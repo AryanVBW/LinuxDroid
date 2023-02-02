@@ -4,11 +4,11 @@ Full version with gui
 
 Maximum flexibility with no commitment
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
-<h1>#Prerequisite:<\h1>
+<h1>#Prerequisite:</h1>
 
 Android Device (Stock unmodified device, no root or custom recovery required)
 
-<h1>Installation<\h1>
+<h1>#Installation:</h1>
 
 Install the NetHunter-Store app from store.nethunter.com
 
