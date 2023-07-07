@@ -34,8 +34,8 @@ Install Kali NetHunter on any stock, unrooted Android device without voiding the
 
 Android Device (Stock unmodified device, no root or custom recovery required)
   <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/untagged-3ca40236df7c164ed5de/010-NH-Rootless-Installation_Start_s.png" alt="Darkside"></a>
-
- 
+https://github.com/AryanVBW/kali-Linux-Android/blob/main/android-for-hacker.jpg
+  <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/kali-Linux-Android/blob/main/android-for-hacker.jpg" alt="Darkside"></a>
 
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
 For more info https://www.kali.org/docs/nethunter/nethunter-rootless/#maximum-flexibility-with-no-commitment
