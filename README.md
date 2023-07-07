@@ -13,19 +13,19 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
 ###<H1>Open Termux and type:</H1>
 
 ```bash
-$   pkg update -y && pkg upgrade -y
-$   termux-setup-storage 
-$   pkg install wget -y
-$   pkg install figlet
-$   pkg install python3
-$   pkg install python-pip
-$   pip install lolcat
-$   wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/vivek
-$   wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/default.bashrc
-$   cp default.bashrc .bashrc
-$   wget -O install-nethunter-termux https://offs.ec/2MceZWr
-$   chmod +x install-nethunter-termux
-$  ./install-nethunter-termux
+   pkg update -y && pkg upgrade -y
+   termux-setup-storage 
+   pkg install wget -y
+   pkg install figlet
+   pkg install python3
+   pkg install python-pip
+   pip install lolcat
+   wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/vivek
+   wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/default.bashrc
+   cp default.bashrc .bashrc
+   wget -O install-nethunter-termux https://offs.ec/2MceZWr
+   chmod +x install-nethunter-termux
+ ./install-nethunter-termux
 ```
 <H1>NetHunter Rootless Edition</h1>
 Maximum flexibility with no commitment
