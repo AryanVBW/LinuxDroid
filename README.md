@@ -1,13 +1,8 @@
 # kali-linux-for-android-
 A mobile penetration testing platform for Android devices, based on Kali Linux. Kali NetHunter consists of an NetHunter App, App Store, Kali Container, and KeX.
+ <a href="https://github.com/AryanVBW/Storm-Breaker.--cam-hack"><img src="https://github.com/ARYAN122333/L3MON/blob/main/logo.png" alt="Darkside"></a>
 
 
-Maximum flexibility with no commitment
-Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
-
-
-Android Device (Stock unmodified device, no root or custom recovery required)
-  <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/untagged-3ca40236df7c164ed5de/010-NH-Rootless-Installation_Start_s.png" alt="Darkside"></a>
 
 <h1>#Installation:</h1>
 
@@ -25,9 +20,14 @@ $   chmod +x install-nethunter-termux
 $  ./install-nethunter-termux
 ```
 <H1>NetHunter Rootless Edition</h1>
-<H1>NetHunter Rootless Edition</h1>
-  <a href="https://github.com/AryanVBW/Storm-Breaker.--cam-hack"><img src="https://github.com/ARYAN122333/L3MON/blob/main/logo.png" alt="Darkside"></a>
+Maximum flexibility with no commitment
+Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
 
+
+Android Device (Stock unmodified device, no root or custom recovery required)
+  <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/untagged-3ca40236df7c164ed5de/010-NH-Rootless-Installation_Start_s.png" alt="Darkside"></a>
+
+ 
 
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
 For more info https://www.kali.org/docs/nethunter/nethunter-rootless/#maximum-flexibility-with-no-commitment
