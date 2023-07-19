@@ -14,7 +14,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 
 <h1>#Installation:</h1>
 
-Install the NetHunter-Store app from store.nethunter.com
+Install the Termux app from store.nethunter.com 
 
 From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
 
