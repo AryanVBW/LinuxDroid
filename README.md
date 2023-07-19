@@ -1,5 +1,13 @@
 # KALI Linux for Android
-A mobile penetration testing platform for Android devices, based on Kali Linux. Kali NetHunter consists of an NetHunter App, App Store, Kali Container, and KeX.
+Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
+
+With Kali NetHunter, you can:
+
+* Penetration test Android devices
+* Perform security research
+* Learn about ethical hacking
+
+Kali NetHunter is easy to install and use. Just follow the instructions in this guide and you'll be up and running in minutes.
  <a href="https://github.com/AryanVBW/Storm-Breaker.--cam-hack"><img src="https://github.com/ARYAN122333/L3MON/blob/main/logo.png" alt="Darkside"></a>
 
 
