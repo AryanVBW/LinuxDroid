@@ -33,6 +33,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    cp default.bashrc .bashrc
 ```
 <H1>copy it for NetHunter Rootless Edition:</H1>
+
 ```bash 
 wget -O install-nethunter-termux https://offs.ec/2MceZWr
    chmod +x install-nethunter-termux
