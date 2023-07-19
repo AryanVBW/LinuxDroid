@@ -23,11 +23,13 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/vivek
    wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/default.bashrc
    cp default.bashrc .bashrc
-   wget -O install-nethunter-termux https://offs.ec/2MceZWr
-   chmod +x install-nethunter-termux
- ./install-nethunter-termux
 ```
 <H1>NetHunter Rootless Edition</h1>
+```bash 
+wget -O install-nethunter-termux https://offs.ec/2MceZWr
+   chmod +x install-nethunter-termux
+ ./install-nethunter-termux
+ ```
 Maximum flexibility with no commitment
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
 Android Device (Stock unmodified device, no root or custom recovery required)
