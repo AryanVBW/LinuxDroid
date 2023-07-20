@@ -44,6 +44,11 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
    chmod +x install-nethunter-termux
  ./install-nethunter-termux
  ```
+<H1>copy it for Ubuntu 22.04 CLI:</H1>
+
+```bash
+pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
+```
 Maximum flexibility with no commitment
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
 Android Device (Stock unmodified device, no root or custom recovery required)
