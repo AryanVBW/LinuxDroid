@@ -37,6 +37,10 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/default.bashrc
    cp default.bashrc .bashrc
 ```
+<p align="center">
+<img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-dragon-tm.png" height="150">
+
+</p>  
 <H1>copy it for NetHunter Rootless Edition:</H1>
 
 ```bash 
