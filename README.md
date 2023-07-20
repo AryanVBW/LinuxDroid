@@ -1,7 +1,7 @@
 #  Linux CLI + GUI  for Android 
 <p align="center">
 <img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="150"><br>
-LinuxDroid
+*LinuxDroid*
 </p>
 
 Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
