@@ -53,7 +53,7 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
  ./install-nethunter-termux
  ```
 <p align="center">
-<img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/UbuntuCoF.png" height="150">
+<img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/UbuntuCoF.png" height="100">
 
 </p>  
    <H1>Copy it for Ubuntu 22.04 CLI:</H1>
