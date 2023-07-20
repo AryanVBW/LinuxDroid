@@ -44,7 +44,8 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
    chmod +x install-nethunter-termux
  ./install-nethunter-termux
  ```
-<H1>copy it for Ubuntu 22.04 CLI:</H1>
+
+<H1><img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/UbuntuCoF.png" height="50">Copy it for Ubuntu 22.04 CLI:</H1>
 
 ```bash
 pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
