@@ -45,7 +45,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
 <img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-dragon-tm.png" height="50">
 <img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-tm.png" height="100">
 </p>  
-<H1>copy it for NetHunter Rootless Edition:</H1>
+<H1>Copy it for NetHunter Rootless Edition:</H1>
 
 ```bash 
 wget -O install-nethunter-termux https://offs.ec/2MceZWr
