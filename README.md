@@ -38,7 +38,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    cp default.bashrc .bashrc
 ```
 <p align="center">
-<img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-dragon-tm.png" height="150">
+<img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-dragon-tm.png" height="100">
 
 </p>  
 <H1>copy it for NetHunter Rootless Edition:</H1>
