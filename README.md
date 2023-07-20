@@ -1,7 +1,7 @@
 #  Linux CLI + GUI  for Android 
 <p align="center">
 <img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="150"><br>
-A cloud based remote android managment suite, powered by ARYAN
+LinuxDroid
 </p>
 
 Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
@@ -22,7 +22,8 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 Install the Termux app from store.nethunter.com 
 or download from here 
 
-<a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/25860-7-download-now-button-glossy-green.png" height="50" alt="Darkside"></a>
+<p align="center">
+   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/25860-7-download-now-button-glossy-green.png" height="50" alt="Darkside"></a></p>
 
 From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
 
