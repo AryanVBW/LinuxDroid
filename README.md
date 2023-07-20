@@ -20,7 +20,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 <h1>Installation:</h1>
 
 Install the Termux app from store.nethunter.com 
-ordownload from here 
+or download from here 
 
 <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/25860-7-download-now-button-glossy-green.png" height="50" alt="Darkside"></a>
 
