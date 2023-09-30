@@ -23,7 +23,7 @@ Install the Termux app from store.nethunter.com
 or download from here 
 
 <p align="center">
-   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/25860-7-download-now-button-glossy-green.png" height="50" alt="Darkside"></a></p>
+   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/25860-7-download-now-button-glossy-green.png" height="50" alt="Darkside"></a></p>
 
 From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
 
@@ -42,8 +42,8 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    cp default.bashrc .bashrc
 ```
 <p align="center">
-<img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-dragon-tm.png" height="50">
-<img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-nethunter-tm.png" height="100">
+<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
+<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-tm.png" height="100">
 </p>  
 <H1>Copy it for NetHunter Rootless Edition:</H1>
 
@@ -53,7 +53,7 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
  ./install-nethunter-termux
  ```
 <p align="center">
-<img src="https://github.com/AryanVBW/Myimage/blob/main/LinuxDroid/UbuntuCoF.png" height="100">
+<img src="https://github.com/AryanVBW/Myimage/releases/download/m2/UbuntuCoF.png" height="100">
 </p>  
    <H1>Copy it for Ubuntu 22.04 CLI:</H1>
 
@@ -61,7 +61,7 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
 pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
 ```
 <p align="center">
-<img src="https://github.com/AryanVBW/Myimage/blob/main/kali/kali-tm.png" height="80">
+<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
 </p>  
   <H1>Copy it for KALI CLI:</H1>
 
@@ -82,7 +82,7 @@ Android Device (Stock unmodified device, no root or custom recovery required)
   
   <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/untagged-3ca40236df7c164ed5de/010-NH-Rootless-Installation_Start_s.png" alt="Darkside"></a>
  
- <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/kali-Linux-Android/blob/main/android-for-hacker.jpg" alt="Darkside"></a>
+ <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/lino.png" alt="Darkside"></a>
 
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
 For more info https://www.kali.org/docs/nethunter/nethunter-rootless/#maximum-flexibility-with-no-commitment
