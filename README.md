@@ -39,7 +39,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    pip install lolcat -y
    wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/vivek
    wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/default.bashrc
-chmod +x vivek
+   chmod +x vivek
    cp default.bashrc .bashrc
 ```
 <p align="center">
