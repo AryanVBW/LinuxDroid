@@ -15,7 +15,7 @@ With Kali NetHunter, you can:
 Kali NetHunter is easy to install and use. Just follow the instructions in this guide and you'll be up and running in minutes.
 
 <p align="center">
-<img src="" height="150">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="">
 </p>
 
 
