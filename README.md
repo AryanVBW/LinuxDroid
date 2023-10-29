@@ -105,7 +105,7 @@ Install Kali NetHunter on any stock, unrooted Android device without voiding the
 Android Device (Stock unmodified device, no root or custom recovery required)
 <p align="center">
 <br/>
-<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/Vivek.gif">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/Sc/Ubantu-Screenrecording-Crop.gif.gif">
 <br/>
 
 </p>
