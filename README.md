@@ -50,7 +50,7 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 
 <h1>Installation:</h1>
 
-Install the Termux app from store.nethunter.com 
+Install the Termux app from f-droid.org/store.nethunter.com 
 or download from here 
 
 <p align="center">
