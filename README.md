@@ -7,15 +7,9 @@
 # Linuxdroid
 
 **Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices, including:
-
-- Ubuntu
-- Debian
-- Manjaro
-- Fedora
-- Kali
-- Void
-- Alpine
-- Arch and similar OS versions
+<p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="">
+</p>
 
 ### Supported Desktop Environments:
 
@@ -53,9 +47,7 @@ With Kali NetHunter, you can:
 
 Kali NetHunter is easy to install and use. Just follow the instructions in this guide and you'll be up and running in minutes.
 
-<p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="">
-</p>
+
 
 
 <h1>Installation:</h1>
