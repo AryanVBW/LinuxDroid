@@ -1,6 +1,6 @@
 #  Linux CLI + GUI  for Android 
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" height="150"><br>
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" height=""><br>
 *AryanVBW*
 </p>
 
