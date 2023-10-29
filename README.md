@@ -22,7 +22,9 @@
 - LXDE
 - LXQT
 - XFCE
-
+- MATE
+- KDE Plasma(coming soon)
+- GNOME(coming soon)
 ### Window Managers:
 
 - Awesome
