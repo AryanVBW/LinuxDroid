@@ -37,18 +37,6 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 
 #### Notable Tools Included:
 - (List some top Kali and Ubuntu tools here)
-Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
-
-With Kali NetHunter, you can:
-
-* Penetration test Android devices
-* Perform security research
-* Learn about ethical hacking
-
-Kali NetHunter is easy to install and use. Just follow the instructions in this guide and you'll be up and running in minutes.
-
-
-
 
 <h1>Installation:</h1>
 
@@ -86,6 +74,16 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
    chmod +x install-nethunter-termux
  ./install-nethunter-termux
  ```
+Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
+
+With Kali NetHunter, you can:
+
+* Penetration test Android devices
+* Perform security research
+* Learn about ethical hacking
+
+Kali NetHunter is easy to install and use. Just follow the instructions in this guide and you'll be up and running in minutes.
+
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m2/UbuntuCoF.png" height="100">
 </p>  
