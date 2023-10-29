@@ -36,7 +36,17 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 - Complete tool compatibility with popular Kali and Ubuntu tools
 
 #### Notable Tools Included:
-- (List some top Kali and Ubuntu tools here)
+- Nmap
+- Wireshark
+- Metasploit
+- Burp Suite
+- Aircrack-ng
+- Hydra
+- John the Ripper
+- SQLMap
+- LibreOffice
+- Visual Studio Code
+- Mozilla Firefox
 
 <h1>Installation:</h1>
 
