@@ -3,7 +3,7 @@
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" height="150"><br>
 *AryanVBW*
 </p>
-
+LinuxdroidLinuxdroid is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices, including:UbuntuDebianManjaroFedoraKaliVoidAlpineArch and similar OS versionsSupported Desktop Environments:LXDELXQTXFCEWindow Managers:AwesomeOpenboxi3In addition to OS support, Linuxdroid also provides automated installation capabilities for Kali Nethunter across all Android versions. This project aims to facilitate diverse use cases, such as:Utilizing Apache local server environmentsConducting penetration testing (pentesting) with KaliFeatures:Full functionality of all Linux distributions supportedComplete tool compatibility with popular Kali and Ubuntu toolsNotable Tools Included:
 Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
 
 With Kali NetHunter, you can:
