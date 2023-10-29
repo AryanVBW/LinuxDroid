@@ -103,6 +103,10 @@ pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubus
 Maximum flexibility with no commitment
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
 Android Device (Stock unmodified device, no root or custom recovery required)
+<p
+<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/Vivek.gif">
+
+</p>
  <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/selectiontermux.jpg" alt="Darkside"></a>
  
   <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/ubantutermux.jpg" alt="Darkside"></a>
