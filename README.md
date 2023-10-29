@@ -100,7 +100,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
    <H1>Copy it for Ubuntu 22.04 CLI:</H1>
 
 ```bash
-pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
+pkg update -y && pkg install wget curl proot tar -y && https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/ubuntu22-cli.sh -O ubuntu22-cli.sh && chmod +x ubuntu22-cli.sh && bash ubuntu22-cli.sh
 ```
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
@@ -108,7 +108,7 @@ pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubus
   <H1>Copy it for KALI CLI:</H1>
 
 ```bash
-pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Kali/kali.sh -O kali.sh && chmod +x kali.sh && bash kali.sh
+pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh
 ```
 Maximum flexibility with no commitment
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
