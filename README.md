@@ -125,12 +125,6 @@ Android Device (Stock unmodified device, no root or custom recovery required)
    
    <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/Termux.jpg" alt="Darkside"></a>
     <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/Kalitermux.jpg" alt="Darkside"></a>
-  
-  
-  
-  <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/untagged-3ca40236df7c164ed5de/010-NH-Rootless-Installation_Start_s.png" alt="Darkside"></a>
- 
- <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/lino.png" alt="Darkside"></a>
 
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
 For more info https://www.kali.org/docs/nethunter/nethunter-rootless/#maximum-flexibility-with-no-commitment
