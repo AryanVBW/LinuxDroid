@@ -117,7 +117,11 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 <br/>
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/Sc/Ubantu-Screenrecording-Crop.gif.gif">
 <br/>
-
+<p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/kaliC.png" height="">
+   <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/downloadC.png" height="">
+   <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/ubantucross.png" height="">
+</p>
 </p>
  <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/selectiontermuxL.jpg" alt="Darkside" ></a>
  
