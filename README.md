@@ -119,7 +119,7 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 <br/>
 
 </p>
- <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/selectiontermux.jpg" alt="Darkside" height="800" ></a>
+ <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/selectiontermux.jpg" alt="Darkside" ></a>
  
   <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/ubantutermux.jpg" alt="Darkside" height="800"  ></a>
    
