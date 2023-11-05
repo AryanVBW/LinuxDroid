@@ -100,7 +100,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
    <H1>Copy it for Ubuntu 22.04 CLI:</H1>
 
 ```bash
-pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/ubuntu22-cli.sh -O ubuntu22-cli.sh && chmod +x ubuntu22-cli.sh && bash ubuntu22-cli.sh
+pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
 ```
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
