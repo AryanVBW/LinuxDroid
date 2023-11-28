@@ -60,6 +60,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
 
 <H1>Open Termux and type:</H1>
 
+### or simply copy paste it 
 ```bash
    pkg update -y && pkg upgrade -y
    termux-setup-storage 
@@ -73,6 +74,9 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    chmod +x vivek
    cp default.bashrc .bashrc
 ```
+
+<h1>Copy and paste in your Termux</h1>
+
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
    - Kali
@@ -84,7 +88,7 @@ This script streamlines the installation process, providing a seamless experienc
    - Alpine
    - Fedora
    - NethunterRootLess (Hacking specialized Linux)
-<h1>Copy and paste in your Termux</h1>
+
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-tm.png" height="100">
