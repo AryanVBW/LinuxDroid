@@ -92,7 +92,7 @@ This script streamlines the installation process, providing a seamless experienc
    - Fedora
    - NethunterRootLess (Hacking specialized Linux)
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/Sc/Ubantu-Screenrecording-Crop.gif.gif">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LINUXDROID.gif">
 <h1>For manually installation of and Linux follow the following<h1></h1>
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
