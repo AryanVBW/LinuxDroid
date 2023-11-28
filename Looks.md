@@ -6,6 +6,12 @@
 # Linuxdroid
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LINUXDROID.gif">
+  <p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/View.gif">
+    <p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/ubantuFull.gif">
+      <p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Fedora.gif">
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/Sc/Ubantu-Screenrecording-Crop.gif.gif">
 <p align="center">
