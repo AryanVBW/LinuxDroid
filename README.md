@@ -64,7 +64,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
 ```bash
 pkg update -y && pkg upgrade -y && termux-setup-storage && pkg install wget -y && pkg install figlet -y 
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LinuxDroidMenu.sh && chmod +x LinuxDroidMenu.sh
-wget 
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
 rm -rf .bashrc && cp default.bashrc .bashrc
 ```
 
