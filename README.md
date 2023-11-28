@@ -73,7 +73,17 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    chmod +x vivek
    cp default.bashrc .bashrc
 ```
-
+###One-Click OS Installation Script 
+This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
+   -Kali
+   -Ubuntu
+   -Arch
+   -Debian
+   -Manjaro
+   -Void
+   -Alpine
+   -Fedora
+   -NethunterRootLess (Hacking specialized Linux)
 
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
