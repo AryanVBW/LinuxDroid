@@ -100,7 +100,8 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
    chmod +x install-nethunter-termux
  ./install-nethunter-termux
 wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/menu.sh && chmod +x menu.sh
-wget 
+rm .bashrc && wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/default.bashrc
+mv default.bashrc .bashrc
  ```
 Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
 
