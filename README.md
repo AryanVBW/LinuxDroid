@@ -62,7 +62,7 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
 
 ### or simply copy paste it 
 ```bash
-   pkg update -y && pkg upgrade -y && termux-setup-storage && pkg install wget -y && pkg install figlet -y
+pkg update -y && pkg upgrade -y && termux-setup-storage && pkg install wget -y && pkg install figlet -y
 pkg install python3 -y && pkg install && python-pip -y
 pip install lolcat -y
    wget https://github.com/AryanVBW/kali-Linux-Android/releases/download/T1/vivek
