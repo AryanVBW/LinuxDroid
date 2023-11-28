@@ -19,4 +19,10 @@
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Os1.gif">
 
+<a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/debian.jpg" alt="Darkside" ></a>
+<a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/fedora.jpg" alt="Darkside" ></a>
+<a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/kali.jpg" alt="Darkside" ></a>
+<a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/kalicrop.jpg" alt="Darkside" ></a>
+<a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Nethunter.jpg" alt="Darkside" ></a>
+<a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/ubantu.jpg" alt="Darkside" ></a>
 
