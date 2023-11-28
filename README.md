@@ -77,6 +77,9 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
 
 <h1>Copy and paste in your Termux</h1>
 
+```bash
+wget 
+```
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
    - Kali
