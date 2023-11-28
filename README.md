@@ -73,6 +73,8 @@ From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s k
    chmod +x vivek
    cp default.bashrc .bashrc
 ```
+
+
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-tm.png" height="100">
