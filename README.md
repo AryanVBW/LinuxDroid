@@ -75,6 +75,7 @@ rm -rf .bashrc && cp default.bashrc .bashrc
 ```bash
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
 ```
+### Select Linux you want to install Linuxdroid automatically isntall it and setup it.
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step3.png" height="200" >
 
