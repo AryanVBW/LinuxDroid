@@ -49,7 +49,8 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 - Mozilla Firefox
 
 <h1>Installation:</h1>
-
+<p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" >
 Install the Termux app from f-droid.org/store.nethunter.com 
 or download from here 
 
@@ -57,7 +58,8 @@ or download from here
    <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/25860-7-download-now-button-glossy-green.png" height="" alt="Darkside"></a></p>
 
 From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
-
+<p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step2.png" >
 <H1>Open Termux and type:</H1>
 
 ### or simply copy paste it 
@@ -70,11 +72,12 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc 
 rm -rf .bashrc && cp default.bashrc .bashrc
 ```
 
-<h1>Copy and paste in your Termux</h1>
-
 ```bash
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
 ```
+<p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step3.png" >
+
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
    - Kali
