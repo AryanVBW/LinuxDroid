@@ -79,15 +79,18 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
+   - Parrot 🦜 Os 💖
    - Kali
-   - Ubuntu
+   - Ubuntu💖
    - Arch
    - Debian
    - Manjaro
    - Void
    - Alpine
    - Fedora
-   - NethunterRootLess (Hacking specialized Linux)
+   - NethunterRootLess (Hacking specialized Linux)💖
+   - BlackBox(coming🔜)
+   - CentOS(coming 🔜)
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LINUXDROID.gif">
 <h1>For manually installation of and Linux follow the following<h1></h1>
