@@ -86,20 +86,20 @@ else
     \$command -c "\$com"
 fi
 EOM
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m The start script has been successfully created!\n"
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Fixing shebang of startparrot.sh, please wait...\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m The start script has been successfully created!\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m Fixing Parrot Os🦜, please wait...\n"
 termux-fix-shebang $bin
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Successfully fixed shebang of startparrot.sh! \n"
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Making startparrot.sh executable please wait...\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m Successfully fixed parrot Os🦜! \n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m configaring parrot os please wait...\n"
 chmod +x $bin
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Successfully made startparrot.sh executable\n"
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Cleaning up please wait...\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m Successfully Configured parrot os\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m Depleting Roofs please wait...\n"
 rm parrot-rootfs.tar.xz -rf
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Successfully cleaned up!\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m Successfully Deleted!\n"
 cat parrot-fs/etc/apt/sources.list | \
 sed -e 's/stable/lts/g' >> parrot-fs/etc/apt/sources.list
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Parsing Parrot with stable repo!\n"
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m The installation has been completed! You can now launch parrot with ./startparrot.sh\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m Parsing Parrot with stable repo!\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[LinuxDroid]:\e[0m \x1b[38;5;87m The installation has been completed! You can now launch parrot Os with ./start-parrot.sh\n"
 printf "\e[0m"
 
 #fixed repo
@@ -118,7 +118,7 @@ echo "nameserver 8.8.4.4" >> parrot-fs/etc/resolv.conf
 if [ "$1" = "-y" ];then
 install1
 elif [ "$1" = "" ];then
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;127m[QUESTION]:\e[0m \x1b[38;5;87m Do you want to install parrot-in-termux? [Y/n] "
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;127m[QUESTION]:\e[0m \x1b[38;5;87m Do you want to install Parrot Os ? [Y/n] "
 
 read cmd1
 if [ "$cmd1" = "y" ];then
