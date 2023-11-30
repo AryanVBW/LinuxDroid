@@ -52,7 +52,7 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 <p align="center">
    <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" height="200" alt="Darkside"></a></p>
 
-Install the Termux app from [F-Droid](https://f-droid.org/)/[Nethunter Store ](https://store.nethunter.com/packages/com.termux/)
+Install the Termux app from [F-Droid](https://f-droid.org/) / [Nethunter Store ](https://store.nethunter.com/packages/com.termux/)
 or download from here 
 
 <p align="center">
