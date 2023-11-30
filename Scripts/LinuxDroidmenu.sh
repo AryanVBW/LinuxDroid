@@ -7,9 +7,9 @@ echo -e "\033[96m| | |___| | | | | |_| |>  <| |_| | | | (_) | | (_| ||\033[0m";
 echo -e "\033[96m| |_____|_|_| |_|\__,_/_/\_\____/|_|  \___/|_|\__,_||\033[0m";
 echo -e "\033[96m|                     By  Vivek W                   |\033[0m";
 echo -e "\033[96m|                                                   |\033[0m";
-echo -e "\033[96m|            GitHub:- Github.com/AryanVBW           |\033[0m";
-echo -e "\033[96m|              Site:- AryanVBW.github.io            |\033[0m";
-echo -e "\033[96m|         Instagram:- Aryan_Technolog1es            |\033[0m";
+echo -e "\033[96m|            🔥GitHub:- Github.com/AryanVBW         |\033[0m";
+echo -e "\033[96m|              🌐Site:- AryanVBW.github.io          |\033[0m";
+echo -e "\033[96m|         💖Instagram:- Aryan_Technolog1es          |\033[0m";
 echo -e "\033[96m+===================================================+\033[0m";
 
 echo -e "\e[1m\e[32mWelcome to the LinuxDroid!\e[0m"
