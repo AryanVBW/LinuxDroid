@@ -22,7 +22,7 @@ if [ -f "parrot-rootfs.tar.xz" ];then
 rm -rf parrot-rootfs.tar.xz
 fi
 if [ ! -f "parrot-rootfs.tar.xz" ];then
-printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Downloading the parrot rootfs, please wait...\n"
+printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Downloading the parrot OS, please wait...\n"
 ARCHITECTURE=$(dpkg --print-architecture)
 case "$ARCHITECTURE" in
 aarch64) ARCHITECTURE=arm64;;
@@ -37,7 +37,7 @@ exit 1
 
 esac
 
-wget https://github.com/RiSecID/AndronixOrigin/blob/master/Rootfs/Parrot/${ARCHITECTURE}/parrot-rootfs-${ARCHITECTURE}.tar.xz?raw=true -q -O parrot-rootfs.tar.xz 
+wget https://github.com/AryanVBW/Roofs/releases/download/${ARCHITECTURE}/parrot-rootfs-${ARCHITECTURE}.tar.xz?raw=true -q -O parrot-rootfs.tar.xz 
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Download complete!\n"
 
 fi
@@ -49,7 +49,7 @@ fi
 	cd "$cur"
 fi
 mkdir -p parrot-binds
-bin=startparrot.sh
+bin=start-parrot.sh
 echo "writing launch script"
 cat > $bin <<- EOM
 #!/bin/bash
