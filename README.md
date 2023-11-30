@@ -71,9 +71,6 @@ pkg install wget -y && pkg install figlet -y
 wget  https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
 rm -rf .bashrc && cp default.bashrc .bashrc
-```
-
-```bash
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
 ```
 ### Select Linux you want to install Linuxdroid automatically isntall it and setup it.
