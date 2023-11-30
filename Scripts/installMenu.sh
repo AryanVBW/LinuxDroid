@@ -81,7 +81,7 @@ while true; do
                         7) cmd="pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Alpine/alpinexfce.sh -O alpinexfce.sh && chmod +x alpinexfce.sh && bash alpinexfce.sh";;
                         8) cmd="pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Fedora/fedora-xfce.sh -O fedora-xfce.sh && chmod +x fedora-xfce.sh && bash fedora-xfce.sh";;
                         9) cmd="termux-setup-storage && pkg install wget && wget -O install-nethunter-termux https://offs.ec/2MceZWr && chmod +x install-nethunter-termux && ./install-nethunter-termux";;
-                        10) cmd="parrot command to install";;
+                        10) cmd="pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/InstallScript/Cli/parrot.sh && chmod +x parrot.sh && bash parrot.sh";;
                     esac
                     ;;
                 2)
@@ -96,7 +96,7 @@ while true; do
                         7) cmd="pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Alpine/alpine.sh -O alpine.sh && chmod +x alpine.sh && bash alpine.sh";;
                         8) cmd="pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Fedora/fedora.sh -O fedora.sh && chmod +x fedora.sh && bash fedora.sh";;
                         9) cmd="termux-setup-storage && pkg install wget && wget -O install-nethunter-termux https://offs.ec/2MceZWr && chmod +x install-nethunter-termux && ./install-nethunter-termux";;
-                        10) cmd="parrot command to install";;
+                        10) cmd="pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/InstallScript/Cli/parrot.sh && chmod +x parrot.sh && bash parrot.sh";;
                     esac
                     ;;
                 *)
