@@ -93,7 +93,9 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step3.png" height="200" >
 
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/LINUXDROID.gif">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Osselectioncolor.gif">
+   <p align="center">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Parrorselect.gif">
 <h1>For manually installation of and Linux follow the following<h1></h1>
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
