@@ -11,11 +11,6 @@
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/tree/main#linuxdroid">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="Darkside"></a></p>
-<p align="center">
-   <a href="https://github.com/AryanVBW/LinuxDroid/tree/main#linuxdroid">
-      <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="Darkside" loading="lazy" loop="infinite">
-   </a>
-</p>
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
