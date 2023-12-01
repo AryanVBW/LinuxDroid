@@ -31,7 +31,7 @@ This script streamlines the installation process, providing a seamless experienc
 - LXQT
 - XFCE
 - MATE
-- KDE Plasma(coming soon)
+- KDE Plasma(Beta)
 - GNOME(coming soon)
 ### Window Managers:
 
