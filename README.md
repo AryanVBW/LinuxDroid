@@ -10,6 +10,7 @@
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="200">
 </p>
+
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
    - Parrot 🦜 Os 💖
