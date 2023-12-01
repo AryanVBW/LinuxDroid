@@ -8,7 +8,7 @@
 
 **Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices, including:
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="">
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="200">
 </p>
 
 ### Supported Desktop Environments:
