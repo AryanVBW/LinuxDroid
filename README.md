@@ -6,10 +6,9 @@
 
 # Linuxdroid
 
-**Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices, including:
+**Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/OSremovebg.png" height="200">
-</p>
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os.gif">
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
