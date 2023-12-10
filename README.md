@@ -3,8 +3,6 @@
    <a href="https://github.com/AryanVBw">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" alt="Darkside"></a></p>
 
-</p>
-
 # Linuxdroid
 
 **Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.
@@ -87,6 +85,7 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
 rm -rf .bashrc && cp default.bashrc .bashrc
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
+
 ```
 ### Select Linux you want to install Linuxdroid automatically isntall it and setup it.
 <p align="center">
@@ -103,14 +102,16 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid
 </p>  
 <H1>Copy it for NetHunter Rootless Edition:</H1>
 
-```bash 
+```bash
+
 wget -O install-nethunter-termux https://offs.ec/2MceZWr
    chmod +x install-nethunter-termux
  ./install-nethunter-termux
 wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/menu.sh && chmod +x menu.sh
 rm .bashrc && wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/default.bashrc
 mv default.bashrc .bashrc
- ```
+
+```
 Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.
 
 With Kali NetHunter, you can:
@@ -127,7 +128,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
    <H1>Copy it for Ubuntu 22.04 CLI:</H1>
 
 ```bash
-pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
+ pkg update -y && pkg install wget   curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
 ```
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
