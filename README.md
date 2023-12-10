@@ -1,14 +1,14 @@
 #  Linux CLI + GUI  for Android 
 <p align="center">
    <a href="https://github.com/AryanVBw">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" alt="Darkside"></a></p>
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" alt="LinuxDroid"></a></p>
 
 # Linuxdroid
 
 **Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/tree/main#linuxdroid">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="Darkside"></a></p>
+<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="LinuxDroid"></a></p>
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
@@ -63,13 +63,13 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 
 <h1>Installation:</h1>
 <p align="center">
-   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" height="200" alt="Darkside"></a></p>
+   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" height="200" alt="LinuxDroid"></a></p>
 
 Install the Termux app from [F-Droid](https://f-droid.org/) / [Nethunter Store ](https://store.nethunter.com/packages/com.termux/)
 or download from here 
 
 <p align="center">
-   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/25860-7-download-now-button-glossy-green.png" height="" alt="Darkside"></a></p>
+   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/25860-7-download-now-button-glossy-green.png" height="" alt="Termux"></a></p>
 
 From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
 <p align="center">
