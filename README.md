@@ -9,7 +9,7 @@
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/tree/main#linuxdroid">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="Darkside"></a></p>
-![Andro](LinuxDroid/20231201_1436001.gif"Andro in action")
+![LinuxDroid](LinuxDroid/20231201_145405_0000.png"Andro in action")
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
