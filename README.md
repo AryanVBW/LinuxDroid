@@ -164,5 +164,9 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 Feel free to reach out, and let's build something amazing together! 🚀
 
 [![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+</p>
 <p align="center">Made with ❤️ By <a href="aryanvbw.github.io">*Vivek W*</a></p>
 <p align="center" style="font-size: 8px">v1.1.2</p>
