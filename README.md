@@ -161,7 +161,8 @@ Android Device (Stock unmodified device, no root or custom recovery required)
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/Looks.md">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L2/Clickhere.gif" alt="Darkside"></a></p> 
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
-For more info https://www.kali.org/docs/nethunter/nethunter-rootless/#maximum-flexibility-with-no-commitment
 Feel free to reach out, and let's build something amazing together! 🚀
 
 [![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
+<p align="center">Made with ❤️ By <a href="aryanvbw.github.io">*Vivek W*</a></p>
+<p align="center" style="font-size: 8px">v1.1.2</p>
