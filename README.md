@@ -14,7 +14,7 @@
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
    - Parrot 🦜 Os <img src="" height="12">
    - Kali<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="12">
-   - Ubuntu<img src="" height="12">
+   - Ubuntu<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="12">
    - Arch<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/arch-l.png" height="12">
    - Debian<img src="" height="12">
    - Manjaro<img src="" height="12">
