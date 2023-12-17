@@ -16,8 +16,8 @@ This script streamlines the installation process, providing a seamless experienc
    - Kali<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="12">
    - Ubuntu<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="12">
    - Arch<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/arch-l.png" height="12">
-   - Debian<img src="" height="12">
-   - Manjaro<img src="" height="12">
+   - Debian<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/linux.png" height="12">
+   - Manjaro<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" height="12">
    - Void<img src="" height="12">
    - Alpine<img src="" height="12">
    - Fedora<img src="" height="12">
