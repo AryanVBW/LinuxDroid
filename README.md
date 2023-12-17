@@ -12,18 +12,18 @@
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
-   - Parrot 🦜 Os <img src="" height="12">
+   - Parrot 🦜 Os <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Parrot.png" height="12">
    - Kali<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="12">
    - Ubuntu<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="12">
    - Arch<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/archBg.png" height="12">
-   - Debian<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/linux.png" height="12">
+   - Debian<img src="" height="12">
    - Manjaro<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" height="12">
    - Void<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/void.png" height="12">
    - Alpine<img src="" height="12">
    - Fedora<img src="" height="12">
    - NethunterRootLess (Hacking specialized Linux)<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="12">
-   - BlackBox(coming🔜)<img src="" height="12">
-   - CentOS(coming 🔜)<img src="" height="12">
+   - BlackBox(coming🔜)<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/bosckbocBg.png" height="12">
+   - CentOS(coming 🔜)<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/centosbg.png" height="12">
 ### Supported Desktop Environments:
 
 - LXDE
