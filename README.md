@@ -12,18 +12,18 @@
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
-   - Parrot 🦜 Os 💖
-   - Kali
-   - Ubuntu💖
-   - Arch
-   - Debian
-   - Manjaro
-   - Void
-   - Alpine
-   - Fedora
-   - NethunterRootLess (Hacking specialized Linux)💖
-   - BlackBox(coming🔜)
-   - CentOS(coming 🔜)
+   - Parrot 🦜 Os <img src="" height="12">
+   - Kali<img src="" height="12">
+   - Ubuntu<img src="" height="12">
+   - Arch<img src="" height="12">
+   - Debian<img src="" height="12">
+   - Manjaro<img src="" height="12">
+   - Void<img src="" height="12">
+   - Alpine<img src="" height="12">
+   - Fedora<img src="" height="12">
+   - NethunterRootLess (Hacking specialized Linux)<img src="" height="12">
+   - BlackBox(coming🔜)<img src="" height="12">
+   - CentOS(coming 🔜)<img src="" height="12">
 ### Supported Desktop Environments:
 
 - LXDE
