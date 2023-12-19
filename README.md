@@ -1,7 +1,7 @@
 #  Linux CLI + GUI  for Android 
 <p align="center">
    <a href="https://github.com/AryanVBw">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" alt="LinuxDroid"></a></p>
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/1698565413241-removebg-preview.png" alt="LinuxDroid"></a></p>
 
 # Linuxdroid
 
