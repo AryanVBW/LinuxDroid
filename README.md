@@ -1,7 +1,7 @@
 #  Linux CLI + GUI  for Android 
 <p align="center">
    <a href="https://github.com/AryanVBw">
-<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/1698565413241-removebg-preview.png" alt="LinuxDroid"></a></p>
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="200" alt="LinuxDroid"></a></p>
 
 # Linuxdroid
 
