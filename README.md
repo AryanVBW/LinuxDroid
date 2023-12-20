@@ -150,13 +150,7 @@ Android Device (Stock unmodified device, no root or custom recovery required)
    <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/downloadC.png" height="">
    <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/ubantucross.png" height="">
 </p>
-</p>
- <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/selectiontermuxL.jpg" alt="Darkside" ></a>
- 
-  <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/ubantutermuxL.jpg" alt="Darkside"  ></a>
-   
-   <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/TermuxL.jpg" alt="Darkside" ></a>
-    <a href="https://github.com/AryanVBW"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/62662552/KalitermuxL.jpg" alt="Darkside"></a>
+
  <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/Looks.md">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L2/Clickhere.gif" alt="Darkside"></a></p> 
