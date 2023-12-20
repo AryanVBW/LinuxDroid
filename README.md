@@ -100,7 +100,7 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-tm.png" height="100">
 </p>  
-<H2><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="22">Copy it for NetHunter Rootless Edition:</H2>
+<H3><img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="22">Copy it for NetHunterRootlessEdition:</H3>
 
 ```bash
 
@@ -125,7 +125,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m2/UbuntuCoF.png" height="100">
 </p>  
-   <H3><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="22">Copy it for Ubuntu 22.04 CLI:</H3>
+   <H3><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="16">Copy it for Ubuntu 22.04 CLI:</H3>
 
 ```bash
  pkg update -y && pkg install wget   curl proot tar -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu22/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
@@ -133,7 +133,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
 </p>  
-  <H2>Copy it for KALI CLI:</H3>
+  <H2><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="20">Copy it for KALI CLI:</H3>
 
 ```bash
 pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh
