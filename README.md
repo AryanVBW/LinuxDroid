@@ -95,7 +95,7 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Osselectioncolor.gif">
    <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Parrorselect.gif">
-<h2>For manually installation of and Linux follow the following<h2>
+<h2>🚨For manually installation of and Linux follow the following<h2>
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-tm.png" height="100">
@@ -133,7 +133,7 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 <p align="center">
 <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
 </p>  
-  <H1>Copy it for KALI CLI:</H1>
+  <H2>Copy it for KALI CLI:</H3>
 
 ```bash
 pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh
