@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/V2/1698565662643-removebg-preview.png" height=""><br>
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/L2/LinuxDroid/Banner/IMG_20231220_091141.jpg" height=""><br>
 *AryanVBW*
 </p>
 
