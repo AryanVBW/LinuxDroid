@@ -144,7 +144,7 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 
  <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L2/Clickhere.gif" alt="Darkside"></a></p>
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" alt="LinuxDroid"></a></p>
 <p align="center">
 <br/>
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/Sc/Ubantu-Screenrecording-Crop.gif.gif">
