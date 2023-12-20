@@ -152,7 +152,7 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 </p>
 
  <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/Looks.md">
+   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L2/Clickhere.gif" alt="Darkside"></a></p> 
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
 Feel free to reach out, and let's build something amazing together! 🚀
