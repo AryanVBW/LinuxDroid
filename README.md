@@ -146,6 +146,10 @@ Android Device (Stock unmodified device, no root or custom recovery required)
  <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
 <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" alt="LinuxDroid">
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+</p>
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/kaliC.png" height="">
