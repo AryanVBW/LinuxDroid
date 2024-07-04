@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,249 +8,260 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            max-width: 100%;
-            margin: 0;
-            padding: 20px;
-            background-color: #f3f3f3;
-            color: #333;
-            overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
-        }
-
-        .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: #007bff;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        pre {
-            position: relative;
-            padding: 10px;
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-            overflow-x: auto; /* Allow horizontal scroll for code blocks */
-            white-space: pre-wrap; /* Preserve formatting */
-            margin-bottom: 20px;
-        }
-
-        code {
-            display: block;
-            white-space: pre;
-            overflow-x: auto;
-            font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-            font-size: 14px;
-            line-height: 1.4;
-            padding: 10px;
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-        }
-
-        .copy-button {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            padding: 5px 10px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            transition: background-color 0.3s;
-        }
-
-        .copy-button:hover {
-            background-color: #0056b3;
-        }
-
-        .banner-img {
-            width: 100%;
-            max-width: 500px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .slider {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-        }
-
-        .intro-text {
-            animation: slidein 3s ease-out infinite alternate;
-        }
-
-        @keyframes slidein {
-            from {
-                transform: translateY(-10px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .card h2 {
-            margin-bottom: 10px;
-            color: #007bff;
-        }
-
-        .card p {
-            margin-bottom: 15px;
-        }
-
-        .card ul {
-            padding-left: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            .banner-img {
-                max-width: 100%;
-            }
+        img {
+            vertical-align: middle;
+            max-width: 100%;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="center">Linux CLI + GUI for Android</h1>
+    <h1 style="text-align: center;">Linux CLI + GUI for Android</h1>
+    <p align="center">
+        <a href="https://github.com/AryanVBw">
+            <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="250" alt="LinuxDroid">
+        </a>
+    </p>
 
-        <p class="center">
-            <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" alt="LinuxDroid" class="banner-img">
-        </p>
+    <h2>LinuxDroid</h2>
 
-        <div class="intro-text">
-            <p><strong>LinuxDroid</strong> is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.</p>
-        </div>
+    <p><strong>LinuxDroid</strong> is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.</p>
 
-        <div class="slider">
-            <div class="slides">
-                <div class="slide">
-                    <pre><code>
-pkg update -y && pkg upgrade -y
-termux-setup-storage
-pkg install wget -y && pkg install figlet -y 
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
-rm -rf .bashrc && cp default.bashrc .bashrc
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
-                    </code></pre>
-                </div>
-                <div class="slide">
-                    <pre><code>
-pkg update -y && pkg upgrade -y
-termux-setup-storage
-pkg install wget -y && pkg install figlet -y 
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
-rm -rf .bashrc && cp default.bashrc .bashrc
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
-                    </code></pre>
-                </div>
-                <div class="slide">
-                    <pre><code>
-pkg update -y && pkg upgrade -y
-termux-setup-storage
-pkg install wget -y && pkg install figlet -y 
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
-rm -rf .bashrc && cp default.bashrc .bashrc
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
-                    </code></pre>
-                </div>
-            </div>
-        </div>
+    <p align="center">
+        <a href="https://github.com/AryanVBW/LinuxDroid/tree/main#linuxdroid">
+            <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="LinuxDroid">
+        </a>
+    </p>
 
-        <div class="center">
-            <button class="copy-button" onclick="copyCode()">Copy Code</button>
-        </div>
+    <h3>One-Click Installation Script</h3>
+    <p>This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.</p>
 
-        <div class="card">
-            <h2>One-Click Installation Script</h2>
-            <p>This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.</p>
-            <h3>Supported OS:</h3>
-            <ul>
-                <li>Parrot 🦜 Os <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Parrot.png" height="12"></li>
-                <li>Kali <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="12"></li>
-                <li>Ubuntu <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="12"></li>
-                <li>Arch <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/archBg.png" height="12"></li>
-                <li>Debian <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/debiBg.png" height="12"></li>
-                <li>Manjaro <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" height="12"></li>
-                <li>Void <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/void.png" height="12"></li>
-                <li>Alpine <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/alpineBg.png" height="12"></li>
-                <li>Fedora <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/fedoraBg.png" height="12"></li>
-            </ul>
-        </div>
+    <p><strong>Supported OS:</strong></p>
+    <ul>
+        <li>Parrot 🦜 Os <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Parrot.png" height="12"></li>
+        <li>Kali <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="12"></li>
+        <li>Ubuntu <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="12"></li>
+        <li>Arch <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/archBg.png" height="12"></li>
+        <li>Debian <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/debiBg.png" height="12"></li>
+        <li>Manjaro <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" height="12"></li>
+        <li>Void <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/void.png" height="12"></li>
+        <li>Alpine <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/alpineBg.png" height="12"></li>
+        <li>Fedora <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Fedorabg.png" height="12"></li>
+        <li>NethunterRootLess (Hacking specialized Linux) <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="12"></li>
+        <li>BlackBox (coming🔜) <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/bosckbocBg.png" height="12"></li>
+        <li>CentOS (coming 🔜) <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/centosbg.png" height="12"></li>
+    </ul>
 
-        <p>Feel free to reach out, and let's build something amazing together! 🚀</p>
+    <h3>Supported Desktop Environments:</h3>
+    <ul>
+        <li>LXDE</li>
+        <li>LXQT</li>
+        <li>XFCE</li>
+        <li>MATE</li>
+        <li>KDE Plasma (Beta)</li>
+        <li>GNOME (coming soon)</li>
+    </ul>
 
-        <div class="center">
+    <h3>Window Managers:</h3>
+    <ul>
+        <li>Awesome</li>
+        <li>Openbox</li>
+        <li>i3</li>
+    </ul>
+
+    <p>In addition to OS support, LinuxDroid also provides automated installation capabilities for Kali Nethunter across all Android versions. This project aims to facilitate diverse use cases, such as:</p>
+
+    <ul>
+        <li>Utilizing Apache local server environments</li>
+        <li>Conducting penetration testing (pentesting) with Kali</li>
+    </ul>
+
+    <h3>Features:</h3>
+    <ul>
+        <li>Full functionality of all Linux distributions supported</li>
+        <li>Complete tool compatibility with popular Kali and Ubuntu tools</li>
+    </ul>
+
+    <h4>Notable Tools Included:</h4>
+    <ul>
+        <li>Nmap</li>
+        <li>Wireshark</li>
+        <li>Metasploit</li>
+        <li>Burp Suite</li>
+        <li>Aircrack-ng</li>
+        <li>Hydra</li>
+        <li>John the Ripper</li>
+        <li>SQLMap</li>
+        <li>LibreOffice</li>
+        <li>Visual Studio Code</li>
+        <li>Mozilla Firefox</li>
+    </ul>
+
+    <h1>Installation:</h1>
+
+    <p align="center">
+        <a href="https://f-droid.org/repo/com.termux_118.apk">
+            <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" height="200" alt="LinuxDroid">
+        </a>
+    </p>
+
+    <p>Install the Termux app from <a href="https://f-droid.org/">F-Droid</a> / <a href="https://store.nethunter.com/packages/com.termux/">Nethunter Store</a> or download from here:</p>
+
+    <p align="center">
+        <a href="https://f-droid.org/repo/com.termux_118.apk">
+            <img src="https://github.com/AryanVBW/Myimage/releases/download/m2/25860-7-download-now-button-glossy-green.png" height="" alt="Termux">
+        </a>
+    </p>
+
+    <p>From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard. Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting Termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.</p>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step2.png" height="200">
+    </p>
+
+    <h1>Open Termux and type:</h1>
+
+    <pre><code>
+        pkg update -y && pkg upgrade -y
+        termux-setup-storage
+        pkg install wget -y && pkg install figlet -y 
+        wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
+        wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
+        rm -rf .bashrc && cp default.bashrc .bashrc
+        wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
+    </code></pre>
+
+    <p>Choose the Linux distribution you want to install LinuxDroid automatically and set it up.</p>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step3.png" height="200">
+    </p>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Osselectioncolor.gif">
+    </p>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Parrorselect.gif">
+    </p>
+
+    <h2>🚨 For manual installation of any Linux, follow these steps:</h2>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="50">
+        <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-tm.png" height="100">
+    </p>
+
+    <h4><img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="15"> Copy it for NetHunter Rootless Edition:</h4>
+
+    <pre><code>
+        wget -O install-nethunter-termux https://offs.ec/2MceZWr
+        chmod +x install-nethunter-termux
+        ./install-nethunter-termux
+        wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/menu.sh && chmod +x menu.sh
+        wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/default.bashrc
+        mv default.bashrc .bashrc
+    </code></pre>
+
+    <p>Kali NetHunter is the ultimate mobile penetration testing platform. It's based on Kali Linux, the most popular penetration testing distribution, and it allows you to run a full range of security tools on your Android device.</p>
+
+    <h3>With Kali NetHunter, you can:</h3>
+
+    <ul>
+        <li>Penetration test Android devices</li>
+        <li>Perform security research</li>
+        <li>Learn about ethical hacking</li>
+    </ul>
+
+    <p>Kali NetHunter is easy to install and use. Just follow the instructions in this guide and you'll be up and running in minutes.</p>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/Myimage/releases/download/m2/UbuntuCoF.png" height="100">
+    </p>
+
+    <h3><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="16"> Copy it for Ubuntu 22.04 CLI:</h3>
+
+    <pre><code>
+        pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/blob/L2/Scripts/InstallScript/Cli/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
+    </code></pre>
+
+    <p align="center">
+        <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
+    </p>
+
+    <h2><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="20"> Copy it for KALI CLI:</h2>
+
+    <pre><code>
+        pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh
+    </code></pre>
+
+    <p>Maximum flexibility with no commitment. Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty.</p>
+
+    <p><strong>Android Device Requirements:</strong></p>
+    <ul>
+        <li>Stock unmodified device, no root or custom recovery required</li>
+    </ul>
+
+    <h2>To see screenshot</h2>
+    <h3>Tap on Arrow👇</h3>
+
+    <p align="center">
+        <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
+            <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" alt="LinuxDroid">
+        </a>
+    </p>
+
+    <p align="center">Visitor count<br>
+        <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+    </p>
+
+    <p align="center">
+        <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
+            <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/kaliC.png" height="">
+        </a>
+    </p>
+
+    <p align="center">
+        <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
+            <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/downloadC.png" height="">
+        </a>
+    </p>
+
+    <p align="center">
+        <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
+            <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/ubantucross.png" height="">
+        </a>
+    </p>
+
+    <p align="center">
+        <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
+            <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/debian.jpg">
+        </a>
+    </p>
+
+    <p align="center">
+        <a href="https://github.com/AryanVBW/kali-Linux-Android">
             <img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside">
-        </div>
+        </a>
+    </p>
 
-        <p align="center">
-            <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" alt="Visitor count">
-        </p>
+    <p>Feel free to reach out, and let's build something amazing together! 🚀</p>
 
-        <p align="center">Made with ❤️ By <a href="https://aryanvbw.github.io">Vivek W</a></p>
-        <p align="center" style="font-size: 8px">v1.1.2</p>
-    </div>
+    <p align="center">
+        <a href="https://github.com/aryanvbw">
+            <img src="https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark" alt="GitHub stats">
+        </a>
+    </p>
 
-    <!-- Copy Button Script -->
-    <script>
-        function copyCode() {
-            var codeBlocks = document.querySelectorAll('pre code');
-            codeBlocks.forEach(function(block) {
-                var tempTextarea = document.createElement('textarea');
-                tempTextarea.value = block.textContent.trim();
-                document.body.appendChild(tempTextarea);
-                tempTextarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempTextarea);
-            });
-        }
-    </script>
+    <p align="center">Visitor count<br>
+        <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+    </p>
+
+    <p align="center">Made with ❤️ By <a href="https://aryanvbw.github.io">Vivek W</a></p>
+    <p align="center" style="font-size: 8px">v1.1.2</p>
+
 </body>
-
 </html>
