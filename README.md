@@ -145,7 +145,7 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 ## Tap on Arrow👇
  <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" height="100" alt="LinuxDroid">
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" height="120" alt="LinuxDroid">
 <p align="center"> 
   Visitor count<br>
   <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
