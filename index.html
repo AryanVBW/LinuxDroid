@@ -1,4 +1,5 @@
-!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,11 +14,17 @@
     padding: 20px;
     background: linear-gradient(to right, #00c6ff, #0072ff); /* New gradient background */
     color: #333;
+    text-align: center;
 }
-        h1, h2, h3, h4 {
-            text-align: center;
-            color: #2c3e50;
-        }
+    h1, h2, h3, h4 {
+    text-align: center;
+    color: white; /* Base color */
+    text-shadow: 
+        1px 1px 0px black, 
+        2px 2px 0px black, 
+        3px 3px 0px black, 
+        4px 4px 0px black; /* Creates the outline effect */
+    }
         p {
             text-align: justify;
         }
@@ -73,11 +80,19 @@
             gap: 20px;
             justify-items: center;
         }
+        .logo-container {
+            position: relative; /* Position relative to allow absolute positioning of the background */
+            display: inline-block; /* Make the container fit the content */
+            padding: 20px; /* Padding inside the box */
+            background: rgba(255, 255, 255, 0.7); /* White background with 70% opacity */
+            border-radius: 15px; /* Curved corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
     </style>
 </head>
 <body>
     <h1>Linux CLI + GUI for Android</h1>
-    <div class="center">
+    <div class="center logo-container">
         <a href="https://github.com/AryanVBw">
             <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="250" alt="LinuxDroid">
         </a>
@@ -356,4 +371,3 @@
     </script>
 </body>
 </html></a></div>
-
