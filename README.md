@@ -38,7 +38,7 @@ This script copies the installation command for LinuxDroid to your clipboard, ma
 - MATE
 - KDE Plasma(Beta)
 - GNOME(coming soon)
-### Window Managers:
+### 🪟 Window Managers:
 
 - Awesome
 - Openbox
@@ -49,7 +49,7 @@ In addition to OS support, Linuxdroid also provides automated installation capab
 - Utilizing Apache local server environments
 - Conducting penetration testing (pentesting) with Kali
 
-### Features:
+### 🌟Features:
 
 - Full functionality of all Linux distributions supported
 - Complete tool compatibility with popular Kali and Ubuntu tools
@@ -144,10 +144,10 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 ```bash
 pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh
 ```
-Maximum flexibility with no commitment
+Maximum flexibility 
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
 Android Device (Stock unmodified device, no root or custom recovery required)
-# To see screenshot 
+#📸 Screenshots
 ## Tap on Arrow👇
  <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
