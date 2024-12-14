@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 folder=fedora-fs
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/DNF/"
-dlink2="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/DNF/"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/DNF/"
+dlink2="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/DNF/"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"

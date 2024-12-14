@@ -2,7 +2,7 @@
 pkg install wget -y 
 folder=ubuntu20-fs
 cur=`pwd`
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
@@ -227,12 +227,12 @@ EOM
 mkdir -p ubuntu20-fs/var/tmp
 rm -rf ubuntu20-fs/usr/local/bin/*
 echo "127.0.0.1 localhost localhost" > $folder/etc/hosts
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/.profile -O ubuntu20-fs/root/.profile.1 > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/.profile -O ubuntu20-fs/root/.profile.1 > /dev/null
 cat $folder/root/.profile.1 >> $folder/root/.profile && rm -rf $folder/root/.profile.1
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vnc -P ubuntu20-fs/usr/local/bin > /dev/null
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vncpasswd -P ubuntu20-fs/usr/local/bin > /dev/null
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vncserver-stop -P ubuntu20-fs/usr/local/bin > /dev/null
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vncserver-start -P ubuntu20-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vnc -P ubuntu20-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vncpasswd -P ubuntu20-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vncserver-stop -P ubuntu20-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vncserver-start -P ubuntu20-fs/usr/local/bin > /dev/null
 
 chmod +x ubuntu20-fs/root/.profile
 chmod +x ubuntu20-fs/usr/local/bin/vnc

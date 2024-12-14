@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install wget -y 
 folder=ubuntu-fs
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT"
-dlink2="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/APT"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT"
+dlink2="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/APT"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"

@@ -25,7 +25,7 @@ dbus-launch --exit-with-session startlxqt &" > ~/.vnc/xstartup
 echo " "
 
 echo "Running browser patch"
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Uninstall/ubchromiumfix.sh && chmod +x ubchromiumfix.sh
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Uninstall/ubchromiumfix.sh && chmod +x ubchromiumfix.sh
 ./ubchromiumfix.sh && rm -rf ubchromiumfix.sh
 
 echo "You can now start vncserver by running vncserver-start"

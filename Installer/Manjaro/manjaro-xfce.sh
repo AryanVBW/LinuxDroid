@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install wget -y 
 folder=manjaro-fs
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Pacman/Manjaro"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/Manjaro"
 if [ -d "$folder" ]; then
     first=1
     echo "skipping downloading"
@@ -88,7 +88,7 @@ rm -rf $folder/etc/resolv.conf && echo "nameserver 1.1.1.1" > $folder/etc/resolv
 wget --tries=20  $dlink/XFCE/vncserver-start -O $folder/usr/local/bin/vncserver-start 
 wget --tries=20 $dlink/XFCE/vncserver-stop -O $folder/usr/local/bin/vncserver-stop
 mkdir $folder/root/.vnc
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/XFCE/xstartup -O $folder/root/.vnc/xstartup
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/Manjaro/XFCE/xstartup -O $folder/root/.vnc/xstartup
 chmod +x $folder/usr/local/bin/vncserver-stop
 chmod +x $folder/usr/local/bin/vncserver-start
 echo " #!/bin/bash

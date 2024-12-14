@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install wget -y 
 folder=void-fs
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/XBPS"
-dlink2="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/XBPS"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/XBPS"
+dlink2="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/XBPS"
 echo "Please enable Termux storage permission if it asks for so"
 sleep 3
 termux-setup-storage

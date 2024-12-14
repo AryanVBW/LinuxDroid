@@ -12,8 +12,8 @@ apt update -y
 apt install e17 tigervnc-standalone-server -y
 
 mkdir -p ~/.vnc
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT/XFCE4/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT/XFCE4/vncserver-stop -P /usr/local/bin/
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
 

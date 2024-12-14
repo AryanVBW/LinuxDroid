@@ -72,8 +72,8 @@ chmod +x $bin
 echo "removing image for some space"
 rm $tarball
 echo "Preparing additional component for the first time, please wait..."
-wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/resolv.conf" -P arch-fs/root > /dev/null
-wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/additional.sh" -P arch-fs/root > /dev/null
+wget "https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Installer/Arch/amd64/resolv.conf" -P arch-fs/root > /dev/null
+wget "https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Installer/Arch/amd64/additional.sh" -P arch-fs/root > /dev/null
 rm -rf arch-fs/root/.bash_profile
 echo "You can now launch Arch Linux with the ./${bin} script"
 echo "Welcome to Arch Linux | Bare"

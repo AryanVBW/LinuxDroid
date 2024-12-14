@@ -9,9 +9,9 @@ pacman -Suuyy --noconfirm
 pacman -S mate  --noconfirm 
 pacman -S tigervnc --noconfirm
 
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/MATE/xstartup   -P ~/.vnc/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/Manjaro/MATE/xstartup   -P ~/.vnc/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/vncserver-stop -P /usr/local/bin/
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop

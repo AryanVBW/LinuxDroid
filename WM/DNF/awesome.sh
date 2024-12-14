@@ -22,7 +22,7 @@ esac
 
 mkdir -p ~/.vnc
 
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/wallpaper.jpg -O /usr/share/wallpaper.jpg
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/wallpaper.jpg -O /usr/share/wallpaper.jpg
 echo "#!/bin/bash
 [ -r ~/.Xresources ] && xrdb ~/.Xresources
 export PULSE_SERVER=127.0.0.1
@@ -33,8 +33,8 @@ dbus-launch openbox &
 dbus-launch cairo-dock & " > ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Fedora/LXDE/vncserver-start -O /usr/local/bin/vncserver-start
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Fedora/LXDE/vncserver-stop -O /usr/local/bin/vncserver-stop
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Fedora/LXDE/vncserver-start -O /usr/local/bin/vncserver-start
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Fedora/LXDE/vncserver-stop -O /usr/local/bin/vncserver-stop
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
 

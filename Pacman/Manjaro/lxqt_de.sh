@@ -11,9 +11,9 @@ pacman -S tigervnc wget --noconfirm
 pacman -S xorg --noconfirm
 pacman -S wget tar sed --noconfirm
 
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/LXQT/xstartup   -P ~/.vnc/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/Manjaro/LXQT/xstartup   -P ~/.vnc/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/vncserver-stop -P /usr/local/bin/
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
@@ -42,4 +42,4 @@ echo " "
 
 echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Pacman/tigervnc-fix.sh -O ~/tigervnc-fix.sh && bash ~/tigervnc-fix.sh
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/tigervnc-fix.sh -O ~/tigervnc-fix.sh && bash ~/tigervnc-fix.sh

@@ -4,9 +4,9 @@ xbps-install -Su
 xbps-install -S lxqt xorg tigervnc wget 
 mkdir ~/.vnc
 
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/XBPS/XFCE4/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/XBPS/XFCE4/vncserver-stop -P /usr/local/bin/
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/XBPS/XFCE4/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/XBPS/XFCE4/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/XBPS/XFCE4/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/XBPS/XFCE4/xstartup -P ~/.vnc/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start

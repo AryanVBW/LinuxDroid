@@ -2,8 +2,8 @@
 pkg install wget -y 
 folder=ubuntu22-fs
 cur=`pwd`
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT"
-dlink2="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/APT"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT"
+dlink2="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/APT"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
@@ -222,10 +222,10 @@ EOM
 mkdir -p ubuntu22-fs/var/tmp
 rm -rf ubuntu22-fs/usr/local/bin/*
 
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vnc -P ubuntu22-fs/usr/local/bin > /dev/null
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vncpasswd -P ubuntu22-fs/usr/local/bin > /dev/null
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vncserver-stop -P ubuntu22-fs/usr/local/bin > /dev/null
-wget -q https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/vncserver-start -P ubuntu22-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vnc -P ubuntu22-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vncpasswd -P ubuntu22-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vncserver-stop -P ubuntu22-fs/usr/local/bin > /dev/null
+wget -q https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Rootfs/Ubuntu19/vncserver-start -P ubuntu22-fs/usr/local/bin > /dev/null
 
 chmod +x ubuntu22-fs/root/.bash_profile
 chmod +x ubuntu22-fs/usr/local/bin/vnc

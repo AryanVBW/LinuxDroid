@@ -2,7 +2,7 @@
 pkg install wget -y 
 folder=ubuntu22-fs
 cur=`pwd`
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"

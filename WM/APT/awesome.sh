@@ -19,14 +19,14 @@ esac
 
 read -p "What to install chromium browser ? (y/n) [ Chromium might not work on arm/arm32/armhf devices ] " choice
 case "$choice" in 
-  y|Y ) wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Uninstall/ubchromiumfix.sh && chmod +x ubchromiumfix.sh && ./ubchromiumfix.sh && rm -rf ubchromiumfix.sh ;;
+  y|Y ) wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Uninstall/ubchromiumfix.sh && chmod +x ubchromiumfix.sh && ./ubchromiumfix.sh && rm -rf ubchromiumfix.sh ;;
   n|N ) echo "Ok... Not installing Chromium";;
   * ) echo "invalid";;
 esac
 
 mkdir -p ~/.vnc
 
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/wallpaper.jpg -O /usr/share/wallpaper.jpg
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/wallpaper.jpg -O /usr/share/wallpaper.jpg
 
 echo "#!/bin/bash
 [ -r ~/.Xresources ] && xrdb ~/.Xresources
@@ -37,8 +37,8 @@ dbus-launch awesome
 dbus-launch cairo-dock " > ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-start -O /usr/local/bin/vncserver-start
-wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/vncserver-stop -O /usr/local/bin/vncserver-stop
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT/LXDE/vncserver-start -O /usr/local/bin/vncserver-start
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/APT/LXDE/vncserver-stop -O /usr/local/bin/vncserver-stop
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
 

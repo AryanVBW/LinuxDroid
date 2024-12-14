@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 folder=fedora-fs
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Fedora"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Fedora"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"

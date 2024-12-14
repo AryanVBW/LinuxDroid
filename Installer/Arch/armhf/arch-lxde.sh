@@ -2,7 +2,7 @@
 pkg install wget -y 
 folder=arch-fs
 cur=`pwd`
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Pacman/Manjaro"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/Manjaro"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
@@ -223,8 +223,8 @@ echo "removing image for some space"
 rm $tarball
 echo "You can now launch Arch Linux with the ./${bin} script"
 echo "Preparing additional component for the first time, please wait..."
-wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/armhf/resolv.conf" -P arch-fs/root
-wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/armhf/additional.sh" -P arch-fs/root
+wget "https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Installer/Arch/armhf/resolv.conf" -P arch-fs/root
+wget "https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Installer/Arch/armhf/additional.sh" -P arch-fs/root
 rm -rf arch-fs/root/.bash_profile
 
 

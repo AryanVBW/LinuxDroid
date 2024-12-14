@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install wget -y 
 folder=manjaro-fs
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Pacman/Manjaro"
-dlink2="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/WM/Pacman"
+dlink="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/Pacman/Manjaro"
+dlink2="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/WM/Pacman"
 if [ -d "$folder" ]; then
     first=1
     echo "skipping downloading"
