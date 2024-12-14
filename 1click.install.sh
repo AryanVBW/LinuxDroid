@@ -12,9 +12,36 @@ echo "#                   by Vivek W                      #"
 echo "#               Github.com/AryanVBW                 #"
 echo "#####################################################"
 
-# Detect Android Version (without root)
+# Function to check if storage permission is granted
+check_storage_permission() {
+    if [ -d ~/storage ]; then
+        return 0  # Permission granted
+    else
+        return 1  # Permission not granted
+    fi
+}
+
+# Detect Android Version and Architecture
 android_version=$(getprop ro.build.version.release)
-echo "Detected Android version: $android_version"
+android_sdk=$(getprop ro.build.version.sdk)
+device_arch=$(uname -m)
+
+echo "Device Information:"
+echo "Android Version: $android_version (SDK: $android_sdk)"
+echo "Architecture: $device_arch"
+
+# Verify Android Compatibility
+if [ -z "$android_version" ]; then
+    echo "Error: Could not detect Android version"
+    exit 1
+fi
+
+version_number=${android_version%%.*}
+if [ "$version_number" -lt 7 ]; then
+    echo "Error: Your Android version ($android_version) is not supported"
+    echo "LinuxDroid requires Android 7.0 or higher"
+    exit 1
+fi
 
 # Check and Update Packages
 echo "Checking for package updates..."
@@ -25,9 +52,27 @@ else
   pkg update -y && pkg upgrade -y
 fi
 
-# Request Storage Permission
-echo "Requesting storage permission for Termux..."
-termux-setup-storage
+# Handle Storage Permission
+if ! check_storage_permission; then
+    echo "Requesting storage permission for Termux..."
+    termux-setup-storage
+    
+    # Wait for user to grant permission
+    count=0
+    max_attempts=30
+    while ! check_storage_permission && [ $count -lt $max_attempts ]; do
+        sleep 1
+        count=$((count + 1))
+    done
+    
+    if ! check_storage_permission; then
+        echo "Error: Storage permission not granted"
+        echo "Please grant storage permission and run the script again"
+        exit 1
+    fi
+else
+    echo "Storage permission already granted, continuing installation..."
+fi
 
 # Install Dependencies
 echo "Installing required packages..."
