@@ -84,7 +84,7 @@ pkg install wget figlet curl -y
 
 # Download and Prepare Scripts
 echo -e "\e[1m\e[34mDownloading LinuxDroid menu script...\e[0m"
-curl -O https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh
+curl -O https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/LinuxDroidmenu.sh
 if [[ ! -f LinuxDroidmenu.sh ]]; then
   echo -e "\e[31mError: Failed to download LinuxDroid menu script.\e[0m"
   exit 1
@@ -92,7 +92,7 @@ fi
 chmod +x LinuxDroidmenu.sh
 
 echo -e "\e[1m\e[34mDownloading default bashrc...\e[0m"
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/default.bashrc && chmod +x default.bashrc
 
 # Backup and replace existing .bashrc 
 echo -e "\e[1m\e[34mBacking up and replacing existing .bashrc...\e[0m"
@@ -105,7 +105,7 @@ rm -rf .bashrc && cp default.bashrc .bashrc
 
 # Download and Run LinuxDroid Script
 echo -e "\e[1m\e[34mDownloading and running LinuxDroid script...\e[0m"
-curl -O https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh
+curl -O https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/LinuxDroid.sh
 if [[ ! -f LinuxDroid.sh ]]; then
     echo -e "\e[31mError: Failed to download LinuxDroid script.\e[0m"
     exit 1
