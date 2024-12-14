@@ -13,6 +13,7 @@ echo -e "\033[96m|            🔥GitHub:- Github.com/AryanVBW         |\033[0m"
 echo -e "\033[96m|              🌐Site:- AryanVBW.github.io          |\033[0m";
 echo -e "\033[96m|         💖Instagram:- Aryan_Technolog1es          |\033[0m";
 echo -e "\033[96m+===================================================+\033[0m";
+echo -e "\e[32mWelcome to the LinuxDroid Setup Script!\e[0m"
 
 # Update package lists
 echo -e "\n\e[32mUpdating package lists...\e[0m"
@@ -40,15 +41,17 @@ wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc 
 echo -e "\n\e[32mConfiguring bashrc...\e[0m"
 rm -rf .bashrc && cp default.bashrc .bashrc
 
-# Download and execute the main LinuxDroid script
-echo -e "\n\e[32mDownloading and executing the main LinuxDroid script...\e[0m"
-wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
+# Download the main LinuxDroid script
+echo -e "\n\e[32mDownloading the main LinuxDroid script...\e[0m"
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh
 
-# Display Android device information
-echo -e "\n\e[32mGathering Android device information...\e[0m"
-getprop | grep "ro.product" | cut -d ':' -f 2 | tr -d ' '
-getprop | grep "ro.build.version" | cut -d ':' -f 2 | tr -d ' '
-getprop | grep "gsm.version.baseband" | cut -d ':' -f 2 | tr -d ' '
-getprop | grep "ro.boot.serialno" | cut -d ':' -f 2 | tr -d ' '
+echo -e "\e[32mAndroid Device Information:\e[0m"
+getprop | grep "ro.product.model" | cut -d ':' -f 2 | tr -d ' ' | sed 's/^/  Model: /'
+getprop | grep "ro.build.version.release" | cut -d ':' -f 2 | tr -d ' ' | sed 's/^/  Android Version: /'
+getprop | grep "gsm.version.baseband" | cut -d ':' -f 2 | tr -d ' ' | sed 's/^/  Baseband Version: /'
+getprop | grep "ro.boot.serialno" | cut -d ':' -f 2 | tr -d ' ' | sed 's/^/  Serial Number: /'
+
+echo -e "\n\e[32mLaunching LinuxDroid...\e[0m"
+bash LinuxDroid.sh
 
 echo -e "\n\e[32mLinuxDroid setup complete!\e[0m"
