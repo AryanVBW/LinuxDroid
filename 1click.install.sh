@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Display Banner
-echo "#####################################################"
-echo "#  _     _                  ____            _     _ #"
-echo "# | |   (_)_ __  _   ___  _|  _ \ _ __ ___ (_) __| |#"
-echo "# | |   | | '_ \| | | \ \/ / | | | '__/ _ \| |/ _` |#"
-echo "# | |___| | | | | |_| |>  <| |_| | | | (_) | | (_| |#"
-echo "# |_____|_|_| |_|\__,_/_/\_\____/|_|  \___/|_|\__,_|#"
-echo "#               One-Click Installer                 #"
-echo "#                   by Vivek W                      #"
-echo "#               Github.com/AryanVBW                 #"
-echo "#####################################################"
+echo -e "\033[96m+===================================================+\033[0m";
+echo -e "\033[96m|  _     _                  ____            _     _ |\033[0m";
+echo -e "\033[96m| | |   (_)_ __  _   ___  _|  _ \ _ __ ___ (_) __| ||\033[0m";
+echo -e "\033[96m| | |   | |  _ \| | | \ \/ / | | |  __/ _ \| |/ _  ||\033[0m";
+echo -e "\033[96m| | |___| | | | | |_| |>  <| |_| | | | (_) | | (_| ||\033[0m";
+echo -e "\033[96m| |_____|_|_| |_|\__,_/_/\_\____/|_|  \___/|_|\__,_||\033[0m";
+echo -e "\033[96m|                     By  Vivek W                   |\033[0m";
+echo -e "\033[96m|                                                   |\033[0m";
+echo -e "\033[96m|            🔥GitHub:- Github.com/AryanVBW         |\033[0m";
+echo -e "\033[96m|              🌐Site:- AryanVBW.github.io          |\033[0m";
+echo -e "\033[96m|         💖Instagram:- Aryan_Technolog1es          |\033[0m";
+echo -e "\033[96m+===================================================+\033[0m";
 
+echo -e "\e[1m\e[32mWelcome to the LinuxDroid!\e[0m"
 # Function to check if storage permission is granted
 check_storage_permission() {
     if [ -d ~/storage ]; then
