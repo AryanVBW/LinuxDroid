@@ -15,6 +15,7 @@ echo -e "\033[96m|         💖Instagram:- Aryan_Technolog1es          |\033[0m"
 echo -e "\033[96m+===================================================+\033[0m";
 
 echo -e "\e[1m\e[32mWelcome to the LinuxDroid!\e[0m"
+
 # Function to check if storage permission is granted
 check_storage_permission() {
     if [ -d ~/storage ]; then
@@ -29,25 +30,25 @@ android_version=$(getprop ro.build.version.release)
 android_sdk=$(getprop ro.build.version.sdk)
 device_arch=$(uname -m)
 
-echo "Device Information:"
-echo "Android Version: $android_version (SDK: $android_sdk)"
-echo "Architecture: $device_arch"
+echo -e "\e[1m\e[34mDevice Information:\e[0m"
+echo -e "\e[1m  Android Version:\e[0m \e[32m$android_version\e[0m (SDK: \e[32m$android_sdk\e[0m)"
+echo -e "\e[1m  Architecture:\e[0m \e[32m$device_arch\e[0m"
 
 # Verify Android Compatibility
 if [ -z "$android_version" ]; then
-    echo "Error: Could not detect Android version"
+    echo -e "\e[31mError: Could not detect Android version\e[0m"
     exit 1
 fi
 
 version_number=${android_version%%.*}
 if [ "$version_number" -lt 7 ]; then
-    echo "Error: Your Android version ($android_version) is not supported"
+    echo -e "\e[31mError: Your Android version ($android_version) is not supported\e[0m"
     echo "LinuxDroid requires Android 7.0 or higher"
     exit 1
 fi
 
 # Check and Update Packages
-echo "Checking for package updates..."
+echo -e "\e[1m\e[34mChecking for package updates...\e[0m"
 if ! pkg list-updates &> /dev/null; then
   echo "No package updates available."
 else
@@ -57,9 +58,9 @@ fi
 
 # Handle Storage Permission
 if ! check_storage_permission; then
-    echo "Requesting storage permission for Termux..."
+    echo -e "\e[1m\e[34mRequesting storage permission for Termux...\e[0m"
     termux-setup-storage
-    
+
     # Wait for user to grant permission
     count=0
     max_attempts=30
@@ -67,9 +68,9 @@ if ! check_storage_permission; then
         sleep 1
         count=$((count + 1))
     done
-    
+
     if ! check_storage_permission; then
-        echo "Error: Storage permission not granted"
+        echo -e "\e[31mError: Storage permission not granted\e[0m"
         echo "Please grant storage permission and run the script again"
         exit 1
     fi
@@ -78,48 +79,39 @@ else
 fi
 
 # Install Dependencies
-echo "Installing required packages..."
+echo -e "\e[1m\e[34mInstalling required packages...\e[0m"
 pkg install wget figlet curl -y
 
 # Download and Prepare Scripts
-echo "Downloading LinuxDroid menu script..."
+echo -e "\e[1m\e[34mDownloading LinuxDroid menu script...\e[0m"
 curl -O https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh
 if [[ ! -f LinuxDroidmenu.sh ]]; then
-  echo "Error: Failed to download LinuxDroid menu script."
+  echo -e "\e[31mError: Failed to download LinuxDroid menu script.\e[0m"
   exit 1
 fi
 chmod +x LinuxDroidmenu.sh
 
-echo "Downloading default bashrc..."
-curl -O https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc
-if [[ ! -f default.bashrc ]]; then
-    echo "Error: Failed to download default bashrc."
-    exit 1
-fi
-chmod +x default.bashrc
+echo -e "\e[1m\e[34mDownloading default bashrc...\e[0m"
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
 
-# Backup existing .bashrc (optional)
-echo "Backing up existing .bashrc (if it exists)..."
+# Backup and replace existing .bashrc 
+echo -e "\e[1m\e[34mBacking up and replacing existing .bashrc...\e[0m"
 if [[ -f ~/.bashrc ]]; then
     mv ~/.bashrc ~/.bashrc.bak
     echo "Existing .bashrc backed up to ~/.bashrc.bak"
-else
-    echo "No existing .bashrc found."
 fi
+rm -rf .bashrc && cp default.bashrc .bashrc 
 
-
-echo "Copying default bashrc..."
-cp default.bashrc ~/.bashrc
 
 # Download and Run LinuxDroid Script
-echo "Downloading and running LinuxDroid script..."
+echo -e "\e[1m\e[34mDownloading and running LinuxDroid script...\e[0m"
 curl -O https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh
 if [[ ! -f LinuxDroid.sh ]]; then
-    echo "Error: Failed to download LinuxDroid script."
+    echo -e "\e[31mError: Failed to download LinuxDroid script.\e[0m"
     exit 1
 fi
 chmod +x LinuxDroid.sh
 bash LinuxDroid.sh
 
 # Installation Complete Message
-echo "Installation completed! Run ./LinuxDroidmenu.sh to start."
+echo -e "\e[1m\e[32mInstallation completed! Run ./LinuxDroidmenu.sh to start.\e[0m"
