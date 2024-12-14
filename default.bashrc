@@ -1,0 +1,2 @@
+clear
+bash LinuxDroidmenu.sh
