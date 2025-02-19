@@ -1,104 +1,113 @@
-#  Linux CLI + GUI  for Android 
+# Linux CLI + GUI for Android
+
 <p align="center">
    <a href="https://github.com/AryanVBw">
-<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="250" alt="LinuxDroid"></a></p>
+      <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="250" alt="LinuxDroid">
+   </a>
+</p>
 
-# Linuxdroid
+---
 
-**Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.
+## 🌐 **LinuxDroid: Your Gateway to Linux on Android**
+
+### **Experience Linux Anywhere, Anytime!**
+
+**LinuxDroid** transforms your Android device into a versatile Linux machine, offering both CLI and GUI support. It's the ultimate tool for developers, pentesters, and enthusiasts to unleash the power of Linux on the go.
+
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/tree/main#linuxdroid">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="LinuxDroid"></a></p>
+      <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/Os2.gif" alt="LinuxDroid" height="300">
+   </a>
+</p>
 
-### One-Click Installation Script 
-This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
-# Copy One-Click Installation Script
+---
+
+## 🚀 **One-Click Installation Script**
+
+### **Get Started in Seconds!**
+Say goodbye to complex installations. With our one-click script, you can have your preferred Linux distribution up and running in no time.
+
+### **Quick Start Command:**
+```bash
+curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash
 ```
-  curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash
-    
-```
-This script copies the installation command for LinuxDroid to your clipboard, making it easier to paste and execute.
-   - Parrot 🦜 Os <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Parrot.png" height="12">
-   - Kali<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="12">
-   - Ubuntu<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="12">
-   - Arch<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/archBg.png" height="12">
-   - Debian<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/debiBg.png" height="12">
-   - Manjaro<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" height="12">
-   - Void<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/void.png" height="12">
-   - Alpine<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/alpineBg.png" height="12">
-   - Fedora<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Fedorabg.png" height="12">
-   - NethunterRootLess (Hacking specialized Linux)<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="12">
-   - BlackBox(coming🔜)<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/bosckbocBg.png" height="12">
-   - CentOS(coming 🔜)<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/centosbg.png" height="12">
-### Supported Desktop Environments:
 
-- LXDE
-- LXQT
-- XFCE
-- MATE
-- KDE Plasma(Beta)
-- GNOME(coming soon)
-### 🪟 Window Managers:
+---
 
-- Awesome
-- Openbox
-- i3
+## 🛡️ **Supported Operating Systems**
 
-In addition to OS support, Linuxdroid also provides automated installation capabilities for Kali Nethunter across all Android versions. This project aims to facilitate diverse use cases, such as:
+### **Choose Your Favorite Distribution:**
+| Distribution         | Icon                                                                 |
+|----------------------|----------------------------------------------------------------------|
+| Parrot OS 🦜         | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Parrot.png" height="18">  |
+| Kali                | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="18">    |
+| Ubuntu              | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" height="18"> |
+| Arch                | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/archBg.png" height="18">    |
+| Debian              | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/debiBg.png" height="18">    |
+| Manjaro             | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" height="18"> |
+| Void                | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/void.png" height="18">     |
+| Alpine              | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/alpineBg.png" height="18">   |
+| Fedora              | <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Fedorabg.png" height="18">   |
+| NethunterRootLess   | <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="18">   |
+| **Coming Soon**     | BlackBox, CentOS                                                     |
 
-- Utilizing Apache local server environments
-- Conducting penetration testing (pentesting) with Kali
+---
 
-### 🌟Features:
+## 💻 **Desktop Environments & Window Managers**
 
-- Full functionality of all Linux distributions supported
-- Complete tool compatibility with popular Kali and Ubuntu tools
+### **Make Linux Your Own:**
+- **Desktop Environments:** LXDE, LXQT, XFCE, MATE, KDE Plasma (Beta), GNOME (Coming Soon)
+- **Window Managers:** Awesome, Openbox, i3
 
-#### Notable Tools Included:
-- Nmap
-- Wireshark
-- Metasploit
-- Burp Suite
-- Aircrack-ng
-- Hydra
-- John the Ripper
-- SQLMap
-- LibreOffice
-- Visual Studio Code
-- Mozilla Firefox
+---
 
-<h1>Installation:</h1>
+## 🌟 **Features**
+
+### **Why LinuxDroid?**
+- **Seamless Linux Experience:** Install and manage multiple distributions effortlessly.
+- **GUI and CLI Flexibility:** Switch between graphical and command-line interfaces.
+- **Ideal for Developers & Pentesters:** Preloaded with tools for coding, security, and more.
+
+### **Pre-Installed Tools:**
+| Category              | Tools                                                                 |
+|-----------------------|----------------------------------------------------------------------|
+| Penetration Testing   | Nmap, Wireshark, Metasploit, Hydra, Aircrack-ng                     |
+| Web Security          | Burp Suite, SQLMap                                                 |
+| Productivity          | LibreOffice, Visual Studio Code                                    |
+| Browsers              | Mozilla Firefox                                                   |
+
+---
+
+## 🛠 **Installation Guide**
+
+### **Follow These Simple Steps:**
+
+
+1. **Install Termux:** Download Termux from [F-Droid](https://f-droid.org/) or the [NetHunter Store](https://store.nethunter.com/packages/com.termux/).
 <p align="center">
-   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" height="200" alt="LinuxDroid"></a></p>
+   <a href="https://f-droid.org/repo/com.termux_118.apk">
+      <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step1.png" height="200" alt="Download Termux">
+   </a>
+</p>
+2. **Install Supporting Apps:** Get NetHunter-KeX client and Hacker’s Keyboard. <p align="center"><img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step2.png" height="200"  >
+     
 
-Install the Termux app from [F-Droid](https://f-droid.org/) / [Nethunter Store ](https://store.nethunter.com/packages/com.termux/)
-or download from here 
-
-<p align="center">
-   <a href="https://f-droid.org/repo/com.termux_118.apk"><img src="https://github.com/AryanVBW/Myimage/releases/download/m2/25860-7-download-now-button-glossy-green.png" height="" alt="Termux"></a></p>
-
-From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
-<p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step2.png" height="200"  >
-<H1>Open Termux and type:</H1>
-
-### or simply copy paste it 
+3. **Initial Setup:** Open Termux and run these commands:
 ```bash
 pkg update -y && pkg upgrade -y
 termux-setup-storage
-pkg install wget -y && pkg install figlet -y 
+pkg install wget -y && pkg install figlet -y
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
 rm -rf .bashrc && cp default.bashrc .bashrc
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
-
 ```
 ### Select Linux you want to install Linuxdroid automatically isntall it and setup it.
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step3.png" height="200" >
 
 <p align="center">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Osselectioncolor.gif">
+<!-- <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Osselectioncolor.gif"> -->
    <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/A1/Parrorselect.gif">
 <h2>🚨For manually installation of and Linux follow the following<h2>
@@ -136,46 +145,27 @@ Kali NetHunter is easy to install and use. Just follow the instructions in this 
 ```bash
  pkg update -y && pkg install wget   curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/blob/L2/Scripts/InstallScript/Cli/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh
 ```
-<p align="center">
-<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-tm.png" height="80">
-</p>  
-  <H2><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" height="20">Copy it for KALI CLI:</H3>
 
-```bash
-pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh
-```
-Maximum flexibility 
-Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
-Android Device (Stock unmodified device, no root or custom recovery required)
-#📸 Screenshots
-## Tap on Arrow👇
- <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" height="120" alt="LinuxDroid">
-<p align="center"> 
-  Visitor count<br>
-  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
-</p>
+---
+
+## 📸 **Screenshots & Visual Guides**
+
+### **See LinuxDroid in Action:**
+[Click here for more visuals](https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md).
+
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/kaliC.png" height="">
-      <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-   <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">   
-   <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/downloadC.png" height="">
- <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">  <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/ubantucross.png" height="">
-<p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-      <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/debian.jpg"></a></p>
-<a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
-Feel free to reach out, and let's build something amazing together! 🚀
+      <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" height="120" alt="Arrow">
+   </a>
+</p>
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
+---
+
 <p align="center"> 
-  Visitor count<br>
+  <strong>Visitor Count:</strong><br>
   <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
 </p>
-<p align="center">Made with ❤️ By <a href="aryanvbw.github.io">*Vivek W*</a></p>
+
+<p align="center">Made with ❤️ by <a href="aryanvbw.github.io">Vivek W</a></p>
+
 <p align="center" style="font-size: 8px">v1.1.2</p>
