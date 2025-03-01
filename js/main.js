@@ -92,6 +92,31 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('selected');
         });
     });
+    
+    // FAQ dropdown functionality
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    
+    faqHeaders.forEach((header, index) => {
+        header.addEventListener('click', function() {
+            // Toggle active class on the header
+            this.classList.toggle('active');
+            
+            // Toggle the content visibility
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+        
+        // Initialize the first FAQ item as open
+        if (index === 0) {
+            header.classList.add('active');
+            const content = header.nextElementSibling;
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
 });
 
 // Function to copy installation commands to clipboard

@@ -176,7 +176,7 @@
                         </div>
                         <span class="rating-text">Recommended Choice</span>
                     </div>
-                    <a href="https://f-droid.org/packages/com.termux/" class="btn btn-primary download-btn" target="_blank">
+                    <a href="https://f-droid.org/packages/com.termux/" class="btn btn-primary download-btn" target="_blank" style="padding: 10px 20px; margin: 10px auto; font-size: 16px; display: inline-flex; align-items: center; gap: 8px; max-width: 90%; word-wrap: break-word; white-space: normal; text-align: center; justify-content: center;">
                         <i class="fas fa-download"></i> Download Latest Version
                     </a>
                 </div>
@@ -190,13 +190,13 @@
                         <span class="feature-tag"><i class="fas fa-shield-alt"></i> Security Tools</span>
                         <span class="feature-tag"><i class="fas fa-sync"></i> Regular Updates</span>
                     </div>
-                    <a href="https://store.nethunter.com/" class="btn btn-primary download-btn" target="_blank">
+                    <a href="https://store.nethunter.com/" class="btn btn-primary download-btn" target="_blank" style="padding: 10px 20px; margin: 10px auto; font-size: 16px; display: inline-flex; align-items: center; gap: 8px; max-width: 90%; word-wrap: break-word; white-space: normal; text-align: center; justify-content: center;">
                         <i class="fas fa-download"></i> Download from NetHunter
                     </a>
                 </div>
                 
                 <div class="download-card">
-                    <img src="../images/store/google play store .webp" alt="Google Play Store Logo" class="store-logo">
+                    <img src="../images/store/playstore.webp" alt="Google Play Store Logo" class="store-logo" style="height: 100px; width: auto; filter: brightness(1) invert(0); object-fit: contain;">
                     <h3>Google Play Store</h3>
                     <p>Easy installation through Play Store</p>
                     <div class="download-features">
@@ -204,7 +204,7 @@
                         <span class="feature-tag"><i class="fas fa-sync"></i> Auto Updates</span>
                         <span class="feature-tag warning"><i class="fas fa-exclamation-triangle"></i> Limited Features</span>
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.termux" class="btn btn-primary download-btn" target="_blank">
+                    <a href="https://play.google.com/store/apps/details?id=com.termux" class="btn btn-primary download-btn" target="_blank" style="padding: 10px 20px; margin: 10px auto; font-size: 16px; display: inline-flex; align-items: center; gap: 8px; max-width: 90%; word-wrap: break-word; white-space: normal; text-align: center; justify-content: center;">
                         <i class="fas fa-download"></i> Download from Play Store
                     </a>
                 </div>
@@ -241,34 +241,51 @@
                 <div class="step-card interactive">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Initial Setup</h3>
-                        <p>Update Termux packages and set up storage access</p>
-                        <div class="code-block with-copy">
-                            <pre><code>termux-setup-storage</code></pre>
-                            <button class="copy-btn" data-clipboard-text="termux-setup-storage">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                        <div class="code-block with-copy">
-                            <pre><code>pkg update && pkg upgrade -y</code></pre>
-                            <button class="copy-btn" data-clipboard-text="pkg update && pkg upgrade -y">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="step-card interactive">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
                         <h3>Install LinuxDroid</h3>
-                        <p>Run the installation script</p>
-                        <div class="code-block with-copy">
-                            <pre><code>curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash</code></pre>
-                            <button class="copy-btn" data-clipboard-text="curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash">
-                                <i class="fas fa-copy"></i>
-                            </button>
+                        <p>Choose one of the installation methods below:</p>
+                        
+                        <div class="install-options">
+                            <div class="install-option recommended">
+                                <div class="option-badge"><i class="fas fa-crown"></i> RECOMMENDED</div>
+                                <h4><i class="fas fa-bolt"></i> Quick Install (Curl)</h4>
+                                <p>One-line installation with curl (fastest method)</p>
+                                <div class="code-block with-copy">
+                                    <pre><code>termux-setup-storage && pkg update -y && curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash</code></pre>
+                                    <button class="copy-btn" data-clipboard-text="termux-setup-storage && pkg update -y && curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="install-option">
+                                <h4><i class="fas fa-cogs"></i> Manual Install (Wget)</h4>
+                                <p>Step-by-step installation with wget</p>
+                                <div class="code-block with-copy">
+                                    <pre><code>pkg update -y && pkg upgrade -y
+termux-setup-storage
+pkg install wget -y && pkg install figlet -y 
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
+rm -rf .bashrc && cp default.bashrc .bashrc
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh</code></pre>
+                                    <button class="copy-btn" data-clipboard-text="pkg update -y && pkg upgrade -y
+termux-setup-storage
+pkg install wget -y && pkg install figlet -y 
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroidmenu.sh && chmod +x LinuxDroidmenu.sh
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/A1/default.bashrc && chmod +x default.bashrc
+rm -rf .bashrc && cp default.bashrc .bashrc
+wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <div class="note-box info">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Both methods include the necessary setup steps. The curl method is faster, while the wget method gives you more control.</p>
+                        </div>
+                        
                         <div class="installation-progress-bar">
                             <div class="progress-indicator"></div>
                         </div>
@@ -276,24 +293,157 @@
                 </div>
                 
                 <div class="step-card interactive">
-                    <div class="step-number">4</div>
+                    <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Choose Your Distribution</h3>
                         <p>Select and configure your preferred Linux distribution</p>
+                        
                         <div class="distro-selector">
-                            <div class="distro-option">
+                            <div class="distro-option recommended">
+                                <div class="distro-badge"><i class="fas fa-star"></i> Popular</div>
                                 <img src="../images/os-icons/ubuntu.png" alt="Ubuntu">
                                 <span>Ubuntu</span>
+                                <div class="distro-details">
+                                    <span class="distro-tag"><i class="fas fa-check-circle"></i> Beginner Friendly</span>
+                                    <span class="distro-tag"><i class="fas fa-laptop-code"></i> Development</span>
+                                </div>
                             </div>
                             <div class="distro-option">
+                                <div class="distro-badge"><i class="fas fa-shield-alt"></i> Security</div>
                                 <img src="../images/os-icons/kali.png" alt="Kali">
                                 <span>Kali Linux</span>
+                                <div class="distro-details">
+                                    <span class="distro-tag"><i class="fas fa-user-secret"></i> Penetration Testing</span>
+                                    <span class="distro-tag"><i class="fas fa-tools"></i> Security Tools</span>
+                                </div>
                             </div>
                             <div class="distro-option">
+                                <div class="distro-badge"><i class="fas fa-server"></i> Stable</div>
                                 <img src="../images/os-icons/debian.png" alt="Debian">
                                 <span>Debian</span>
+                                <div class="distro-details">
+                                    <span class="distro-tag"><i class="fas fa-cogs"></i> Lightweight</span>
+                                    <span class="distro-tag"><i class="fas fa-server"></i> Server</span>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="distro-comparison">
+                            <h4><i class="fas fa-balance-scale"></i> Distribution Comparison</h4>
+                            <div class="comparison-table">
+                                <div class="comparison-row header">
+                                    <div class="comparison-cell">Distribution</div>
+                                    <div class="comparison-cell">Best For</div>
+                                    <div class="comparison-cell">Size</div>
+                                    <div class="comparison-cell">Difficulty</div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell"><img src="../images/os-icons/ubuntu.png" alt="Ubuntu"> Ubuntu</div>
+                                    <div class="comparison-cell">General Use, Development</div>
+                                    <div class="comparison-cell">~1.5 GB</div>
+                                    <div class="comparison-cell"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell"><img src="../images/os-icons/kali.png" alt="Kali"> Kali Linux</div>
+                                    <div class="comparison-cell">Security, Penetration Testing</div>
+                                    <div class="comparison-cell">~2.0 GB</div>
+                                    <div class="comparison-cell"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                                </div>
+                                <div class="comparison-row">
+                                    <div class="comparison-cell"><img src="../images/os-icons/debian.png" alt="Debian"> Debian</div>
+                                    <div class="comparison-cell">Servers, Lightweight Systems</div>
+                                    <div class="comparison-cell">~1.0 GB</div>
+                                    <div class="comparison-cell"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="note-box info mt-20">
+                            <i class="fas fa-info-circle"></i>
+                            <p>After installation, you can switch between distributions or install additional ones using the LinuxDroid menu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Advanced Installation -->
+    <section class="py-80 advanced-installation-section">
+        <div class="container">
+            <h2 class="section-title">Advanced Installation</h2>
+            <p class="section-subtitle text-center">Manual installation steps for advanced users</p>
+            
+            <div class="note-box warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>These manual installation methods are intended for advanced users who understand Linux systems. For beginners, we recommend using the automated installation method above.</p>
+            </div>
+            
+            <div class="distro-cards">
+                <div class="distro-card">
+                    <div class="distro-header">
+                        <img src="../images/os-icons/kali.png" alt="Kali NetHunter" class="distro-logo">
+                        <h3>Kali NetHunter Rootless</h3>
+                    </div>
+                    <p>Install Kali NetHunter, the ultimate mobile penetration testing platform based on Kali Linux.</p>
+                    <div class="code-block with-copy">
+                        <pre><code>wget -O install-nethunter-termux https://offs.ec/2MceZWr
+chmod +x install-nethunter-termux
+./install-nethunter-termux
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/menu.sh && chmod +x menu.sh
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/default.bashrc
+mv default.bashrc .bashrc</code></pre>
+                        <button class="copy-btn" data-clipboard-text="wget -O install-nethunter-termux https://offs.ec/2MceZWr
+chmod +x install-nethunter-termux
+./install-nethunter-termux
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/menu.sh && chmod +x menu.sh
+wget https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/Scripts/default.bashrc
+mv default.bashrc .bashrc">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="distro-features">
+                        <span class="feature-tag"><i class="fas fa-shield-alt"></i> Penetration Testing</span>
+                        <span class="feature-tag"><i class="fas fa-terminal"></i> Security Tools</span>
+                        <span class="feature-tag"><i class="fas fa-laptop-code"></i> Ethical Hacking</span>
+                    </div>
+                </div>
+
+                <div class="distro-card">
+                    <div class="distro-header">
+                        <img src="../images/os-icons/ubuntu.png" alt="Ubuntu" class="distro-logo">
+                        <h3>Ubuntu 22.04 CLI</h3>
+                    </div>
+                    <p>Install Ubuntu 22.04 command-line interface for a stable and versatile Linux environment.</p>
+                    <div class="code-block with-copy">
+                        <pre><code>pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/blob/L2/Scripts/InstallScript/Cli/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh</code></pre>
+                        <button class="copy-btn" data-clipboard-text="pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/blob/L2/Scripts/InstallScript/Cli/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="distro-features">
+                        <span class="feature-tag"><i class="fas fa-server"></i> Web Development</span>
+                        <span class="feature-tag"><i class="fas fa-code"></i> Programming</span>
+                        <span class="feature-tag"><i class="fas fa-cogs"></i> System Administration</span>
+                    </div>
+                </div>
+
+                <div class="distro-card">
+                    <div class="distro-header">
+                        <img src="../images/os-icons/kali.png" alt="Kali Linux" class="distro-logo">
+                        <h3>Kali Linux CLI</h3>
+                    </div>
+                    <p>Install Kali Linux command-line interface for advanced security testing and penetration tools.</p>
+                    <div class="code-block with-copy">
+                        <pre><code>pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh</code></pre>
+                        <button class="copy-btn" data-clipboard-text="pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="distro-features">
+                        <span class="feature-tag"><i class="fas fa-user-secret"></i> Security Research</span>
+                        <span class="feature-tag"><i class="fas fa-network-wired"></i> Network Analysis</span>
+                        <span class="feature-tag"><i class="fas fa-bug"></i> Vulnerability Testing</span>
                     </div>
                 </div>
             </div>
@@ -379,9 +529,6 @@
                 <div class="support-links">
                     <a href="https://github.com/AryanVBW/LinuxDroid/issues" class="btn btn-secondary" target="_blank">
                         <i class="fab fa-github"></i> GitHub Issues
-                    </a>
-                    <a href="https://t.me/LinuxDroid" class="btn btn-secondary" target="_blank">
-                        <i class="fab fa-telegram"></i> Telegram Group
                     </a>
                 </div>
             </div>

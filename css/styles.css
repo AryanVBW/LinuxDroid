@@ -503,20 +503,31 @@ nav a.active {
 }
 
 .note-box {
-    background: #f8f9fa;
+    background: rgba(255, 245, 230, 0.1);
     border-left: 4px solid var(--primary-color);
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-speed) ease;
+}
+
+.note-box:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+    border-left-width: 6px;
 }
 
 .note-box.warning {
     border-left-color: var(--warning-color);
+    background: rgba(255, 200, 200, 0.1);
 }
 
 .note-box i {
     color: var(--primary-color);
     margin-right: 0.5rem;
+    font-size: 1.1em;
 }
 
 .note-box.warning i {
@@ -1068,7 +1079,7 @@ footer {
 .requirement-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-color);
-  box-shadow: var(--box-shadow-hover);
+  box-shadow: var (--box-shadow-hover);
 }
 
 .requirement-icon {
@@ -1091,7 +1102,7 @@ footer {
   color: var(--text-color);
 }
 
-.requirement-details i {
+requirement-details i {
   color: var(--success-color);
   margin-right: 10px;
 }
@@ -1233,8 +1244,13 @@ footer {
 
 .store-logo {
   height: 60px;
-  object-fit: contain;
+  width: auto;
   margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.store-logo[src*="fdroid"],
+.store-logo[src*="nethunter"] {
   filter: brightness(0) invert(1);
 }
 
@@ -1294,8 +1310,14 @@ footer {
 
 .store-logo {
   height: 60px;
+  width: auto;
   margin-bottom: 20px;
   object-fit: contain;
+}
+
+.store-logo[src*="fdroid"],
+.store-logo[src*="nethunter"] {
+  filter: brightness(0) invert(1);
 }
 
 .download-features {
@@ -1322,6 +1344,74 @@ footer {
 
 .installation-steps {
   margin-top: 40px;
+}
+
+.install-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.install-option {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-speed) ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.install-option.recommended {
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.install-option.recommended::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  pointer-events: none;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+.option-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--bg-primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: var(--box-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.option-badge i {
+  margin-right: 5px;
+}
+
+.install-option h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.install-option h4 i {
+  color: var(--primary-color);
 }
 
 .step-card.interactive {
@@ -1414,36 +1504,217 @@ footer {
 
 .distro-selector {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 15px;
-  overflow-x: auto;
+  margin-top: 20px;
+  justify-content: center;
   padding-bottom: 10px;
 }
 
 .distro-option {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 15px;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
   cursor: pointer;
   transition: all var(--transition-speed) ease;
+  width: 180px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.distro-option.recommended {
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.distro-option.recommended::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  pointer-events: none;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
 }
 
 .distro-option:hover {
-  border-color: var(--primary-color);
   transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .distro-option img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.distro-option:hover img {
+  transform: scale(1.1);
+}
+
+.distro-option span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.distro-badge {
+  position: absolute;
+  top: -12px;
+  right: 10px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--bg-primary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.7rem;
+  box-shadow: var(--box-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.distro-badge i {
+  margin-right: 4px;
+}
+
+.distro-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.distro-tag {
+  font-size: 0.8rem;
+  background-color: var(--bg-secondary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-secondary);
+}
+
+.distro-tag i {
+  color: var(--primary-color);
+}
+
+.distro-comparison {
+  margin-top: 30px;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.distro-comparison h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 1.5fr;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-row.header {
+  font-weight: bold;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.comparison-cell {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comparison-cell img {
+  width: 20px;
+  height: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Advanced Installation Section */
+.advanced-installation-section {
+  background: var(--bg-secondary);
+}
+
+.distro-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.distro-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-speed) ease;
+  border: 1px solid var(--border-color);
+}
+
+.distro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.distro-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.distro-logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
+.distro-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.distro-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Troubleshooting Section */
 .troubleshooting-section {
   background: var(--bg-secondary);
 }
@@ -1484,7 +1755,21 @@ footer {
 
 .faq-content {
   padding: 0 20px 20px;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-header.active + .faq-content {
+  max-height: 1000px; /* Large enough to accommodate content */
+}
+
+.faq-header .fas.fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+.faq-header.active .fas.fa-chevron-down {
+  transform: rotate(180deg);
 }
 
 .faq-card.expanded .faq-content {
@@ -1711,7 +1996,7 @@ footer {
 
 .wm-icon {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var (--primary-color);
   margin-bottom: 15px;
   text-shadow: var(--neon-glow);
 }

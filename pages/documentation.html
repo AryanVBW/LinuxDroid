@@ -291,6 +291,47 @@
                         </ol>
                     </div>
                 </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> How do I set up audio (ALSA) in LinuxDroid?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>To set up ALSA (Advanced Linux Sound Architecture) in LinuxDroid:</p>
+                        <ol>
+                            <li>Install ALSA utilities:</li>
+                            <div class="code-block with-copy">
+                                <pre><code>apt-get update && apt-get install -y alsa-utils pulseaudio</code></pre>
+                                <button class="copy-btn" data-clipboard-text="apt-get update && apt-get install -y alsa-utils pulseaudio">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <li>Configure ALSA:</li>
+                            <div class="code-block with-copy">
+                                <pre><code>mkdir -p ~/.config/pulse
+echo "default-server = 127.0.0.1" > ~/.config/pulse/client.conf
+pulseaudio --start</code></pre>
+                                <button class="copy-btn" data-clipboard-text="mkdir -p ~/.config/pulse
+echo \"default-server = 127.0.0.1\" > ~/.config/pulse/client.conf
+pulseaudio --start">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <li>Test audio with:</li>
+                            <div class="code-block with-copy">
+                                <pre><code>speaker-test -c2 -t wav</code></pre>
+                                <button class="copy-btn" data-clipboard-text="speaker-test -c2 -t wav">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </ol>
+                        <div class="note-box info">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Audio support may vary depending on your Android device and distribution. Some applications may require additional configuration.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
