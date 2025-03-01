@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - LinuxDroid | User Guide & Documentation</title>
+    <meta name="description" content="Comprehensive documentation for LinuxDroid - Learn how to install, configure, and use Linux distributions on your Android device.">
+    <meta name="keywords" content="LinuxDroid documentation, Linux Android guide, Linux installation Android, Linux configuration Android">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Documentation - LinuxDroid">
+    <meta property="og:description" content="Complete guide for installing and using Linux distributions on Android with LinuxDroid.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png">
+    <meta property="og:url" content="https://aryanvbw.github.io/LinuxDroid/documentation">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Documentation - LinuxDroid">
+    <meta name="twitter:description" content="Complete guide for LinuxDroid - Run Linux on Android.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" alt="LinuxDroid Logo" style="height: 40px;">
+                <span class="logo-text">LinuxDroid</span>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="distributions.html">Distributions</a></li>
+                    <li><a href="installation.html">Installation</a></li>
+                    <li><a href="screenshots.html">Screenshots</a></li>
+                    <li><a href="documentation.html" class="active">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 60px 20px;">
+        <div class="container">
+            <h1>Documentation</h1>
+            <p>Complete guide to installing, configuring, and using LinuxDroid on your Android device.</p>
+        </div>
+    </section>
+    
+    <!-- Documentation Navigation -->
+    <section class="py-80">
+        <div class="container">
+            <div class="doc-grid">
+                <!-- Quick Start -->
+                <div class="doc-section">
+                    <h2>Quick Start Guide</h2>
+                    <div class="doc-content">
+                        <h3>Prerequisites</h3>
+                        <ul>
+                            <li>Android device running Android 5.0 or higher</li>
+                            <li>At least 2GB of free storage space</li>
+                            <li>Stable internet connection</li>
+                            <li>Termux app installed from F-Droid</li>
+                        </ul>
+                        
+                        <h3>One-Click Installation</h3>
+                        <div class="code-block">
+                            <pre><code>curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash</code></pre>
+                            <button class="copy-button" data-copy="curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Installation Guide -->
+                <div class="doc-section">
+                    <h2>Installation Guide</h2>
+                    <div class="doc-content">
+                        <h3>Step-by-Step Installation</h3>
+                        <ol>
+                            <li>Install Termux from F-Droid</li>
+                            <li>Update package repositories</li>
+                            <li>Install required dependencies</li>
+                            <li>Run the installation script</li>
+                            <li>Choose your preferred Linux distribution</li>
+                            <li>Select desktop environment</li>
+                            <li>Complete the setup process</li>
+                        </ol>
+                        
+                        <div class="note-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p>For detailed installation instructions, visit our <a href="installation.html">Installation Guide</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Configuration -->
+                <div class="doc-section">
+                    <h2>Configuration</h2>
+                    <div class="doc-content">
+                        <h3>Basic Configuration</h3>
+                        <ul>
+                            <li>Setting up user accounts</li>
+                            <li>Configuring network settings</li>
+                            <li>Managing storage</li>
+                            <li>Customizing desktop environment</li>
+                        </ul>
+                        
+                        <h3>Advanced Configuration</h3>
+                        <ul>
+                            <li>Performance optimization</li>
+                            <li>Resource management</li>
+                            <li>Service configuration</li>
+                            <li>Security settings</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Troubleshooting -->
+                <div class="doc-section">
+                    <h2>Troubleshooting</h2>
+                    <div class="doc-content">
+                        <h3>Common Issues</h3>
+                        <ul>
+                            <li>Installation failures</li>
+                            <li>Network connectivity issues</li>
+                            <li>Display problems</li>
+                            <li>Performance issues</li>
+                        </ul>
+                        
+                        <div class="note-box warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>If you encounter issues not covered here, please check our <a href="https://github.com/AryanVBW/LinuxDroid/issues">GitHub Issues</a> page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Environments -->
+                <div class="doc-section">
+                    <h2>Desktop Environments</h2>
+                    <div class="doc-content">
+                        <h3>Supported Environments</h3>
+                        <ul>
+                            <li>LXDE - Lightweight and efficient</li>
+                            <li>XFCE - Modern and customizable</li>
+                            <li>MATE - Traditional desktop experience</li>
+                            <li>KDE Plasma - Feature-rich environment (Beta)</li>
+                        </ul>
+                        
+                        <h3>Window Managers</h3>
+                        <ul>
+                            <li>Awesome</li>
+                            <li>Openbox</li>
+                            <li>i3</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Development -->
+                <div class="doc-section">
+                    <h2>Development Guide</h2>
+                    <div class="doc-content">
+                        <h3>Setting Up Development Environment</h3>
+                        <ul>
+                            <li>Installing development tools</li>
+                            <li>Configuring IDEs</li>
+                            <li>Setting up version control</li>
+                            <li>Managing dependencies</li>
+                        </ul>
+                        
+                        <h3>Contributing</h3>
+                        <p>Learn how to contribute to LinuxDroid:</p>
+                        <ul>
+                            <li>Code contributions</li>
+                            <li>Documentation improvements</li>
+                            <li>Bug reports</li>
+                            <li>Feature requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section py-80">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle text-center">Find answers to common questions about LinuxDroid</p>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> Do I need root access?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>No, LinuxDroid does not require root access. It uses a containerized environment that runs within Termux, which doesn't need root privileges.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> Which Android version do I need?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>LinuxDroid supports Android 5.0 (Lollipop) and above. However, for the best experience, we recommend using Android 7.0 or newer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> How much storage space do I need?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>The base installation requires about 2GB of free space. Additional space will be needed for:</p>
+                        <ul>
+                            <li>Desktop environments (500MB - 2GB)</li>
+                            <li>Additional packages and applications</li>
+                            <li>User data and documents</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> Can I run GUI applications?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>Yes, LinuxDroid supports GUI applications through:</p>
+                        <ul>
+                            <li>VNC Viewer for full desktop environments</li>
+                            <li>X11 forwarding for individual applications</li>
+                            <li>Native Android display server (experimental)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> How do I update LinuxDroid?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>To update LinuxDroid, run the following commands:</p>
+                        <div class="code-block with-copy">
+                            <pre><code>pkg update && pkg upgrade -y</code></pre>
+                            <button class="copy-btn" data-clipboard-text="pkg update && pkg upgrade -y">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-question-circle"></i> Can I access Android storage?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>Yes, you can access Android storage by:</p>
+                        <ol>
+                            <li>Running <code>termux-setup-storage</code></li>
+                            <li>Accessing the shared storage in <code>~/storage</code></li>
+                            <li>Using standard Linux file operations</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>LinuxDroid</h4>
+                    <p>Linux CLI + GUI for Android, offering a collection of original open-source operating systems.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="distributions.html">Distributions</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="screenshots.html">Screenshots</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid/issues">Report Issues</a></li>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid/blob/main/CONTRIBUTING.md">Contribute</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid">GitHub</a></li>
+                        <li><a href="https://github.com/AryanVBW">Developer</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://github.com/AryanVBW/LinuxDroid" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                
+                <p>&copy; 2025 LinuxDroid. Made with ❤️ by <a href="https://github.com/AryanVBW">Vivek W</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

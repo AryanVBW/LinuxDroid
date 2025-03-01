@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Distributions - LinuxDroid</title>
+    <meta name="description" content="Explore the wide range of Linux distributions available in LinuxDroid, including Ubuntu, Kali Linux, Parrot OS, and more.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" alt="LinuxDroid Logo" style="height: 40px;">
+                <span class="logo-text">LinuxDroid</span>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="distributions.html" class="active">Distributions</a></li>
+                    <li><a href="installation.html">Installation</a></li>
+                    <li><a href="screenshots.html">Screenshots</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 20px;">
+        <div class="container">
+            <h1>Linux Distributions</h1>
+            <p>Choose from a wide range of Linux distributions to run on your Android device.</p>
+        </div>
+    </section>
+    
+    <!-- Main Distributions -->
+    <section class="py-80">
+        <div class="container">
+            <div class="os-grid">
+                <!-- Parrot OS -->
+                <div class="os-card" onclick="selectOS('parrot', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Parrot.png" alt="Parrot OS">
+                    <h3>Parrot OS</h3>
+                    <p>Security-focused distribution with penetration testing tools.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-shield-alt"></i> Security</span>
+                        <span class="badge"><i class="fas fa-tools"></i> Pentesting</span>
+                    </div>
+                </div>
+                
+                <!-- Kali Linux -->
+                <div class="os-card" onclick="selectOS('kali', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Kali.png" alt="Kali Linux">
+                    <h3>Kali Linux</h3>
+                    <p>Advanced penetration testing and security auditing distribution.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-user-secret"></i> Hacking</span>
+                        <span class="badge"><i class="fas fa-terminal"></i> CLI</span>
+                    </div>
+                </div>
+                
+                <!-- Ubuntu -->
+                <div class="os-card" onclick="selectOS('ubuntu', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/ubuntu-logo.png" alt="Ubuntu">
+                    <h3>Ubuntu</h3>
+                    <p>User-friendly distribution perfect for daily use and development.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-desktop"></i> Desktop</span>
+                        <span class="badge"><i class="fas fa-code"></i> Development</span>
+                    </div>
+                </div>
+                
+                <!-- Arch Linux -->
+                <div class="os-card" onclick="selectOS('arch', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/archBg.png" alt="Arch Linux">
+                    <h3>Arch Linux</h3>
+                    <p>Lightweight and flexible distribution for advanced users.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-feather"></i> Lightweight</span>
+                        <span class="badge"><i class="fas fa-cogs"></i> Customizable</span>
+                    </div>
+                </div>
+                
+                <!-- Debian -->
+                <div class="os-card" onclick="selectOS('debian', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/debiBg.png" alt="Debian">
+                    <h3>Debian</h3>
+                    <p>Stable and reliable distribution with extensive package support.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-server"></i> Stable</span>
+                        <span class="badge"><i class="fas fa-box"></i> Packages</span>
+                    </div>
+                </div>
+                
+                <!-- Manjaro -->
+                <div class="os-card" onclick="selectOS('manjaro', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/d90e746a72ab1fd0d3e9638477e456ab4b4767cd.png" alt="Manjaro">
+                    <h3>Manjaro</h3>
+                    <p>User-friendly Arch-based distribution with rolling releases.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-user"></i> User-friendly</span>
+                        <span class="badge"><i class="fas fa-sync"></i> Rolling</span>
+                    </div>
+                </div>
+                
+                <!-- Void Linux -->
+                <div class="os-card" onclick="selectOS('void', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/void.png" alt="Void Linux">
+                    <h3>Void Linux</h3>
+                    <p>Independent distribution with unique package management.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-bolt"></i> Fast</span>
+                        <span class="badge"><i class="fas fa-box-open"></i> XBPS</span>
+                    </div>
+                </div>
+                
+                <!-- Alpine Linux -->
+                <div class="os-card" onclick="selectOS('alpine', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/alpineBg.png" alt="Alpine Linux">
+                    <h3>Alpine Linux</h3>
+                    <p>Security-oriented, lightweight distribution using musl libc.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-feather-alt"></i> Minimal</span>
+                        <span class="badge"><i class="fas fa-lock"></i> Secure</span>
+                    </div>
+                </div>
+                
+                <!-- Fedora -->
+                <div class="os-card" onclick="selectOS('fedora', this)">
+                    <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/Fedorabg.png" alt="Fedora">
+                    <h3>Fedora</h3>
+                    <p>Leading-edge distribution with the latest technologies.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-rocket"></i> Latest Tech</span>
+                        <span class="badge"><i class="fas fa-hat-cowboy"></i> Red Hat</span>
+                    </div>
+                </div>
+                
+                <!-- Kali NetHunter -->
+                <div class="os-card" onclick="selectOS('nethunter', this)">
+                    <img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" alt="Kali NetHunter">
+                    <h3>Kali NetHunter</h3>
+                    <p>Mobile penetration testing platform based on Kali Linux.</p>
+                    <div class="os-features">
+                        <span class="badge"><i class="fas fa-mobile-alt"></i> Mobile</span>
+                        <span class="badge"><i class="fas fa-wifi"></i> Wireless</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Coming Soon -->
+    <section class="coming-soon py-80">
+        <div class="container">
+            <h2 class="section-title">Coming Soon</h2>
+            <p class="section-subtitle text-center">Exciting new distributions and features in development</p>
+            
+            <div class="features-grid">
+                <div class="coming-soon-card">
+                    <div class="desktop-icon">
+                        <i class="fab fa-fedora"></i>
+                    </div>
+                    <h3>Fedora Linux</h3>
+                    <p>Leading-edge Linux distribution with the latest open source technologies.</p>
+                    <div class="release-date">Expected: Q2 2024</div>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-rocket"></i> Bleeding Edge</span>
+                        <span class="feature-tag"><i class="fas fa-clock"></i> Coming Soon</span>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-card">
+                    <div class="desktop-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Linux Mint</h3>
+                    <p>User-friendly distribution based on Ubuntu, perfect for beginners.</p>
+                    <div class="release-date">Expected: Q3 2024</div>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-user-friends"></i> User-Friendly</span>
+                        <span class="feature-tag"><i class="fas fa-clock"></i> Coming Soon</span>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-card">
+                    <div class="desktop-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Arch Linux</h3>
+                    <p>Lightweight and flexible distribution that follows the KISS principle.</p>
+                    <div class="release-date">Expected: Q4 2024</div>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-wrench"></i> DIY</span>
+                        <span class="feature-tag"><i class="fas fa-clock"></i> Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Desktop Environments -->
+    <section class="desktop-environments py-80">
+        <div class="container">
+            <h2 class="section-title">Supported Desktop Environments</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>LXDE</h3>
+                    <p>Lightweight X11 Desktop Environment, perfect for older devices or minimal resource usage.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>LXQT</h3>
+                    <p>The Qt port of LXDE, offering a modern and lightweight desktop experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>XFCE</h3>
+                    <p>Fast and lightweight desktop environment that's both visually appealing and efficient.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>MATE</h3>
+                    <p>Traditional desktop environment that continues the legacy of GNOME 2.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>KDE Plasma (Beta)</h3>
+                    <p>Modern and highly customizable desktop environment with cutting-edge features.</p>
+                </div>
+                
+                <div class="feature-card coming-soon">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>GNOME (Coming Soon)</h3>
+                    <p>Modern desktop environment focused on simplicity and user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Window Managers -->
+    <section class="window-managers py-80">
+        <div class="container">
+            <h2 class="section-title">Window Managers</h2>
+            <p class="section-subtitle text-center">Lightweight alternatives to full desktop environments for advanced users</p>
+            
+            <div class="wm-grid">
+                <div class="wm-card">
+                    <div class="wm-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h3>i3</h3>
+                    <p>Dynamic tiling window manager focused on efficiency and keyboard control.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-keyboard"></i> Keyboard-driven</span>
+                        <span class="feature-tag"><i class="fas fa-th"></i> Tiling</span>
+                    </div>
+                </div>
+                
+                <div class="wm-card">
+                    <div class="wm-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Openbox</h3>
+                    <p>Highly configurable stacking window manager with minimal resource usage.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-feather"></i> Lightweight</span>
+                        <span class="feature-tag"><i class="fas fa-sliders-h"></i> Configurable</span>
+                    </div>
+                </div>
+                
+                <div class="wm-card">
+                    <div class="wm-icon">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Awesome</h3>
+                    <p>Dynamic window manager that can be customized using Lua scripting.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-code"></i> Scriptable</span>
+                        <span class="feature-tag"><i class="fas fa-puzzle-piece"></i> Extensible</span>
+                    </div>
+                </div>
+                
+                <div class="wm-card">
+                    <div class="wm-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h3>dwm</h3>
+                    <p>Minimalist dynamic window manager that follows the suckless philosophy.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-minimize"></i> Minimal</span>
+                        <span class="feature-tag"><i class="fas fa-bolt"></i> Fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>LinuxDroid</h4>
+                    <p>Linux CLI + GUI for Android, offering a collection of original open-source operating systems.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="distributions.html">Distributions</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="screenshots.html">Screenshots</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid/issues">Report Issues</a></li>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid/blob/main/CONTRIBUTING.md">Contribute</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid">GitHub</a></li>
+                        <li><a href="https://github.com/AryanVBW">Developer</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://github.com/AryanVBW/LinuxDroid" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                
+                <p>&copy; 2025 LinuxDroid. Made with ❤️ by <a href="https://github.com/AryanVBW">Vivek W</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

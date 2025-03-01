@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation - LinuxDroid | Setup Guide</title>
+    <meta name="description" content="Step-by-step guide to install LinuxDroid on your Android device. Download Termux from F-Droid, NetHunter Store, or Google Play Store.">
+    <meta name="keywords" content="LinuxDroid installation, Termux download, Linux Android install, NetHunter setup">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Installation - LinuxDroid">
+    <meta property="og:description" content="Install LinuxDroid on your Android device - Complete setup guide">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png">
+    <meta property="og:url" content="https://aryanvbw.github.io/LinuxDroid/installation">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Installation - LinuxDroid">
+    <meta name="twitter:description" content="Complete guide to install LinuxDroid on Android">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" alt="LinuxDroid Logo" style="height: 40px;">
+                <span class="logo-text">LinuxDroid</span>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="distributions.html">Distributions</a></li>
+                    <li><a href="installation.html" class="active">Installation</a></li>
+                    <li><a href="screenshots.html">Screenshots</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero installation-hero">
+        <div class="container">
+            <h1>Get Started with LinuxDroid</h1>
+            <p class="hero-subtitle">Transform your Android device into a powerful Linux machine in minutes</p>
+            <div class="installation-progress">
+                <div class="progress-step active">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <i class="fas fa-terminal"></i>
+                    <span>Install</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <i class="fas fa-cog"></i>
+                    <span>Configure</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Ready</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prerequisites Section -->
+    <section class="py-80">
+        <div class="container">
+            <h2 class="section-title">System Requirements</h2>
+            <p class="section-subtitle text-center">Make sure your device meets these requirements before proceeding</p>
+            
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Android Device</h3>
+                    <p>Android 5.0 or higher</p>
+                    <ul class="requirement-details">
+                        <li><i class="fas fa-check"></i> ARM64 architecture</li>
+                        <li><i class="fas fa-check"></i> Root not required</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Hardware</h3>
+                    <p>Minimum specifications</p>
+                    <ul class="requirement-details">
+                        <li><i class="fas fa-check"></i> 2GB RAM</li>
+                        <li><i class="fas fa-check"></i> 2GB free storage</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Internet</h3>
+                    <p>Connection required</p>
+                    <ul class="requirement-details">
+                        <li><i class="fas fa-check"></i> Stable connection</li>
+                        <li><i class="fas fa-check"></i> ~500MB download</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Additional</h3>
+                    <p>Optional features</p>
+                    <ul class="requirement-details">
+                        <li><i class="fas fa-check"></i> VNC Viewer app</li>
+                        <li><i class="fas fa-check"></i> External keyboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download Section -->
+    <section class="py-80 download-section">
+        <div class="container">
+            <h2 class="section-title">Download Termux</h2>
+            <p class="section-subtitle text-center">Choose your preferred source to download Termux. We recommend F-Droid for the best experience.</p>
+            
+            <div class="download-options">
+                <div class="download-card recommended">
+                    <div class="recommended-badge">
+                        <i class="fas fa-star"></i> Recommended
+                    </div>
+                    <img src="https://f-droid.org/assets/fdroid-logo-text_S0pEMDk4LzE3LzE3_9l9tCwvXdk%3D.svg" alt="F-Droid Logo" class="store-logo">
+                    <h3>F-Droid</h3>
+                    <p>Official source with latest updates</p>
+                    <div class="download-features">
+                        <span class="feature-tag success"><i class="fas fa-check"></i> Latest Version</span>
+                        <span class="feature-tag success"><i class="fas fa-check"></i> Full Features</span>
+                        <span class="feature-tag success"><i class="fas fa-check"></i> Regular Updates</span>
+                    </div>
+                    <a href="https://f-droid.org/packages/com.termux/" class="btn btn-primary download-btn" target="_blank">
+                        <i class="fas fa-download"></i> Download from F-Droid
+                    </a>
+                </div>
+                
+                <div class="download-card">
+                    <img src="https://gitlab.com/kalilinux/nethunter/apps/store/-/raw/master/assets/icon.png" alt="NetHunter Store Logo" class="store-logo">
+                    <h3>NetHunter Store</h3>
+                    <p>Optimized for Kali NetHunter users</p>
+                    <div class="download-features">
+                        <span class="feature-tag"><i class="fas fa-check"></i> Kali Integration</span>
+                        <span class="feature-tag"><i class="fas fa-check"></i> Security Tools</span>
+                        <span class="feature-tag"><i class="fas fa-check"></i> Regular Updates</span>
+                    </div>
+                    <a href="https://store.nethunter.com/" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download from NetHunter
+                    </a>
+                </div>
+                
+                <div class="download-card">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play Store Logo" class="store-logo">
+                    <h3>Google Play Store</h3>
+                    <p>Easy installation through Play Store</p>
+                    <div class="download-features">
+                        <span class="feature-tag"><i class="fas fa-check"></i> Easy Install</span>
+                        <span class="feature-tag"><i class="fas fa-check"></i> Auto Updates</span>
+                        <span class="feature-tag warning"><i class="fas fa-exclamation-triangle"></i> Limited Features</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.termux" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download from Play Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Installation Steps -->
+    <section class="py-80">
+        <div class="container">
+            <h2 class="section-title">Installation Guide</h2>
+            <p class="section-subtitle text-center">Follow these steps to set up LinuxDroid on your device</p>
+            
+            <div class="installation-steps">
+                <div class="step-card interactive">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install Termux</h3>
+                        <p>Download and install Termux from F-Droid (recommended)</p>
+                        <div class="step-details">
+                            <ol>
+                                <li>Open F-Droid and search for "Termux"</li>
+                                <li>Tap Install and grant necessary permissions</li>
+                                <li>Wait for the installation to complete</li>
+                            </ol>
+                        </div>
+                        <div class="note-box info">
+                            <i class="fas fa-info-circle"></i>
+                            <p>First time using F-Droid? Follow our <a href="#fdroid-guide">quick guide</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card interactive">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Initial Setup</h3>
+                        <p>Update Termux packages and set up storage access</p>
+                        <div class="code-block with-copy">
+                            <pre><code>termux-setup-storage</code></pre>
+                            <button class="copy-btn" data-clipboard-text="termux-setup-storage">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="code-block with-copy">
+                            <pre><code>pkg update && pkg upgrade -y</code></pre>
+                            <button class="copy-btn" data-clipboard-text="pkg update && pkg upgrade -y">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card interactive">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Install LinuxDroid</h3>
+                        <p>Run the installation script</p>
+                        <div class="code-block with-copy">
+                            <pre><code>curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash</code></pre>
+                            <button class="copy-btn" data-clipboard-text="curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="installation-progress-bar">
+                            <div class="progress-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card interactive">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Choose Your Distribution</h3>
+                        <p>Select and configure your preferred Linux distribution</p>
+                        <div class="distro-selector">
+                            <div class="distro-option">
+                                <img src="../images/os-icons/ubuntu.png" alt="Ubuntu">
+                                <span>Ubuntu</span>
+                            </div>
+                            <div class="distro-option">
+                                <img src="../images/os-icons/kali.png" alt="Kali">
+                                <span>Kali Linux</span>
+                            </div>
+                            <div class="distro-option">
+                                <img src="../images/os-icons/debian.png" alt="Debian">
+                                <span>Debian</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Troubleshooting -->
+    <section class="py-80 troubleshooting-section">
+        <div class="container">
+            <h2 class="section-title">Troubleshooting Guide</h2>
+            <p class="section-subtitle text-center">Common issues and their solutions</p>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-exclamation-circle"></i> Installation Script Fails</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>Try these steps in order:</p>
+                        <ol>
+                            <li>Update Termux packages:
+                                <div class="code-block with-copy">
+                                    <pre><code>pkg update && pkg upgrade -y</code></pre>
+                                    <button class="copy-btn" data-clipboard-text="pkg update && pkg upgrade -y">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li>Clear Termux data and try again</li>
+                            <li>Check internet connection</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-exclamation-circle"></i> Storage Access Denied</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>Grant storage permissions:</p>
+                        <div class="code-block with-copy">
+                            <pre><code>termux-setup-storage</code></pre>
+                            <button class="copy-btn" data-clipboard-text="termux-setup-storage">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <p>If the issue persists:</p>
+                        <ol>
+                            <li>Check app permissions in Android Settings</li>
+                            <li>Reinstall Termux if needed</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3><i class="fas fa-exclamation-circle"></i> GUI Not Working</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-content">
+                        <p>Verify VNC installation:</p>
+                        <div class="code-block with-copy">
+                            <pre><code>vncserver -list</code></pre>
+                            <button class="copy-btn" data-clipboard-text="vncserver -list">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <p>Common solutions:</p>
+                        <ul>
+                            <li>Install a VNC viewer app</li>
+                            <li>Check port forwarding</li>
+                            <li>Verify desktop environment installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="support-box">
+                <h3><i class="fas fa-life-ring"></i> Need More Help?</h3>
+                <p>Join our community for support:</p>
+                <div class="support-links">
+                    <a href="https://github.com/AryanVBW/LinuxDroid/issues" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i> GitHub Issues
+                    </a>
+                    <a href="https://t.me/LinuxDroid" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-telegram"></i> Telegram Group
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>LinuxDroid</h4>
+                    <p>Linux CLI + GUI for Android, offering a collection of original open-source operating systems.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="distributions.html">Distributions</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="screenshots.html">Screenshots</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid/issues">Report Issues</a></li>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid/blob/main/CONTRIBUTING.md">Contribute</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/AryanVBW/LinuxDroid">GitHub</a></li>
+                        <li><a href="https://github.com/AryanVBW">Developer</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://github.com/AryanVBW/LinuxDroid" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://t.me/LinuxDroid" class="social-link" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+                <p>&copy; 2024 LinuxDroid. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/installation.js"></script>
+</body>
+</html>
