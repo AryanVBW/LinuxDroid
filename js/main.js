@@ -1,13 +1,28 @@
 // LinuxDroid Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+    // Mobile menu toggle with improved functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('nav ul');
     
     if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent clicks on the button from closing the menu immediately
             navMenu.classList.toggle('show');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (navMenu.classList.contains('show') && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
+        
+        // Close menu on window resize (when switching to desktop view)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('show');
+            }
         });
     }
     
@@ -16,16 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     copyButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const codeBlock = this.parentElement.querySelector('code');
-            const textToCopy = codeBlock.textContent.trim();
+            const textToCopy = this.getAttribute('data-clipboard-text') || this.previousElementSibling.textContent;
             
             navigator.clipboard.writeText(textToCopy)
                 .then(() => {
-                    const originalText = this.textContent;
-                    this.textContent = 'Copied!';
+                    // Visual feedback
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Copied!';
                     
                     setTimeout(() => {
-                        this.textContent = originalText;
+                        this.innerHTML = originalText;
                     }, 2000);
                 })
                 .catch(err => {
@@ -34,25 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // FAQ dropdown functionality
+    // FAQ accordion functionality
     const faqHeaders = document.querySelectorAll('.faq-header');
     
     faqHeaders.forEach((header, index) => {
         header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            
-            // Toggle active class on the header
             this.classList.toggle('active');
             
-            // Reset all other FAQ items
+            // Close other active accordions
             faqHeaders.forEach(otherHeader => {
-                if (otherHeader !== this) {
+                if (otherHeader !== this && otherHeader.classList.contains('active')) {
                     otherHeader.classList.remove('active');
                     otherHeader.nextElementSibling.style.maxHeight = null;
                 }
             });
             
             // Toggle the content visibility using maxHeight
+            const content = this.nextElementSibling;
             if (this.classList.contains('active')) {
                 content.style.maxHeight = content.scrollHeight + 'px';
             } else {
@@ -67,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
             content.style.maxHeight = content.scrollHeight + 'px';
         }
     });
-
-    // Smooth scrolling for anchor links
+    
+    // Smooth scrolling for anchor links with improved mobile handling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -79,148 +92,252 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Adjust for header height
-                    behavior: 'smooth'
-                });
-                
                 // Close mobile menu if open
-                if (navMenu.classList.contains('show')) {
+                if (navMenu && navMenu.classList.contains('show')) {
                     navMenu.classList.remove('show');
                 }
+                
+                // Get header height for proper offset
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+                
+                window.scrollTo({
+                    behavior: 'smooth',
+                    top: targetPosition
+                });
             }
         });
     });
-    
-    // Add active class to current navigation item
-    const currentPage = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href').split('/').pop();
-        
-        if ((currentPage === '' && linkPage === 'index.html') || 
-            (currentPage && linkPage === currentPage)) {
-            link.classList.add('active');
-        }
-    });
-    
-    // Initialize image lightbox for screenshots
-    const screenshotItems = document.querySelectorAll('.screenshot-item img');
-    
-    if (typeof GLightbox !== 'undefined') {
-        GLightbox({
-            selector: '.screenshot-item img',
-            touchNavigation: true,
-            loop: true
+
+    // Enhanced lightbox functionality if lightbox is used
+    if(typeof lightbox !== 'undefined') {
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Image %1 of %2",
+            'fadeDuration': 300,
+            'fitImagesInViewport': true,
+            'positionFromTop': 50,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true,
+            'touchNavigation': true,
+            'loop': true,
+            'autoplayVideos': true
         });
     }
     
-    // OS selection highlighting
+    // OS selection highlighting with better touch support
     const osCards = document.querySelectorAll('.os-card');
     
     osCards.forEach(card => {
-        card.addEventListener('click', function() {
-            osCards.forEach(c => c.classList.remove('selected'));
-            this.classList.add('selected');
+        ['click', 'touchend'].forEach(eventType => {
+            card.addEventListener(eventType, function(e) {
+                if (eventType === 'touchend') {
+                    e.preventDefault(); // Prevent default touch behavior
+                }
+                osCards.forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+            });
         });
     });
-});
-
-// Function to copy installation commands to clipboard
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text)
-        .then(() => {
-            const notification = document.createElement('div');
-            notification.className = 'copy-notification';
-            notification.textContent = 'Command copied to clipboard!';
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.classList.add('show');
-            }, 10);
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy: ', err);
-        });
-}
-
-// Handle OS selection and display appropriate installation commands
-function selectOS(osName, element) {
-    const osCards = document.querySelectorAll('.os-card');
-    osCards.forEach(card => card.classList.remove('selected'));
     
-    if (element) {
-        element.classList.add('selected');
-    }
+    // Enhance responsive tables with data attributes for mobile viewing
+    const comparisonRows = document.querySelectorAll('.comparison-row:not(.header)');
+    const headerCells = document.querySelectorAll('.comparison-row.header .comparison-cell');
     
-    const commandDisplay = document.getElementById('installation-command');
-    const osInfoDisplay = document.getElementById('os-info');
-    
-    if (!commandDisplay || !osInfoDisplay) return;
-    
-    // Set the installation command based on OS selection
-    let command = '';
-    let osInfo = '';
-    
-    switch(osName.toLowerCase()) {
-        case 'ubuntu':
-            command = 'pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/blob/L2/Scripts/InstallScript/Cli/ubuntu22.sh -O ubuntu22.sh && chmod +x ubuntu22.sh && bash ubuntu22.sh';
-            osInfo = 'Ubuntu is a popular Linux distribution based on Debian. It offers a user-friendly experience with a focus on ease of use.';
-            break;
-        case 'kali':
-            command = 'pkg update -y && pkg install wget curl proot tar -y && wget https://github.com/AryanVBW/LinuxDroid/releases/download/Vivek1/kali-cli.sh -O kali-cli.sh && chmod +x kali-cli.sh && bash kali-cli.sh';
-            osInfo = 'Kali Linux is a Debian-based distribution designed for digital forensics and penetration testing.';
-            break;
-        case 'nethunter':
-            command = 'wget -O install-nethunter-termux https://offs.ec/2MceZWr && chmod +x install-nethunter-termux && ./install-nethunter-termux';
-            osInfo = 'Kali NetHunter is the ultimate mobile penetration testing platform based on Kali Linux.';
-            break;
-        case 'parrot':
-            command = 'curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash';
-            osInfo = 'Parrot OS is a security-focused Linux distribution with a collection of tools for penetration testing and digital forensics.';
-            break;
-        default:
-            command = 'curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash';
-            osInfo = 'Select your preferred Linux distribution to see specific installation instructions.';
-    }
-    
-    commandDisplay.textContent = command;
-    osInfoDisplay.textContent = osInfo;
-}
-
-// Lazy load images for better performance
-document.addEventListener("DOMContentLoaded", function() {
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
+    if (headerCells.length > 0) {
+        const labels = Array.from(headerCells).map(cell => cell.textContent);
+        
+        comparisonRows.forEach(row => {
+            const cells = row.querySelectorAll('.comparison-cell');
+            cells.forEach((cell, index) => {
+                if (labels[index]) {
+                    cell.setAttribute('data-label', labels[index]);
                 }
             });
         });
+    }
+    
+    // Add touch-friendly interactions for mobile devices
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        // Enhanced interactions for timeline items
+        const timelineItems = document.querySelectorAll('.timeline-item');
         
-        lazyImages.forEach(img => {
-            imageObserver.observe(img);
+        timelineItems.forEach(item => {
+            item.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            item.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+                
+                // Add subtle highlight effect
+                this.querySelector('.timeline-content').style.borderColor = 'var(--primary-color)';
+                setTimeout(() => {
+                    this.querySelector('.timeline-content').style.borderColor = '';
+                }, 800);
+            });
         });
-    } else {
-        // Fallback for browsers that don't support IntersectionObserver
-        lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
+        
+        // Improved community cards for touch
+        const communityCards = document.querySelectorAll('.community-card');
+        
+        communityCards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.style.transform = '';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-5px)';
+                }, 50);
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 300);
+            });
         });
     }
+    
+    // Adjust timeline for mobile screens
+    function updateTimelineForMobile() {
+        const timeline = document.querySelector('.timeline');
+        if (!timeline) return;
+        
+        if (window.innerWidth <= 768) {
+            // For mobile, reset the timeline layout for vertical display
+            timeline.style.paddingLeft = '25px';
+            
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach(item => {
+                item.style.width = '100%';
+                item.style.left = '0';
+                item.style.padding = '0 0 0 20px';
+            });
+        } else {
+            // Reset to desktop layout
+            timeline.style.paddingLeft = '';
+            
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach((item, index) => {
+                item.style.width = '50%';
+                item.style.left = index % 2 ? '50%' : '0';
+                item.style.padding = '';
+            });
+        }
+    }
+    
+    // Run on load and resize
+    updateTimelineForMobile();
+    window.addEventListener('resize', updateTimelineForMobile);
+    
+    // Fix images aspect ratio on mobile
+    const allImages = document.querySelectorAll('img');
+    
+    allImages.forEach(img => {
+        img.addEventListener('load', function() {
+            this.style.height = 'auto'; // Ensure proper aspect ratio
+        });
+    });
+    
+    // Optimize community stats for narrow mobile screens
+    function adjustCommunityStats() {
+        const statContainers = document.querySelectorAll('.community-stats');
+        
+        if (window.innerWidth <= 480) {
+            statContainers.forEach(container => {
+                container.style.flexDirection = 'column';
+                container.style.gap = '10px';
+                
+                const statItems = container.querySelectorAll('.stat-item');
+                statItems.forEach(item => {
+                    item.style.margin = '5px 0';
+                });
+            });
+        } else {
+            statContainers.forEach(container => {
+                container.style.flexDirection = '';
+                container.style.gap = '';
+                
+                const statItems = container.querySelectorAll('.stat-item');
+                statItems.forEach(item => {
+                    item.style.margin = '';
+                });
+            });
+        }
+    }
+    
+    // Run on load and resize
+    adjustCommunityStats();
+    window.addEventListener('resize', adjustCommunityStats);
 });
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+    // Use clipboard API if available
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                // Show toast notification or change button text temporarily
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.textContent = 'Copied to clipboard!';
+                document.body.appendChild(toast);
+                
+                // Show the toast
+                setTimeout(() => {
+                    toast.classList.add('show');
+                }, 10);
+                
+                // Hide and remove the toast
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(toast);
+                    }, 300);
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+                // Fallback
+                fallbackCopyTextToClipboard(text);
+            });
+    } else {
+        // Fallback for browsers that don't support clipboard API
+        fallbackCopyTextToClipboard(text);
+    }
+}
+
+// Fallback function for older browsers
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = '0';
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+    
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            // Show notification
+            alert('Copied to clipboard!');
+        } else {
+            console.error('Unable to copy');
+        }
+    } catch (err) {
+        console.error('Error copying text: ', err);
+    }
+    
+    document.body.removeChild(textArea);
+}

@@ -218,6 +218,9 @@ nav a.active {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Buttons */
@@ -236,6 +239,15 @@ nav a.active {
   overflow: hidden;
   text-shadow: none;
   box-shadow: var(--box-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+  width: auto;
 }
 
 .btn::before {
@@ -259,6 +271,14 @@ nav a.active {
   box-shadow: var(--box-shadow-hover);
   background: var(--accent-color);
   color: var(--text-color);
+}
+
+/* Make sure icons inside buttons are visible regardless of button background */
+.btn i {
+  color: inherit;
+  font-size: 1.1rem;
+  /* Ensure GitHub icon is visible on primary button */
+  filter: brightness(0.9) contrast(1.1);
 }
 
 .btn-secondary {
@@ -714,36 +734,32 @@ nav a.active {
     
     nav ul {
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--secondary-color);
-        flex-direction: column;
-        padding: 1rem;
+        background-color: var(--secondary-color);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Ensure menu is above other content */
     }
     
-    nav ul.active {
+    nav ul.show {
         display: flex;
     }
     
     nav li {
-        margin: 0.5rem 0;
+        margin: 10px 0;
+        width: 100%; /* Make menu items full width on mobile */
     }
     
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .timeline::before {
-        left: 0;
-    }
-    
-    .timeline-item {
+    nav a {
+        display: block;
+        padding: 12px 20px;
         width: 100%;
-        left: 0 !important;
-        padding-left: 2rem;
+        box-sizing: border-box;
+        text-align: center;
     }
     
     .hero h1 {
@@ -751,16 +767,200 @@ nav a.active {
     }
     
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
-    .doc-grid,
-    .screenshot-grid,
-    .team-grid,
-    .community-grid {
+    .features-grid {
         grid-template-columns: 1fr;
     }
 }
+
+/* Add these styles for mobile installation progress */
+@media (max-width: 768px) {
+  .installation-progress {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .progress-step {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .progress-step i {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+  
+  .progress-line {
+    width: 2px;
+    height: 20px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive comparison table */
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-row.header {
+    display: none;
+  }
+  
+  .comparison-cell {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .comparison-cell::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
+  }
+  
+  /* Make feature tags and download features wrap better */
+  .download-features, 
+  .feature-tags {
+    justify-content: center;
+  }
+  
+  /* Mobile optimized distro selector */
+  .distro-selector {
+    justify-content: center;
+  }
+  
+  .distro-option {
+    width: 140px;
+    padding: 15px 10px;
+  }
+  
+  /* Fix any horizontal scrolling issues */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Make support links stack on mobile */
+  .support-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* About Page Mobile Optimization */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-image {
+    order: -1; /* Display image before text on mobile */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-image img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .values-list li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+  }
+  
+  .values-list li i {
+    margin-right: 10px;
+  }
+
+  .timeline {
+    padding-left: 25px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 30px;
+  }
+  
+  .timeline-item::before {
+    width: 12px;
+    height: 12px;
+    left: -25px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .timeline-content p:nth-child(2) {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .team-member {
+    margin-bottom: 20px;
+  }
+  
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image img {
+    max-width: 90%;
+  }
+  
+  .values-list li {
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .values-list li i {
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-content {
+    padding: 12px;
+  }
+  
+  .team-member {
+    padding: 15px;
+  }
+  
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .community-card {
+    margin-bottom: 20px;
+  }
+  
+  .community-stats {
+    flex-wrap: wrap;
+  }
+}
+
 .screenshots {
   padding: 80px 0;
   background-color: #f9f9f9;
@@ -880,7 +1080,7 @@ footer {
   height: 40px;
   border-radius: 50%;
   background-color: var(--bg-card);
-  color: var(--text-color);
+  color: var (--text-color);
   transition: background-color var(--transition-speed) ease;
 }
 
@@ -980,15 +1180,121 @@ footer {
   
   .hero-buttons {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
   }
   
   .btn {
     width: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
   }
   
+  /* Improve button text wrapping on small screens */
+  .btn i {
+    font-size: 16px;
+    min-width: 16px;
+  }
+  
+  /* Other responsive styling remains the same */
   .screenshot-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Update grid sizing for smallest screens */
+  .os-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  /* Improve footer layout on mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-column ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-column li {
+    margin-bottom: 0;
+  }
+  
+  /* Make feature cards more mobile-friendly */
+  .feature-card {
+    padding: 20px 15px;
+  }
+  
+  /* Adjust headings for smaller screens */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Optimize OS card spacing */
+  .os-card {
+    padding: 15px;
+  }
+  
+  .os-card img {
+    height: 60px;
+  }
+  
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Allow tables to scroll horizontally on mobile */
+  .comparison-table {
+    overflow-x: auto;
+    display: block;
+  }
+  
+  /* Adjust spacing for the mobile experience */
+  .py-80 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  /* Make community stats stack on small screens */
+  .community-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .btn i {
+    font-size: 14px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1131,7 +1437,7 @@ requirement-details i {
   position: absolute;
   top: -12px;
   right: 20px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, var (--primary-color), var(--accent-color));
   color: var(--bg-primary);
   padding: 8px 16px;
   border-radius: 20px;
@@ -1230,7 +1536,7 @@ requirement-details i {
   right: 0;
   bottom: 0;
   border: 2px solid var(--primary-color);
-  border-radius: var(--border-radius);
+  border-radius: var (--border-radius);
   pointer-events: none;
   opacity: 0.5;
   animation: pulse 2s infinite;
@@ -1727,7 +2033,7 @@ requirement-details i {
 
 .faq-card {
   background: var(--bg-card);
-  border-radius: var(--border-radius);
+  border-radius: var (--border-radius);
   border: 1px solid var(--border-color);
   overflow: hidden;
 }
@@ -1789,7 +2095,6 @@ requirement-details i {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
 }
 
 /* Screenshots Preview Section */
@@ -1918,7 +2223,7 @@ requirement-details i {
   color: var(--primary-color);
   margin: 20px 0;
   font-weight: bold;
-  text-shadow: var(--neon-glow);
+  text-shadow: var (--neon-glow);
 }
 
 /* Coming Soon Section */
@@ -1943,7 +2248,7 @@ requirement-details i {
 
 .coming-soon-card {
   background: var(--bg-card);
-  border-radius: var(--border-radius);
+  border-radius: var (--border-radius);
   padding: 30px;
   text-align: center;
   border: 1px solid var(--border-color);
@@ -2095,6 +2400,8 @@ requirement-details i {
   border: 1px solid var(--border-color);
   text-align: center;
   transition: all var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .community-card:hover {
@@ -2114,6 +2421,7 @@ requirement-details i {
   justify-content: center;
   gap: 30px;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .stat-item {
@@ -2134,12 +2442,15 @@ requirement-details i {
 .community-card .btn {
   width: 100%;
   margin: 20px 0 0;
-  padding: 12px 25px;
+  padding: 12px 15px;
+  font-size: 0.9rem;
+  margin-top: auto; /* Push buttons to bottom of cards */
 }
 
 .community-card .btn i {
-  margin-right: 8px;
-  font-size: 1.1em;
+  margin-right: 5px;
+  /* Ensure icon is visible regardless of button background */
+  color: inherit;
 }
 
 .community-section::before {
@@ -2205,4 +2516,96 @@ requirement-details i {
 .stat-label {
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+/* Toast Notifications for Mobile */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: rgba(0, 245, 255, 0.9);
+  color: var(--bg-primary);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease;
+  text-align: center;
+  max-width: 90%;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .toast {
+    font-size: 14px;
+    padding: 10px 20px;
+    bottom: 15px;
+  }
+}
+
+/* About Page specific additional mobile tweaks */
+@media (max-width: 600px) {
+  .about-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .about-content h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .about-content p {
+    text-align: center;
+  }
+  
+  .values-list li span {
+    line-height: 1.4;
+    font-size: 0.95rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .team-member {
+    padding: 20px 15px;
+  }
+  
+  .timeline-content h3 {
+    text-align: left;
+  }
+  
+  .timeline-content p {
+    text-align: left;
+  }
+  
+  /* Improve button readability on smaller screens */
+  .community-card .btn {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .community-card {
+    padding: 20px 15px;
+  }
+  
+  .stat-item {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-card .btn {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+  }
 }
