@@ -365,9 +365,11 @@ nav a.active {
 }
 
 .os-card img {
-  height: 80px;
+  height: 70px;
+  width: 70px;
   margin-bottom: 15px;
   transition: transform var(--transition-speed) ease;
+  object-fit: contain;
 }
 
 .os-card:hover img {
@@ -1250,6 +1252,7 @@ footer {
   
   .os-card img {
     height: 60px;
+    width: 60px;
   }
   
   /* Make images responsive */
@@ -1295,6 +1298,21 @@ footer {
   
   .hero p {
     font-size: 0.9rem;
+  }
+  
+  .os-card img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .distro-option img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .distro-logo {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -1959,8 +1977,9 @@ requirement-details i {
 }
 
 .comparison-cell img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .mt-20 {
@@ -2002,8 +2021,8 @@ requirement-details i {
 }
 
 .distro-logo {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
@@ -2607,5 +2626,70 @@ requirement-details i {
     padding: 8px 10px;
     font-size: 0.8rem;
     letter-spacing: 0;
+  }
+}
+
+/* OS and Icon Standardization */
+.os-card img {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 15px;
+  transition: transform var(--transition-speed) ease;
+  object-fit: contain;
+}
+
+.distro-option img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.distro-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.comparison-cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Media query adjustments for mobile */
+@media (max-width: 576px) {
+  .os-card img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .distro-option img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .distro-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .os-card img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .distro-option img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .distro-logo {
+    width: 50px;
+    height: 50px;
   }
 }
