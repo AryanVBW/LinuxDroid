@@ -886,7 +886,7 @@ footer {
 
 .social-link:hover {
   background-color: var(--primary-color);
-  color: var(--bg-primary);
+  color: var (--bg-primary);
 }
 
 /* Utilities */
@@ -1276,7 +1276,7 @@ requirement-details i {
 }
 
 .feature-tag.success {
-  color: var(--success-color);
+  color: var (--success-color);
 }
 
 .feature-tag.warning {
@@ -1757,27 +1757,24 @@ requirement-details i {
   padding: 0 20px 20px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height var(--transition-speed) ease;
 }
 
 .faq-header.active + .faq-content {
-  max-height: 1000px; /* Large enough to accommodate content */
+  max-height: 1000px;
 }
 
 .faq-header .fas.fa-chevron-down {
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed) ease;
 }
 
 .faq-header.active .fas.fa-chevron-down {
   transform: rotate(180deg);
 }
 
+/* Remove conflicting styles */
 .faq-card.expanded .faq-content {
-  display: block;
-}
-
-.faq-card.expanded .fa-chevron-down {
-  transform: rotate(180deg);
+  /* remove display: block */
 }
 
 .support-box {
@@ -2054,12 +2051,26 @@ requirement-details i {
 
 .faq-content {
   padding: 0 20px 20px;
-  color: var(--text-color);
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-speed) ease;
 }
 
+.faq-header.active + .faq-content {
+  max-height: 1000px;
+}
+
+.faq-header .fas.fa-chevron-down {
+  transition: transform var(--transition-speed) ease;
+}
+
+.faq-header.active .fas.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Remove conflicting styles */
 .faq-card.expanded .faq-content {
-  display: block;
+  /* remove display: block */
 }
 
 /* Community Section */

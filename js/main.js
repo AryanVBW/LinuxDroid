@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             navigator.clipboard.writeText(textToCopy)
                 .then(() => {
-                    // Change button text temporarily
                     const originalText = this.textContent;
                     this.textContent = 'Copied!';
                     
@@ -35,6 +34,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // FAQ dropdown functionality
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    
+    faqHeaders.forEach((header, index) => {
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            
+            // Toggle active class on the header
+            this.classList.toggle('active');
+            
+            // Reset all other FAQ items
+            faqHeaders.forEach(otherHeader => {
+                if (otherHeader !== this) {
+                    otherHeader.classList.remove('active');
+                    otherHeader.nextElementSibling.style.maxHeight = null;
+                }
+            });
+            
+            // Toggle the content visibility using maxHeight
+            if (this.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = null;
+            }
+        });
+        
+        // Open first FAQ item by default
+        if (index === 0) {
+            header.classList.add('active');
+            const content = header.nextElementSibling;
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -91,31 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
             osCards.forEach(c => c.classList.remove('selected'));
             this.classList.add('selected');
         });
-    });
-    
-    // FAQ dropdown functionality
-    const faqHeaders = document.querySelectorAll('.faq-header');
-    
-    faqHeaders.forEach((header, index) => {
-        header.addEventListener('click', function() {
-            // Toggle active class on the header
-            this.classList.toggle('active');
-            
-            // Toggle the content visibility
-            const content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        });
-        
-        // Initialize the first FAQ item as open
-        if (index === 0) {
-            header.classList.add('active');
-            const content = header.nextElementSibling;
-            content.style.maxHeight = content.scrollHeight + 'px';
-        }
     });
 });
 
