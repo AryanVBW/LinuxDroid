@@ -2,14 +2,14 @@
 :root {
   --primary-color: #00f5ff;
   --secondary-color: #1a1b26;
-  --accent-color: #ff00ff;
+  --accent-color: #7f9cb5;
   --text-color: #e5e5e5;
   --text-muted: #888;
   --bg-primary: #0a0b14;
   --bg-secondary: #12141d;
   --bg-card: #1c1e2a;
-  --success-color: #00ff9d;
-  --warning-color: #ffb700;
+  --success-color: #00f5ff;
+  --warning-color: #7f9cb5;
   --danger-color: #ff3860;
   --border-color: #2a2d3d;
   --border-radius: 12px;
@@ -19,6 +19,10 @@
   --code-bg: #1d1f2b;
   --selection-bg: #2a3a63;
   --neon-glow: 0 0 10px rgba(0, 245, 255, 0.5);
+  --btn-primary-bg: #00f5ff;
+  --btn-primary-text: #0a0b14;
+  --btn-secondary-bg: #7f9cb5;
+  --btn-secondary-text: #0a0b14;
 }
 
 /* Base Styles */
@@ -218,7 +222,7 @@ nav a.active {
 
 /* Buttons */
 .btn {
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: var(--primary-color);
   color: var(--bg-primary);
   font-weight: 600;
   padding: 12px 30px;
@@ -231,6 +235,7 @@ nav a.active {
   position: relative;
   overflow: hidden;
   text-shadow: none;
+  box-shadow: var(--box-shadow);
 }
 
 .btn::before {
@@ -251,18 +256,21 @@ nav a.active {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
+  box-shadow: var(--box-shadow-hover);
+  background: var(--accent-color);
+  color: var(--text-color);
 }
 
 .btn-secondary {
-  background: var(--bg-card);
+  background: var(--accent-color);
   color: var(--text-color);
-  border: 1px solid var(--border-color);
+  border: none;
 }
 
 .btn-secondary:hover {
   background: var(--primary-color);
   color: var(--bg-primary);
+  box-shadow: var(--box-shadow-hover);
 }
 
 /* Features Section */
@@ -1100,11 +1108,169 @@ footer {
   margin-top: 40px;
 }
 
+/* Download Section Styles */
+.download-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--bg-primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: var(--box-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.recommended-badge i {
+  margin-right: 6px;
+  color: var(--bg-primary);
+}
+
+.download-rating {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.stars {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.rating-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.download-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.feature-tag {
+  background: var(--bg-primary);
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-speed) ease;
+}
+
+.feature-tag.success {
+  color: var(--success-color);
+}
+
+.feature-tag i {
+  font-size: 1rem;
+}
+
+.download-btn {
+  margin-top: 20px;
+  width: 100%;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+}
+
+.download-btn i {
+  font-size: 1.1rem;
+}
+
 .download-card {
   background: var(--bg-card);
   padding: 30px;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.download-card.recommended {
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.download-card.recommended::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  pointer-events: none;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+.store-logo {
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.download-features {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feature-tag {
+  background: var(--bg-primary);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.feature-tag i {
+  font-size: 0.8rem;
+}
+
+.feature-tag.success {
+  color: var(--success-color);
+}
+
+.feature-tag.warning {
+  color: var(--warning-color);
+}
+
+.download-btn {
+  margin-top: auto;
+  width: 100%;
+}
   position: relative;
   transition: all var(--transition-speed) ease;
 }
@@ -1612,10 +1778,72 @@ footer {
 }
 
 /* Community Section */
+/* Community Section Styles */
 .community-section {
   background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.community-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all var(--transition-speed) ease;
+}
+
+.community-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.community-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.community-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.community-card .btn {
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 12px 25px;
+}
+
+.community-card .btn i {
+  margin-right: 8px;
+  font-size: 1.1em;
 }
 
 .community-section::before {
