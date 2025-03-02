@@ -4,24 +4,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle with improved functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('nav ul');
+    const body = document.body;
     
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function(event) {
             event.stopPropagation(); // Prevent clicks on the button from closing the menu immediately
-            navMenu.classList.toggle('show');
+            body.classList.toggle('mobile-menu-open');
         });
         
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            if (navMenu.classList.contains('show') && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('show');
+            if (body.classList.contains('mobile-menu-open') && 
+                !navMenu.contains(event.target) && 
+                !mobileMenuBtn.contains(event.target)) {
+                body.classList.remove('mobile-menu-open');
             }
+        });
+        
+        // Close menu when clicking on a nav link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                body.classList.remove('mobile-menu-open');
+            });
         });
         
         // Close menu on window resize (when switching to desktop view)
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
-                navMenu.classList.remove('show');
+                body.classList.remove('mobile-menu-open');
             }
         });
     }
@@ -93,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetElement) {
                 // Close mobile menu if open
-                if (navMenu && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
+                if (body.classList.contains('mobile-menu-open')) {
+                    body.classList.remove('mobile-menu-open');
                 }
                 
                 // Get header height for proper offset
@@ -108,7 +119,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    
+    // Add active class to current page nav link
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        // Check if the current path includes the link path or if we're on the home page
+        if ((currentPath.includes(linkPath) && linkPath !== 'index.html' && linkPath !== '/') || 
+            (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('/index.html')))) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Handle header shadow on scroll for better mobile experience
+    function handleHeaderShadow() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.style.boxShadow = 'var(--box-shadow-hover)';
+        } else {
+            header.style.boxShadow = 'var(--box-shadow)';
+        }
+    }
+    
+    window.addEventListener('scroll', handleHeaderShadow);
+    
     // Enhanced lightbox functionality if lightbox is used
     if(typeof lightbox !== 'undefined') {
         lightbox.option({
@@ -270,6 +307,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run on load and resize
     adjustCommunityStats();
     window.addEventListener('resize', adjustCommunityStats);
+    
+    // Handle initial page load
+    handleHeaderShadow();
 });
 
 // Function to copy text to clipboard

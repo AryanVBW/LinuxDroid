@@ -23,6 +23,7 @@
   --btn-primary-text: #0a0b14;
   --btn-secondary-bg: #7f9cb5;
   --btn-secondary-text: #0a0b14;
+  --nav-height: 70px;
 }
 
 /* Base Styles */
@@ -94,34 +95,56 @@ a:hover {
 
 /* Header */
 header {
-  background-color: var(--secondary-color);
+  background-color: rgba(26, 27, 38, 0.95);
   color: white;
-  padding: 1rem 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(42, 45, 61, 0.3);
+  height: var(--nav-height);
+  transition: all 0.3s ease;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  padding: 10px 0;
+  transition: all 0.3s ease;
 }
 
-.logo img {
-  height: 50px;
+.logo-image {
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
+  max-width: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+  transform: rotate(10deg);
 }
 
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, var(--primary-color), #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
 }
 
 /* Navigation */
@@ -130,19 +153,25 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 nav li {
-  margin-left: 20px;
+  margin-left: 8px;
+  position: relative;
 }
 
 nav a {
   color: var(--text-color);
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 10px 16px;
   border-radius: var(--border-radius);
   transition: all var(--transition-speed) ease;
   position: relative;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+  overflow: hidden;
 }
 
 nav a::before {
@@ -155,6 +184,7 @@ nav a::before {
   height: 2px;
   background: var(--primary-color);
   transition: width var(--transition-speed) ease;
+  box-shadow: 0 0 8px var(--primary-color);
 }
 
 nav a:hover::before,
@@ -165,7 +195,8 @@ nav a.active::before {
 nav a:hover,
 nav a.active {
   color: var(--primary-color);
-  background: rgba(0, 245, 255, 0.1);
+  background: rgba(0, 245, 255, 0.08);
+  transform: translateY(-2px);
 }
 
 /* Mobile Menu */
@@ -174,8 +205,61 @@ nav a.active {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  padding: 0;
   cursor: pointer;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  margin: 0 auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--primary-color);
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(4) {
+  top: 16px;
+}
+
+.mobile-menu-open .hamburger span:nth-child(1),
+.mobile-menu-open .hamburger span:nth-child(4) {
+  width: 0%;
+  opacity: 0;
+}
+
+.mobile-menu-open .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.mobile-menu-open .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
 }
 
 /* Hero Section */
@@ -729,52 +813,305 @@ nav a.active {
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+  :root {
+    --nav-height: 60px;
+  }
+  
+  .logo-text {
+    font-size: 1.4rem;
+  }
+  
+  nav a {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--secondary-color);
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        z-index: 1000; /* Ensure menu is above other content */
-    }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    nav li {
-        margin: 10px 0;
-        width: 100%; /* Make menu items full width on mobile */
-    }
-    
-    nav a {
-        display: block;
-        padding: 12px 20px;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
+  .mobile-menu-btn {
+    display: block;
+    margin-right: 5px;
+  }
+  
+  header {
+    height: var(--nav-height);
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(26, 27, 38, 0.98);
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mobile-menu-open nav {
+    height: 100vh;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: var(--nav-height);
+    padding-bottom: 40px;
+    overflow-y: auto;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: 0.15s;
+  }
+  
+  .mobile-menu-open nav ul {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  nav li {
+    margin: 0;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  nav a {
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.1rem;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  nav a::before {
+    bottom: auto;
+    left: 0;
+    transform: none;
+    width: 4px;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  nav a:hover::before,
+  nav a.active::before {
+    width: 4px;
+    height: 70%;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    background: rgba(0, 245, 255, 0.1);
+    transform: none;
+  }
+  
+  /* Fix content scroll when menu is open */
+  body.mobile-menu-open {
+    overflow: hidden;
+  }
+  
+  /* Adjust logo for mobile */
+  .logo {
+    padding: 8px 0;
+    z-index: 1001;
+  }
+  
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --nav-height: 55px;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero {
+    padding: 60px 15px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .logo-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+  
+  nav a {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  /* Improve button text wrapping on small screens */
+  .btn i {
+    font-size: 16px;
+    min-width: 16px;
+  }
+  
+  /* Other responsive styling remains the same */
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Update grid sizing for smallest screens */
+  .os-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  /* Improve footer layout on mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-column ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-column li {
+    margin-bottom: 0;
+  }
+  
+  /* Make feature cards more mobile-friendly */
+  .feature-card {
+    padding: 20px 15px;
+  }
+  
+  /* Adjust headings for smaller screens */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Optimize OS card spacing */
+  .os-card {
+    padding: 15px;
+  }
+  
+  .os-card img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Allow tables to scroll horizontally on mobile */
+  .comparison-table {
+    overflow-x: auto;
+    display: block;
+  }
+  
+  /* Adjust spacing for the mobile experience */
+  .py-80 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  /* Make community stats stack on small screens */
+  .community-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .btn i {
+    font-size: 14px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .os-card img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .distro-option img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .distro-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  nav a {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
 }
 
 /* Add these styles for mobile installation progress */
@@ -1083,7 +1420,7 @@ footer {
   border-radius: 50%;
   background-color: var(--bg-card);
   color: var (--text-color);
-  transition: background-color var(--transition-speed) ease;
+  transition: background-color var (--transition-speed) ease;
 }
 
 .social-link:hover {
@@ -2276,7 +2613,7 @@ requirement-details i {
 
 .coming-soon-card:hover {
   transform: translateY(-5px);
-  border-color: var(--primary-color);
+  border-color: var (--primary-color);
   box-shadow: var(--box-shadow-hover);
 }
 
