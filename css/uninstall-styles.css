@@ -1,0 +1,36 @@
+/* Danger styling for uninstall options */
+.os-option.danger {
+  border: 1px solid rgba(255, 56, 96, 0.5);
+  background: rgba(255, 56, 96, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.os-option.danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(255, 56, 96, 0.15);
+}
+
+.os-option.danger .option-header i {
+  color: rgba(255, 56, 96, 0.8);
+  animation: pulse 3s infinite;
+}
+
+.os-option.danger h4 {
+  color: rgba(255, 56, 96, 0.8);
+  font-weight: bold;
+}
+
+/* Removed caution icon as requested */
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

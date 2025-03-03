@@ -1947,7 +1947,6 @@ requirement-details i {
 .download-btn {
   margin-top: auto;
   width: 100%;
-}
   position: relative;
   transition: all var(--transition-speed) ease;
 }
@@ -2292,6 +2291,11 @@ requirement-details i {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  max-height: 500px;
+  overflow-y: auto;
+  display: block;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
 }
 
 .comparison-row {
@@ -2304,6 +2308,17 @@ requirement-details i {
   font-weight: bold;
   background-color: var(--bg-secondary);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.comparison-row:nth-child(even) {
+  background-color: rgba(127, 156, 181, 0.05);
+}
+
+.comparison-row:hover {
+  background-color: rgba(0, 245, 255, 0.05);
 }
 
 .comparison-cell {
@@ -2434,9 +2449,10 @@ requirement-details i {
   transform: rotate(180deg);
 }
 
-/* Remove conflicting styles */
+/* Expanded FAQ card styles */
 .faq-card.expanded .faq-content {
-  /* remove display: block */
+  max-height: 1000px;
+  opacity: 1;
 }
 
 .support-box {
@@ -2729,9 +2745,29 @@ requirement-details i {
   transform: rotate(180deg);
 }
 
-/* Remove conflicting styles */
+/* Expanded FAQ card styles for community section */
 .faq-card.expanded .faq-content {
-  /* remove display: block */
+  max-height: 1000px;
+  opacity: 1;
+}
+
+/* Troubleshooting Section Specific Styles */
+.troubleshooting-section .faq-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.troubleshooting-section .faq-content {
+  padding: 0 20px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.troubleshooting-section .faq-header.active + .faq-content {
+  max-height: 1000px;
+  opacity: 1;
 }
 
 /* Community Section */
@@ -3092,6 +3128,173 @@ requirement-details i {
     transform: translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: var(--box-shadow-hover);
+}
+
+/* OS Selection Box Styles */
+.os-selection-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    background-color: var(--bg-card);
+}
+
+.os-tabs {
+    display: flex;
+    overflow-x: auto;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+    scrollbar-width: none; /* Firefox */
+}
+
+.os-tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.os-tab {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px 10px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.os-tab img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.os-tab span {
+    font-size: 14px;
+}
+
+.os-tab.active {
+    background-color: rgba(0, 245, 255, 0.1);
+    color: var(--primary-color);
+}
+
+.os-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.os-tab:hover img {
+    transform: scale(1.1);
+}
+
+.os-content-container {
+    background-color: var(--bg-card);
+    padding: 20px;
+}
+
+.os-content {
+    display: none;
+}
+
+.os-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.os-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.os-option {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.os-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Uninstall option styling */
+.os-option.uninstall {
+    background-color: rgba(244, 67, 54, 0.05);
+    border-color: rgba(244, 67, 54, 0.2);
+}
+
+.os-option.uninstall:hover {
+    box-shadow: 0 10px 20px rgba(244, 67, 54, 0.1);
+    border-color: rgba(244, 67, 54, 0.5);
+}
+
+.os-option.uninstall .option-header i {
+    color: #f44336;
+}
+
+.option-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-header i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.option-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.os-option p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.os-option .code-block {
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Media Queries for OS Selection Box */
+@media (max-width: 768px) {
+    .os-tabs {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    
+    .os-tab {
+        min-width: 100px;
+    }
+    
+    .os-options {
+        grid-template-columns: 1fr;
+    }
 }
 
 .category-header {

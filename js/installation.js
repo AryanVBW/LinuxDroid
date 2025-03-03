@@ -62,45 +62,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // FAQ Accordion with improved touch handling
-    document.querySelectorAll('.faq-header').forEach(header => {
-        header.addEventListener('click', function() {
-            const card = header.closest('.faq-card');
-            const content = card.querySelector('.faq-content');
-            const allCards = document.querySelectorAll('.faq-card');
-            
-            // Check if this card is already active
-            const isActive = header.classList.contains('active');
-            
-            // Close all other cards
-            allCards.forEach(c => {
-                const h = c.querySelector('.faq-header');
-                const con = c.querySelector('.faq-content');
-                if (h !== header) {
-                    h.classList.remove('active');
-                    con.style.maxHeight = null;
-                    c.style.transform = '';
-                    c.style.borderColor = '';
+    function initFaqAccordion() {
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const card = header.closest('.faq-card');
+                const content = card.querySelector('.faq-content');
+                
+                // Check if this card is already active
+                const isActive = header.classList.contains('active');
+                
+                // Close all other cards
+                document.querySelectorAll('.faq-card').forEach(c => {
+                    const h = c.querySelector('.faq-header');
+                    const con = c.querySelector('.faq-content');
+                    if (h !== header) {
+                        h.classList.remove('active');
+                        con.style.maxHeight = null;
+                        c.style.transform = '';
+                        c.style.borderColor = '';
+                    }
+                });
+                
+                // Toggle current card
+                if (!isActive) {
+                    header.classList.add('active');
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.borderColor = 'var(--primary-color)';
+                    if (content) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                } else {
+                    header.classList.remove('active');
+                    card.style.transform = '';
+                    card.style.borderColor = '';
+                    if (content) {
+                        content.style.maxHeight = null;
+                    }
                 }
             });
-            
-            // Toggle current card
-            if (!isActive) {
-                header.classList.add('active');
-                card.style.transform = 'translateY(-5px)';
-                card.style.borderColor = 'var(--primary-color)';
-                if (content) {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
-            } else {
-                header.classList.remove('active');
-                card.style.transform = '';
-                card.style.borderColor = '';
-                if (content) {
-                    content.style.maxHeight = null;
-                }
-            }
         });
-    });
+    }
+    
+    // Initialize FAQ accordion
+    initFaqAccordion();
 
     // Distribution Selection
     document.querySelectorAll('.distro-option').forEach(option => {
@@ -198,6 +202,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 content.style.maxHeight = content.scrollHeight + 'px';
             }
         });
+    });
+    
+    // Simple direct OS tab switching functionality
+    function handleOSTabClick() {
+        // Get the OS name from the clicked tab
+        const osName = this.getAttribute('data-os');
+        console.log(`Tab clicked: ${osName}`);
+        
+        // Remove active class from all tabs
+        document.querySelectorAll('.os-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Hide all content panels
+        document.querySelectorAll('.os-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Show the corresponding content panel
+        const contentPanel = document.getElementById(`${osName}-content`);
+        if (contentPanel) {
+            contentPanel.classList.add('active');
+        } else {
+            console.error(`Content panel not found: ${osName}-content`);
+        }
+    }
+    
+    // Initialize OS tabs with direct event handlers
+    function initializeOSTabs() {
+        console.log('Initializing OS tabs with direct event handlers...');
+        
+        // Remove any existing event listeners by cloning and replacing each tab
+        document.querySelectorAll('.os-tab').forEach(tab => {
+            const newTab = tab.cloneNode(true);
+            tab.parentNode.replaceChild(newTab, tab);
+            
+            // Add click event directly
+            newTab.onclick = handleOSTabClick;
+        });
+        
+        console.log('OS tabs initialized with direct event handlers');
+    }
+    
+    // Initialize OS tabs when DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM fully loaded, initializing OS tabs and FAQ');
+        initializeOSTabs();
+        initFaqAccordion();
+        
+        // Add a fallback initialization in case the first one doesn't work
+        setTimeout(function() {
+            console.log('Running fallback OS tabs initialization');
+            initializeOSTabs();
+        }, 500);
+    });
         
         // Update progress display for the current viewport size
         updateProgress();
@@ -212,4 +274,3 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.add('selected');
         }, {passive: false});
     });
-});
