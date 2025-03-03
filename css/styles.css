@@ -1191,6 +1191,144 @@ nav a.active {
 
 /* About Page Mobile Optimization */
 @media (max-width: 768px) {
+  /* General Mobile Optimizations */
+  .container {
+    padding: 0 15px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95em;
+    margin-bottom: 25px;
+  }
+
+  /* Installation Progress Steps */
+  .installation-progress {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .progress-step {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--border-radius);
+  }
+
+  .progress-line {
+    display: none;
+  }
+
+  /* Requirements Grid */
+  .requirements-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .requirement-card {
+    padding: 15px;
+  }
+
+  /* Download Options */
+  .download-options {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .download-card {
+    padding: 20px 15px;
+  }
+
+  /* Installation Steps */
+  .step-card {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .step-content {
+    padding: 15px;
+  }
+
+  .code-block {
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    overflow-x: auto;
+  }
+
+  /* Distribution Selection */
+  .distro-selector {
+    padding: 10px;
+  }
+
+  .distro-option {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .comparison-table {
+    font-size: 0.9em;
+    overflow-x: auto;
+  }
+
+  .comparison-row {
+    padding: 10px;
+  }
+
+  /* OS Selection */
+  .os-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .os-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .os-tab {
+    flex: 0 0 auto;
+    padding: 8px 15px;
+    white-space: nowrap;
+  }
+
+  .os-tab img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .os-options {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .os-option {
+    padding: 15px;
+  }
+
+  /* FAQ Section */
+  .faq-card {
+    margin-bottom: 15px;
+  }
+
+  .faq-header {
+    padding: 12px 15px;
+  }
+
+  .faq-content {
+    padding: 15px;
+  }
+
+  /* About Grid */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 30px;

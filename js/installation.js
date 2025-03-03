@@ -28,9 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth <= 768) {
             const activeStep = progressSteps[currentStep];
             if (activeStep) {
-                // Scroll to the active step on mobile
-                activeStep.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                // Scroll to the active step on mobile with offset for header
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const elementPosition = activeStep.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: elementPosition - headerHeight - 20,
+                    behavior: 'smooth'
+                });
             }
+
+            // Update step titles for better mobile display
+            progressSteps.forEach((step, index) => {
+                const title = step.querySelector('span');
+                if (title) {
+                    title.style.display = index === currentStep ? 'block' : 'none';
+                }
+            });
         }
     }
 
@@ -106,20 +119,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize FAQ accordion
     initFaqAccordion();
 
-    // Distribution Selection
+    // Distribution Selection with improved mobile interaction
     document.querySelectorAll('.distro-option').forEach(option => {
-        option.addEventListener('click', () => {
+        const handleSelection = () => {
             document.querySelectorAll('.distro-option').forEach(opt => {
                 opt.style.borderColor = '';
                 opt.style.transform = '';
+                opt.classList.remove('selected');
             });
             
             option.style.borderColor = 'var(--primary-color)';
             option.style.transform = 'translateY(-5px)';
+            option.classList.add('selected');
+            
+            // Add haptic feedback for mobile
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+            
+            // Smooth scroll to comparison table on mobile
+            if (window.innerWidth <= 768) {
+                const comparisonTable = option.closest('.distro-selector').querySelector('.comparison-table');
+                if (comparisonTable) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const elementPosition = comparisonTable.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({
+                        top: elementPosition - headerHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            }
             
             // Update progress
             currentStep = 3;
             updateProgress();
+        };
+        
+        // Handle both click and touch events
+        option.addEventListener('click', handleSelection);
+        option.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            handleSelection();
         });
     });
 
