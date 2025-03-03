@@ -3030,3 +3030,233 @@ requirement-details i {
     height: 50px;
   }
 }
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--bg-card);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.tool-item img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.tool-item i {
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tools-category {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.tools-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.category-header i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
+}
+
+.category-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.tools-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-2px);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow);
+}
+
+.tool-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.tool-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.tool-item span {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tools-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+/* Distributions Showcase Section */
+.distributions-showcase {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.distributions-bg-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.cube {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 245, 255, 0.1);
+    animation: cube 25s linear infinite;
+    border: 2px solid rgba(0, 245, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(0);
+}
+
+.cube:nth-child(1) {
+    top: 80%;
+    left: 45%;
+    animation-delay: 0s;
+}
+
+.cube:nth-child(2) {
+    top: 70%;
+    left: 25%;
+    animation-delay: -5s;
+    width: 40px;
+    height: 40px;
+}
+
+.cube:nth-child(3) {
+    top: 10%;
+    left: 65%;
+    animation-delay: -10s;
+    width: 80px;
+    height: 80px;
+}
+
+.cube:nth-child(4) {
+    top: 50%;
+    left: 90%;
+    animation-delay: -15s;
+    width: 50px;
+    height: 50px;
+}
+
+.cube:nth-child(5) {
+    top: 30%;
+    left: 15%;
+    animation-delay: -20s;
+    width: 70px;
+    height: 70px;
+}
+
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.5) rotate(360deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.distributions-showcase .screenshot-card {
+    background: rgba(28, 30, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.distributions-showcase .screenshot-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+}
+
+.distributions-showcase .screenshot-card h3 {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+}
+
+.distributions-showcase .screenshot-card p {
+    color: var(--text-color);
+}
