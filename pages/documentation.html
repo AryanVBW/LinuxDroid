@@ -60,281 +60,282 @@
         </div>
     </header>
     
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 60px 20px;">
-        <div class="container">
-            <h1>Documentation</h1>
-            <p>Complete guide to installing, configuring, and using LinuxDroid on your Android device.</p>
-        </div>
-    </section>
-    
-    <!-- Documentation Navigation -->
-    <section class="py-80">
-        <div class="container">
-            <div class="doc-grid">
-                <!-- Quick Start -->
-                <div class="doc-section">
-                    <h2>Quick Start Guide</h2>
-                    <div class="doc-content">
-                        <h3>Prerequisites</h3>
-                        <ul>
-                            <li>Android device running Android 5.0 or higher</li>
-                            <li>At least 2GB of free storage space</li>
-                            <li>Stable internet connection</li>
-                            <li>Termux app installed from F-Droid</li>
-                        </ul>
-                        
-                        <h3>One-Click Installation</h3>
-                        <div class="code-block">
-                            <pre><code>curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash</code></pre>
-                            <button class="copy-button" data-copy="curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Installation Guide -->
-                <div class="doc-section">
-                    <h2>Installation Guide</h2>
-                    <div class="doc-content">
-                        <h3>Step-by-Step Installation</h3>
-                        <ol>
-                            <li>Install Termux from F-Droid</li>
-                            <li>Update package repositories</li>
-                            <li>Install required dependencies</li>
-                            <li>Run the installation script</li>
-                            <li>Choose your preferred Linux distribution</li>
-                            <li>Select desktop environment</li>
-                            <li>Complete the setup process</li>
-                        </ol>
-                        
-                        <div class="note-box">
-                            <i class="fas fa-info-circle"></i>
-                            <p>For detailed installation instructions, visit our <a href="installation.html">Installation Guide</a>.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Configuration -->
-                <div class="doc-section">
-                    <h2>Configuration</h2>
-                    <div class="doc-content">
-                        <h3>Basic Configuration</h3>
-                        <ul>
-                            <li>Setting up user accounts</li>
-                            <li>Configuring network settings</li>
-                            <li>Managing storage</li>
-                            <li>Customizing desktop environment</li>
-                        </ul>
-                        
-                        <h3>Advanced Configuration</h3>
-                        <ul>
-                            <li>Performance optimization</li>
-                            <li>Resource management</li>
-                            <li>Service configuration</li>
-                            <li>Security settings</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Troubleshooting -->
-                <div class="doc-section">
-                    <h2>Troubleshooting</h2>
-                    <div class="doc-content">
-                        <h3>Common Issues</h3>
-                        <ul>
-                            <li>Installation failures</li>
-                            <li>Network connectivity issues</li>
-                            <li>Display problems</li>
-                            <li>Performance issues</li>
-                        </ul>
-                        
-                        <div class="note-box warning">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <p>If you encounter issues not covered here, please check our <a href="https://github.com/AryanVBW/LinuxDroid/issues">GitHub Issues</a> page.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Desktop Environments -->
-                <div class="doc-section">
-                    <h2>Desktop Environments</h2>
-                    <div class="doc-content">
-                        <h3>Supported Environments</h3>
-                        <ul>
-                            <li>LXDE - Lightweight and efficient</li>
-                            <li>XFCE - Modern and customizable</li>
-                            <li>MATE - Traditional desktop experience</li>
-                            <li>KDE Plasma - Feature-rich environment (Beta)</li>
-                        </ul>
-                        
-                        <h3>Window Managers</h3>
-                        <ul>
-                            <li>Awesome</li>
-                            <li>Openbox</li>
-                            <li>i3</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Development -->
-                <div class="doc-section">
-                    <h2>Development Guide</h2>
-                    <div class="doc-content">
-                        <h3>Setting Up Development Environment</h3>
-                        <ul>
-                            <li>Installing development tools</li>
-                            <li>Configuring IDEs</li>
-                            <li>Setting up version control</li>
-                            <li>Managing dependencies</li>
-                        </ul>
-                        
-                        <h3>Contributing</h3>
-                        <p>Learn how to contribute to LinuxDroid:</p>
-                        <ul>
-                            <li>Code contributions</li>
-                            <li>Documentation improvements</li>
-                            <li>Bug reports</li>
-                            <li>Feature requests</li>
-                        </ul>
-                    </div>
-                </div>
+    <main class="dual-tone-gradient">
+        <section class="documentation-section">
+            <div class="container text-center">
+                <h1>Documentation</h1>
+                <p class="section-subtitle">Complete guide to installing, configuring, and mastering LinuxDroid on your Android device</p>
             </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="faq-section py-80">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle text-center">Find answers to common questions about LinuxDroid</p>
-            
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> Do I need root access?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>No, LinuxDroid does not require root access. It uses a containerized environment that runs within Termux, which doesn't need root privileges.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> Which Android version do I need?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>LinuxDroid supports Android 5.0 (Lollipop) and above. However, for the best experience, we recommend using Android 7.0 or newer.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> How much storage space do I need?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>The base installation requires about 2GB of free space. Additional space will be needed for:</p>
-                        <ul>
-                            <li>Desktop environments (500MB - 2GB)</li>
-                            <li>Additional packages and applications</li>
-                            <li>User data and documents</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> Can I run GUI applications?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>Yes, LinuxDroid supports GUI applications through:</p>
-                        <ul>
-                            <li>VNC Viewer for full desktop environments</li>
-                            <li>X11 forwarding for individual applications</li>
-                            <li>Native Android display server (experimental)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> How do I update LinuxDroid?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>To update LinuxDroid, run the following commands:</p>
-                        <div class="code-block with-copy">
-                            <pre><code>pkg update && pkg upgrade -y</code></pre>
-                            <button class="copy-btn" data-clipboard-text="pkg update && pkg upgrade -y">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> Can I access Android storage?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>Yes, you can access Android storage by:</p>
-                        <ol>
-                            <li>Running <code>termux-setup-storage</code></li>
-                            <li>Accessing the shared storage in <code>~/storage</code></li>
-                            <li>Using standard Linux file operations</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <div class="faq-card">
-                    <div class="faq-header">
-                        <h3><i class="fas fa-question-circle"></i> How do I set up audio (ALSA) in LinuxDroid?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-content">
-                        <p>To set up ALSA (Advanced Linux Sound Architecture) in LinuxDroid:</p>
-                        <ol>
-                            <li>Install ALSA utilities:</li>
-                            <div class="code-block with-copy">
-                                <pre><code>apt-get update && apt-get install -y alsa-utils pulseaudio</code></pre>
-                                <button class="copy-btn" data-clipboard-text="apt-get update && apt-get install -y alsa-utils pulseaudio">
+        </section>
+        
+        <!-- Documentation Navigation -->
+        <section class="py-80">
+            <div class="container">
+                <div class="doc-grid">
+                    <!-- Quick Start -->
+                    <div class="doc-section">
+                        <h2>Quick Start Guide</h2>
+                        <div class="doc-content">
+                            <h3>Prerequisites</h3>
+                            <ul>
+                                <li>Android device running Android 5.0 or higher</li>
+                                <li>At least 2GB of free storage space</li>
+                                <li>Stable internet connection</li>
+                                <li>Termux app installed from F-Droid</li>
+                            </ul>
+                            
+                            <h3>One-Click Installation</h3>
+                            <div class="code-block">
+                                <pre><code>curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash</code></pre>
+                                <button class="copy-button" data-copy="curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
-                            <li>Configure ALSA:</li>
+                        </div>
+                    </div>
+                    
+                    <!-- Installation Guide -->
+                    <div class="doc-section">
+                        <h2>Installation Guide</h2>
+                        <div class="doc-content">
+                            <h3>Step-by-Step Installation</h3>
+                            <ol>
+                                <li>Install Termux from F-Droid</li>
+                                <li>Update package repositories</li>
+                                <li>Install required dependencies</li>
+                                <li>Run the installation script</li>
+                                <li>Choose your preferred Linux distribution</li>
+                                <li>Select desktop environment</li>
+                                <li>Complete the setup process</li>
+                            </ol>
+                            
+                            <div class="note-box">
+                                <i class="fas fa-info-circle"></i>
+                                <p>For detailed installation instructions, visit our <a href="installation.html">Installation Guide</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Configuration -->
+                    <div class="doc-section">
+                        <h2>Configuration</h2>
+                        <div class="doc-content">
+                            <h3>Basic Configuration</h3>
+                            <ul>
+                                <li>Setting up user accounts</li>
+                                <li>Configuring network settings</li>
+                                <li>Managing storage</li>
+                                <li>Customizing desktop environment</li>
+                            </ul>
+                            
+                            <h3>Advanced Configuration</h3>
+                            <ul>
+                                <li>Performance optimization</li>
+                                <li>Resource management</li>
+                                <li>Service configuration</li>
+                                <li>Security settings</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Troubleshooting -->
+                    <div class="doc-section">
+                        <h2>Troubleshooting</h2>
+                        <div class="doc-content">
+                            <h3>Common Issues</h3>
+                            <ul>
+                                <li>Installation failures</li>
+                                <li>Network connectivity issues</li>
+                                <li>Display problems</li>
+                                <li>Performance issues</li>
+                            </ul>
+                            
+                            <div class="note-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p>If you encounter issues not covered here, please check our <a href="https://github.com/AryanVBW/LinuxDroid/issues">GitHub Issues</a> page.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Desktop Environments -->
+                    <div class="doc-section">
+                        <h2>Desktop Environments</h2>
+                        <div class="doc-content">
+                            <h3>Supported Environments</h3>
+                            <ul>
+                                <li>LXDE - Lightweight and efficient</li>
+                                <li>XFCE - Modern and customizable</li>
+                                <li>MATE - Traditional desktop experience</li>
+                                <li>KDE Plasma - Feature-rich environment (Beta)</li>
+                            </ul>
+                            
+                            <h3>Window Managers</h3>
+                            <ul>
+                                <li>Awesome</li>
+                                <li>Openbox</li>
+                                <li>i3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Development -->
+                    <div class="doc-section">
+                        <h2>Development Guide</h2>
+                        <div class="doc-content">
+                            <h3>Setting Up Development Environment</h3>
+                            <ul>
+                                <li>Installing development tools</li>
+                                <li>Configuring IDEs</li>
+                                <li>Setting up version control</li>
+                                <li>Managing dependencies</li>
+                            </ul>
+                            
+                            <h3>Contributing</h3>
+                            <p>Learn how to contribute to LinuxDroid:</p>
+                            <ul>
+                                <li>Code contributions</li>
+                                <li>Documentation improvements</li>
+                                <li>Bug reports</li>
+                                <li>Feature requests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section py-80">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle text-center">Find answers to common questions about LinuxDroid</p>
+                
+                <div class="faq-grid">
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> Do I need root access?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>No, LinuxDroid does not require root access. It uses a containerized environment that runs within Termux, which doesn't need root privileges.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> Which Android version do I need?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>LinuxDroid supports Android 5.0 (Lollipop) and above. However, for the best experience, we recommend using Android 7.0 or newer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> How much storage space do I need?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>The base installation requires about 2GB of free space. Additional space will be needed for:</p>
+                            <ul>
+                                <li>Desktop environments (500MB - 2GB)</li>
+                                <li>Additional packages and applications</li>
+                                <li>User data and documents</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> Can I run GUI applications?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>Yes, LinuxDroid supports GUI applications through:</p>
+                            <ul>
+                                <li>VNC Viewer for full desktop environments</li>
+                                <li>X11 forwarding for individual applications</li>
+                                <li>Native Android display server (experimental)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> How do I update LinuxDroid?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>To update LinuxDroid, run the following commands:</p>
                             <div class="code-block with-copy">
-                                <pre><code>mkdir -p ~/.config/pulse
+                                <pre><code>pkg update && pkg upgrade -y</code></pre>
+                                <button class="copy-btn" data-clipboard-text="pkg update && pkg upgrade -y">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> Can I access Android storage?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>Yes, you can access Android storage by:</p>
+                            <ol>
+                                <li>Running <code>termux-setup-storage</code></li>
+                                <li>Accessing the shared storage in <code>~/storage</code></li>
+                                <li>Using standard Linux file operations</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <h3><i class="fas fa-question-circle"></i> How do I set up audio (ALSA) in LinuxDroid?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>To set up ALSA (Advanced Linux Sound Architecture) in LinuxDroid:</p>
+                            <ol>
+                                <li>Install ALSA utilities:</li>
+                                <div class="code-block with-copy">
+                                    <pre><code>apt-get update && apt-get install -y alsa-utils pulseaudio</code></pre>
+                                    <button class="copy-btn" data-clipboard-text="apt-get update && apt-get install -y alsa-utils pulseaudio">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <li>Configure ALSA:</li>
+                                <div class="code-block with-copy">
+                                    <pre><code>mkdir -p ~/.config/pulse
 echo "default-server = 127.0.0.1" > ~/.config/pulse/client.conf
 pulseaudio --start</code></pre>
-                                <button class="copy-btn" data-clipboard-text="mkdir -p ~/.config/pulse
+                                    <button class="copy-btn" data-clipboard-text="mkdir -p ~/.config/pulse
 echo \"default-server = 127.0.0.1\" > ~/.config/pulse/client.conf
 pulseaudio --start">
-                                    <i class="fas fa-copy"></i>
-                                </button>
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <li>Test audio with:</li>
+                                <div class="code-block with-copy">
+                                    <pre><code>speaker-test -c2 -t wav</code></pre>
+                                    <button class="copy-btn" data-clipboard-text="speaker-test -c2 -t wav">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </ol>
+                            <div class="note-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Audio support may vary depending on your Android device and distribution. Some applications may require additional configuration.</p>
                             </div>
-                            <li>Test audio with:</li>
-                            <div class="code-block with-copy">
-                                <pre><code>speaker-test -c2 -t wav</code></pre>
-                                <button class="copy-btn" data-clipboard-text="speaker-test -c2 -t wav">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                        </ol>
-                        <div class="note-box info">
-                            <i class="fas fa-info-circle"></i>
-                            <p>Audio support may vary depending on your Android device and distribution. Some applications may require additional configuration.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     
     <!-- Footer -->
     <footer>

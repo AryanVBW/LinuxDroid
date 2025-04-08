@@ -36,6 +36,26 @@ body {
   color: var(--text-color);
 }
 
+/* Dual-tone gradient base class */
+.dual-tone-gradient {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+  position: relative;
+  overflow: hidden;
+}
+
+.dual-tone-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 30%);
+  pointer-events: none;
+}
+
 ::selection {
   background: var(--selection-bg);
   color: var(--text-color);
@@ -308,7 +328,9 @@ body.mobile-menu-open .mobile-menu-btn i {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 245, 255, 0.1) 0%, transparent 100%);
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 30%);
   pointer-events: none;
 }
 
@@ -433,7 +455,6 @@ body.mobile-menu-open .mobile-menu-btn i {
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
-  border-color: var(--primary-color);
 }
 
 .feature-icon {
@@ -473,7 +494,6 @@ body.mobile-menu-open .mobile-menu-btn i {
 .os-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
-  border-color: var(--primary-color);
 }
 
 .os-card img {
@@ -3797,4 +3817,58 @@ requirement-details i {
         background: rgba(0, 245, 255, 0.1);
         transform: translateX(10px);
     }
+}
+
+.documentation-section, .about-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+}
+
+.documentation-section::before, .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.15) 0%, transparent 70%),
+        radial-gradient(circle at 80% 70%, rgba(127, 156, 181, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.documentation-section h1, .about-section h1 {
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--primary-color), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+}
+
+.documentation-section .section-subtitle, .about-section .section-subtitle {
+    font-size: 1.2em;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.documentation-section .container, .about-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.documentation-section .doc-grid, .about-section .about-grid {
+    position: relative;
+    z-index: 2;
+    background: rgba(28, 30, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-top: 40px;
+    border: 1px solid rgba(0, 245, 255, 0.1);
 }
