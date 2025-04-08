@@ -132,8 +132,9 @@ header {
   transition: transform 0.3s ease;
 }
 
+/* Removing the zoom effect on hover */
 .logo:hover .logo-image {
-  transform: rotate(10deg);
+  transform: none;
 }
 
 .logo-text {
