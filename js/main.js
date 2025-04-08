@@ -1,38 +1,109 @@
 // LinuxDroid Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle with improved functionality
+    // Mobile menu functionality with enhanced animations
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('nav ul');
+    const nav = document.querySelector('nav');
     const body = document.body;
+    const menuIcon = mobileMenuBtn?.querySelector('i');
     
-    if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent clicks on the button from closing the menu immediately
+    if (mobileMenuBtn) {
+        // Toggle menu with animations
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             body.classList.toggle('mobile-menu-open');
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (body.classList.contains('mobile-menu-open') && 
-                !navMenu.contains(event.target) && 
-                !mobileMenuBtn.contains(event.target)) {
-                body.classList.remove('mobile-menu-open');
+            
+            // Toggle menu icon
+            if (menuIcon) {
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-times');
+            }
+            
+            // Toggle aria-expanded
+            const isExpanded = body.classList.contains('mobile-menu-open');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+            
+            // Add haptic feedback for mobile devices
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
             }
         });
-        
-        // Close menu when clicking on a nav link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (body.classList.contains('mobile-menu-open') && 
+                !nav.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                body.classList.remove('mobile-menu-open');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function() {
                 body.classList.remove('mobile-menu-open');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             });
         });
+
+        // Handle touch events for better mobile experience
+        let touchStartY = 0;
+        let touchEndY = 0;
         
-        // Close menu on window resize (when switching to desktop view)
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
+        nav.addEventListener('touchstart', function(e) {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        nav.addEventListener('touchmove', function(e) {
+            touchEndY = e.touches[0].clientY;
+            const diff = touchStartY - touchEndY;
+            
+            // If swiping down near the top of the menu, close it
+            if (diff < -50 && window.scrollY <= 0) {
                 body.classList.remove('mobile-menu-open');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        }, { passive: true });
+
+        // Close menu on resize if screen becomes larger
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth > 768 && body.classList.contains('mobile-menu-open')) {
+                    body.classList.remove('mobile-menu-open');
+                    if (menuIcon) {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            }, 250);
+        });
+
+        // Handle keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
+                body.classList.remove('mobile-menu-open');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.focus();
             }
         });
     }
