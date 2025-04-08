@@ -115,109 +115,147 @@ a:hover {
 
 /* Header */
 header {
-  background-color: rgba(26, 27, 38, 0.95);
-  color: white;
-  padding: 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: var(--box-shadow);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(42, 45, 61, 0.3);
-  height: var(--nav-height);
-  transition: all 0.3s ease;
+    background-color: rgba(26, 27, 38, 0.85);
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: var(--nav-height);
+    transition: all 0.3s ease;
 }
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    background: linear-gradient(90deg, 
+        rgba(0, 245, 255, 0.05) 0%,
+        rgba(127, 156, 181, 0.05) 50%,
+        rgba(0, 245, 255, 0.05) 100%
+    );
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.logo:hover {
+    background: rgba(0, 245, 255, 0.08);
+    transform: translateY(-2px);
 }
 
 .logo-image {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  max-width: 40px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-/* Removing the zoom effect on hover */
-.logo:hover .logo-image {
-  transform: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    max-width: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 245, 255, 0.3));
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  background: linear-gradient(90deg, var(--primary-color), #fff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, var(--primary-color), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
 }
 
 /* Navigation */
 nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 2px;
 }
 
 nav li {
-  margin-left: 8px;
-  position: relative;
+    margin: 0;
+    position: relative;
 }
 
 nav a {
-  color: var(--text-color);
-  font-weight: 500;
-  padding: 10px 16px;
-  border-radius: var(--border-radius);
-  transition: all var(--transition-speed) ease;
-  position: relative;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.3px;
-  overflow: hidden;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-size: 0.95rem;
 }
 
 nav a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--primary-color);
-  transition: width var(--transition-speed) ease;
-  box-shadow: 0 0 8px var(--primary-color);
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 nav a:hover::before,
 nav a.active::before {
-  width: 80%;
+    opacity: 0.1;
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--primary-color);
-  background: rgba(0, 245, 255, 0.08);
-  transform: translateY(-2px);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+nav a i {
+    margin-right: 6px;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover i {
+    transform: translateY(-1px);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(0, 245, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 /* Mobile Menu */
@@ -1929,6 +1967,11 @@ footer {
   .distro-logo {
     width: 50px;
     height: 50px;
+  }
+  
+  nav a {
+    font-size: 0.95rem;
+    padding: 12px;
   }
 }
 
@@ -3871,4 +3914,15 @@ requirement-details i {
     padding: 30px;
     margin-top: 40px;
     border: 1px solid rgba(0, 245, 255, 0.1);
+}
+
+.linuxflow-image {
+    max-width: 1000px;
+    height: auto;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.linuxflow-image:hover {
+    transform: scale(1.05);
 }
