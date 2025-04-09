@@ -232,7 +232,12 @@ nav a.active {
 
 nav a i {
     margin-right: 6px;
-    font-size: 1em;
+    font-size: 1.1em;
+    width: 1.1em;
+    height: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease;
 }
 
