@@ -7,14 +7,16 @@
   --text-muted: #888;
   --bg-primary: #0a0b14;
   --bg-secondary: #12141d;
-  --bg-card: #1c1e2a;
+  --bg-card: rgba(28, 30, 42, 0.6);
   --success-color: #00f5ff;
   --warning-color: #7f9cb5;
   --danger-color: #ff3860;
-  --border-color: #2a2d3d;
+  --border-color: rgba(42, 45, 61, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.1);
   --border-radius: 12px;
   --box-shadow: 0 4px 15px rgba(0, 245, 255, 0.1);
   --box-shadow-hover: 0 8px 25px rgba(0, 245, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   --transition-speed: 0.3s;
   --code-bg: #1d1f2b;
   --selection-bg: #2a3a63;
@@ -24,6 +26,7 @@
   --btn-secondary-bg: #7f9cb5;
   --btn-secondary-text: #0a0b14;
   --nav-height: 70px;
+  --glass-blur: 16px;
 }
 
 /* Base Styles */
@@ -498,6 +501,8 @@ body.mobile-menu-open .mobile-menu-btn i {
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
+  border-color: rgba(0, 245, 255, 0.3);
+  background: rgba(28, 30, 42, 0.7);
 }
 
 .feature-icon {
@@ -529,14 +534,18 @@ body.mobile-menu-open .mobile-menu-btn i {
   border-radius: var(--border-radius);
   padding: 25px;
   text-align: center;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--glass-shadow);
   transition: all var(--transition-speed) ease;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .os-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
+  border-color: rgba(0, 245, 255, 0.3);
+  background: rgba(28, 30, 42, 0.7);
 }
 
 .os-card img {
@@ -609,8 +618,11 @@ body.mobile-menu-open .mobile-menu-btn i {
     background: var(--bg-card);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--glass-shadow);
     transition: transform var(--transition-speed) ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .screenshot-card:hover {
@@ -643,20 +655,151 @@ body.mobile-menu-open .mobile-menu-btn i {
     margin-top: 2rem;
 }
 
+.doc-section-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all var(--transition-speed) ease;
+}
+
+.doc-section-box {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.doc-section-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+    transition: all var(--transition-speed) ease;
+    font-size: 1.8rem;
+}
+
+.doc-section-box p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.doc-section-box i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    opacity: 0.7;
+    transition: all var(--transition-speed) ease;
+}
+
+.doc-section-link:hover .doc-section-box {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: rgba(0, 245, 255, 0.3);
+    background: rgba(28, 30, 42, 0.7);
+}
+
+.doc-section-link:hover .doc-section-box h2 {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+}
+
+.doc-section-link:hover .doc-section-box i {
+    transform: translateY(-5px) scale(1.1);
+    opacity: 1;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.7);
+}
+
+.doc-section-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    z-index: -1;
+}
+
+.doc-section-link:hover .doc-section-box::after {
+    opacity: 1;
+}
+
 .doc-section {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .doc-section h2 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+    transition: all var(--transition-speed) ease;
 }
 
 .doc-content {
     margin-top: 1rem;
+}
+
+.doc-section:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: rgba(0, 245, 255, 0.3);
+    background: rgba(28, 30, 42, 0.7);
+}
+
+.doc-section:hover h2 {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+}
+
+.doc-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    z-index: -1;
+}
+
+.doc-section:hover::after {
+    opacity: 1;
+}
+
+.doc-section a {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
 }
 
 .doc-content ul, .doc-content ol {
@@ -669,12 +812,16 @@ body.mobile-menu-open .mobile-menu-btn i {
 }
 
 .code-block {
-    background: var(--light-color);
+    background: rgba(28, 30, 42, 0.7);
     padding: 1.5rem;
     border-radius: 5px;
     margin: 1.5rem 0;
     position: relative;
     font-family: monospace;
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .code-block pre {
@@ -757,8 +904,11 @@ body.mobile-menu-open .mobile-menu-btn i {
     padding: 1rem;
     background: var(--bg-card);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    color: var(--text-color);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .values-list i {
@@ -804,9 +954,10 @@ body.mobile-menu-open .mobile-menu-btn i {
     background: var(--bg-card);
     padding: 1.5rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .timeline-content:hover {
@@ -832,7 +983,11 @@ body.mobile-menu-open .mobile-menu-btn i {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .team-member img {
@@ -884,7 +1039,11 @@ body.mobile-menu-open .mobile-menu-btn i {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .community-card i {
@@ -1636,7 +1795,11 @@ body.mobile-menu-open .mobile-menu-btn i {
 .screenshot-item {
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-speed) ease;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .screenshot-item img {
@@ -1660,8 +1823,11 @@ body.mobile-menu-open .mobile-menu-btn i {
   color: var(--text-color);
   border-radius: var(--border-radius);
   margin-bottom: 30px;
-  box-shadow: var(--box-shadow);
-  overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-speed) ease;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .step-number {
@@ -2062,6 +2228,9 @@ footer {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   transition: all var(--transition-speed) ease;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .requirement-card:hover {
@@ -2203,6 +2372,9 @@ requirement-details i {
   flex-direction: column;
   height: 100%;
   position: relative;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .download-card.recommended {
@@ -2344,10 +2516,12 @@ requirement-details i {
   background: var(--bg-card);
   border-radius: var(--border-radius);
   padding: 25px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--glass-shadow);
   transition: all var(--transition-speed) ease;
   border: 1px solid var(--border-color);
   position: relative;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .install-option.recommended {
@@ -2406,6 +2580,9 @@ requirement-details i {
   border: 1px solid var(--border-color);
   transition: all var(--transition-speed) ease;
   cursor: pointer;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .step-card.interactive:hover {
@@ -2450,6 +2627,9 @@ requirement-details i {
   border-radius: var(--border-radius);
   margin: 15px 0;
   overflow-x: auto;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .code-block.with-copy pre {
@@ -2508,9 +2688,11 @@ requirement-details i {
   cursor: pointer;
   transition: all var(--transition-speed) ease;
   width: 180px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--glass-shadow);
   position: relative;
   border: 1px solid var(--border-color);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .distro-option.recommended {
@@ -2603,6 +2785,9 @@ requirement-details i {
   border-radius: var(--border-radius);
   padding: 20px;
   border: 1px solid var(--border-color);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .distro-comparison h4 {
@@ -2681,9 +2866,11 @@ requirement-details i {
   background: var(--bg-card);
   border-radius: var(--border-radius);
   padding: 30px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--glass-shadow);
   transition: all var(--transition-speed) ease;
   border: 1px solid var(--border-color);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 .distro-card:hover {
@@ -3770,10 +3957,12 @@ requirement-details i {
 }
 
 .distributions-showcase .screenshot-card {
-    background: rgba(28, 30, 42, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 245, 255, 0.1);
+    background: rgba(28, 30, 42, 0.6);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
     transition: all var(--transition-speed) ease;
+    box-shadow: var(--glass-shadow);
 }
 
 .distributions-showcase .screenshot-card:hover {
@@ -3914,11 +4103,13 @@ requirement-details i {
     position: relative;
     z-index: 2;
     background: rgba(28, 30, 42, 0.6);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border-radius: var(--border-radius);
     padding: 30px;
     margin-top: 40px;
-    border: 1px solid rgba(0, 245, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
 }
 
 .linuxflow-image {
