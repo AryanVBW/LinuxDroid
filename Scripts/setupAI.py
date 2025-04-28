@@ -23,11 +23,12 @@ while True:
         !pip install torch transformers peft colorama
         !pip install google-generativeai colorama
         print("Testing AI...)
-        
+        wget https://raw.githubusercontent.com/minhmc2007/LinuxDroid/main/Scripts/gemini.py -O ~/gemini.py
         python3 ~/ai/chatbot.py
     elif user_input == "no":
         print("Setup online AI...")
         !pip install google-generativeai colorama
+        wget https://raw.githubusercontent.com/minhmc2007/LinuxDroid/main/Scripts/gemini.py -O ~/gemini.py
 
         
     else:
@@ -35,3 +36,4 @@ while True:
         # The loop will automatically repeat
 
 #!pip install torch transformers peft accelerate bitsandbytes datasets
+print("Setup complete")

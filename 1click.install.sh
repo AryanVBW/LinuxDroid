@@ -60,7 +60,8 @@ read choice
 
 if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
     echo -e "\n\e[32mInstalling LinuxDroid AI chatbot...\e[0m"
-    bash setupAI.sh
+    wget https://raw.githubusercontent.com/minhmc2007/LinuxDroid/main/Scripts/setupAI.py ~/setupAI.py 
+    python3 setupAI.py
 else
     echo -e "\n\e[32mSkipping AI chatbot installation...\e[0m"
 fi
