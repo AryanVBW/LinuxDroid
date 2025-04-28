@@ -54,4 +54,15 @@ getprop | grep "ro.boot.serialno" | cut -d ':' -f 2 | tr -d ' ' | sed 's/^/  Ser
 echo -e "\n\e[32mLaunching LinuxDroid...\e[0m"
 bash LinuxDroid.sh
 
+# Ask user if they want to install LinuxDroid AI chatbot
+echo -e "\n\e[33mDo you want to install LinuxDroid AI chatbot? (y/n)\e[0m"
+read choice
+
+if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+    echo -e "\n\e[32mInstalling LinuxDroid AI chatbot...\e[0m"
+    bash setupAI.sh
+else
+    echo -e "\n\e[32mSkipping AI chatbot installation...\e[0m"
+fi
+
 echo -e "\n\e[32mLinuxDroid setup complete!\e[0m"
