@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo -e "\033[96m+===================================================+\033[0m";
 echo -e "\033[96m|  _     _                  ____            _     _ |\033[0m";
 echo -e "\033[96m| | |   (_)_ __  _   ___  _|  _ \ _ __ ___ (_) __| ||\033[0m";
@@ -17,7 +18,7 @@ green='\033[0;32m'
 reset='\033[0m'
 
 # Clear the terminal for a clean start (optional)
-clear
+#clear
 
 echo -e "${green}Welcome to the LinuxDroid!${reset}"
 echo
@@ -26,12 +27,14 @@ echo
 os_list=()
 for file in start-*.sh; do
   os_name=${file##start-}  # Extract OS name using parameter expansion
-  os_name=${os_name%.*}      # Remove ".sh" extension
+  os_name=${os_name%.*}    # Remove ".sh" extension
   os_list+=("$os_name")
 done
 
 # Add "Termux" option
 os_list+=("Termux")
+# Add "LinuxDroid AI" option
+os_list+=("LinuxDroid AI")
 
 # Display OS options with clear numbering
 echo "Available operating systems:"
@@ -53,14 +56,18 @@ if [[ $os_number -eq 0 ]]; then
   exit 0
 elif [[ $os_number -ge 1 && $os_number -le "${#os_list[@]}" ]]; then
   selected_os="${os_list[$((os_number-1))]}"
-  script_name="start-$selected_os.sh"
-
-  if [[ -f "$script_name" ]]; then
-    echo -e "You selected OS number $os_number: $selected_os\n"
-    echo "Executing: ./$script_name"
-    ./"$script_name"  # Execute the script using source command
+  echo "You selected OS number $os_number: $selected_os"
+  if [[ "$selected_os" == "LinuxDroid AI" ]]; then
+    echo "Running LinuxDroid AI..."
+    python3 ~/gemini.py
   else
-    echo "Script '$script_name' not found."
+    script_name="start-$selected_os.sh"
+    if [[ -f "$script_name" ]]; then
+      echo "Executing: ./$script_name"
+      ./"$script_name"  # Execute the script
+    else
+      echo "Script '$script_name' not found."
+    fi
   fi
 else
   echo "Invalid input. No matching OS found."
