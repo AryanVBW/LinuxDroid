@@ -1,9 +1,4 @@
-## 🌐 Available Languages
-[🇬🇧 English](README.md) | [🇮🇳 Hindi](docs/translations/README.hi.md) | [🇪🇸 Spanish](docs/translations/README.es.md) | [🇨🇳 Chinese (Simplified)](docs/translations/README.zh.md)
-
-> Select your preferred language above 🌍 to read the README in that language.
-
-# Linux CLI + GUI for Android 
+# Linux CLI + GUI for Android
 <p align="center">
    <a href="https://github.com/AryanVBw">
 <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="250" alt="LinuxDroid"></a></p>
