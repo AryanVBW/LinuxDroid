@@ -1,5 +1,5 @@
 ## 🌐 Idiomas disponibles
-[🇬🇧 Inglés](README.md) | [🇮🇳 Hindi](docs/translations/README.hi.md) | [🇪🇸 Español](docs/translations/README.es.md) | [🇨🇳 Chino (Simplificado)](docs/translations/README.zh.md)
+[🇬🇧 Inglés](../../README.md) | [🇮🇳 Hindi](README.hi.md) | [🇪🇸 Español](README.es.md) | [🇨🇳 Chino (Simplificado)](README.zh.md)
 
 > Selecciona tu idioma preferido arriba 🌍 para leer el README en ese idioma.
 
