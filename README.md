@@ -1,9 +1,14 @@
-#  Linux CLI + GUI  for Android 
+## 🌐 Available Languages
+[🇬🇧 English](README.md) | [🇮🇳 Hindi](docs/translations/README.hi.md) | [🇪🇸 Spanish](docs/translations/README.es.md) | [🇨🇳 Chinese (Simplified)](docs/translations/README.zh.md)
+
+> Select your preferred language above 🌍 to read the README in that language.
+
+# Linux CLI + GUI for Android 
 <p align="center">
    <a href="https://github.com/AryanVBw">
 <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Banner/IMG_20231220_014524-removebg-preview.png" height="250" alt="LinuxDroid"></a></p>
 
-# Linuxdroid
+# LinuxDroid
 
 **Linuxdroid** is a Linux Command Line Interface (CLI) and Graphical User Interface (GUI) for Android, offering a collection of original open-source operating systems. This platform enables users to experience a variety of Linux distributions on Android devices.
 <p align="center">  
@@ -93,7 +98,7 @@ rm -rf .bashrc && cp default.bashrc .bashrc
 wget https://github.com/AryanVBW/LinuxDroid/releases/download/scripts/LinuxDroid.sh && chmod +x LinuxDroid.sh && bash LinuxDroid.sh
 
 ```
-### Select Linux you want to install Linuxdroid automatically isntall it and setup it.
+### Select the Linux distribution you want to install — LinuxDroid will automatically install and set it up.
 <p align="center">
 <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/S1/Step3.png" height="200" >
 
