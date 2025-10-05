@@ -23,7 +23,16 @@ Este script simplifica el proceso de instalación, brindando una experiencia flu
 curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash
 ```
 
-Este script copia el comando de instalación de LinuxDroid en tu portapapeles, facilitando pegarlo y ejecutarlo.
+Este comando descarga y ejecuta el instalador de LinuxDroid automáticamente. Si prefieres revisar el script antes de ejecutarlo, descárgalo primero y ábrelo en un editor para inspeccionarlo:
+
+```bash
+curl -sSL -o 1click.install.sh https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/1click.install.sh
+less 1click.install.sh
+# o ejecutar solo si confías en él:
+bash 1click.install.sh
+```
+
+De esta forma el usuario puede verificar el contenido antes de ejecutarlo.
    - Parrot 🦜 OS  
    - Kali  
    - Ubuntu  

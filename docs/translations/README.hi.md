@@ -179,7 +179,7 @@ Android डिवाइस (स्टॉक अनमोडिफाइड ड�
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
       <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/debian.jpg" alt="Debian स्क्रीनशॉट"></a></p>
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside स्क्रीनशॉट"></a>
-Feel free to reach out, and let's build something amazing together! 🚀
+बेस फर्क पूछिए — आइए मिलकर कुछ शानदार बनाएं!
 
 [![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
 <p align="center"> 
