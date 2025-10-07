@@ -177,14 +177,11 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 <a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
 Feel free to reach out, and let's build something amazing together! 🚀
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
-<p align="center"> 
-  Visitor count<br>
-  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
-</p>
----
+
+
 **LinuxDroid v1.1.2**  
 📅 Last Updated: October 2025  
 💬 Feedback or issues? [Open an issue](https://github.com/AryanVBW/LinuxDroid/issues)
+
 <p align="center">Made with ❤️ By <a href="https://aryanvbw.github.io">*Vivek W*</a></p>
 <p align="center" style="font-size: 8px">v1.1.2</p>
