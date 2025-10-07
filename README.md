@@ -182,5 +182,9 @@ Feel free to reach out, and let's build something amazing together! 🚀
   Visitor count<br>
   <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
 </p>
-<p align="center">Made with ❤️ By <a href="aryanvbw.github.io">*Vivek W*</a></p>
+---
+**LinuxDroid v1.1.2**  
+📅 Last Updated: October 2025  
+💬 Feedback or issues? [Open an issue](https://github.com/AryanVBW/LinuxDroid/issues)
+<p align="center">Made with ❤️ By <a href="https://aryanvbw.github.io">*Vivek W*</a></p>
 <p align="center" style="font-size: 8px">v1.1.2</p>
