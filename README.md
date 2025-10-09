@@ -17,6 +17,7 @@
 
 ### One-Click Installation Script 
 This script streamlines the installation process, providing a seamless experience for various operating systems. Whether you prefer a graphical interface or the command line, it's designed for simplicity and efficiency.Supported OS:
+> Below are the Linux distributions you can install using LinuxDroid.
 # Copy One-Click Installation Script
 ```
   curl -sSL https://raw.githubusercontent.com/AryanVBW/LinuxDroid/refs/heads/main/1click.install.sh | bash
@@ -35,6 +36,58 @@ This script copies the installation command for LinuxDroid to your clipboard, ma
    - NethunterRootLess (Hacking specialized Linux)<img src="https://github.com/AryanVBW/Myimage/releases/download/m3/kali-nethunter-dragon-tm.png" height="12">
    - BlackBox(coming🔜)<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/bosckbocBg.png" height="12">
    - CentOS(coming 🔜)<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Icon/centosbg.png" height="12">
+
+---
+### 🐧 Linux Distribution Comparison
+
+> A quick guide to help you choose the right Linux distribution based on system requirements, use case, and difficulty level.
+
+| 🧩 **Distribution** | 🧠 **RAM Required** | 💾 **Storage** | 🖥️ **Desktop Environments (DEs)** | 🎯 **Best Use Case** | ⚙️ **Difficulty** |
+|---------------------|--------------------|---------------|-----------------------------------|----------------------|------------------|
+| 🟢 **Linux Mint**   | 2 GB              | 15 GB         | Cinnamon, MATE, XFCE             | 🧑‍💻 Beginners, Everyday Use | ⭐ |
+| 🟢 **Ubuntu**       | 2 GB              | 25 GB         | GNOME, KDE, XFCE                 | 🌐 General Use, Productivity | ⭐⭐ |
+| 🟡 **Fedora**       | 2 GB              | 20 GB         | GNOME, KDE, XFCE                 | 👨‍💻 Developers, Testing New Tech | ⭐⭐ |
+| 🟡 **Debian**       | 1 GB              | 10 GB         | GNOME, KDE, XFCE, LXDE           | 🖥️ Servers, Stability | ⭐⭐ |
+| 🔵 **Pop!_OS**      | 4 GB              | 20 GB         | GNOME                            | 🎮 Gaming, Workstations | ⭐⭐ |
+| 🟠 **Kali Linux**   | 2 GB              | 4 GB          | XFCE, KDE                        | 🕵️‍♂️ Pentesting, Cybersecurity | ⭐⭐⭐ |
+| 🔴 **Arch Linux**   | 1 GB              | 5 GB          | Any (User Installs Manually)     | ⚡ Advanced Users, Custom Builds | ⭐⭐⭐⭐ |
+
+> **Legend:**  
+> - **⭐ Easy** → Great for beginners  
+> - **⭐⭐ Moderate** → Some experience recommended  
+> - **⭐⭐⭐ Hard** → For experienced users  
+> - **⭐⭐⭐⭐ Expert** → For power users & enthusiasts  
+
+> 💡 **Tip:** If you're new to Linux, start with **Mint** or **Ubuntu**.  
+> Want full control and customization? Try **Arch** — but keep a coffee ready ☕😉
+
+---
+
+### 🔬 Performance Benchmarks (Optional)
+
+| Distribution | Boot Time (avg) | Idle RAM Usage | Update Frequency |
+|---------------|-----------------|----------------|------------------|
+| Ubuntu | ⚡ ~25 sec | 🧠 ~800 MB | 🔄 Regular (LTS every 2 years) |
+| Linux Mint | ⚡ ~20 sec | 🧠 ~700 MB | 🔄 Frequent |
+| Arch Linux | ⚡ ~15 sec | 🧠 ~500 MB | 🔄 Rolling Release |
+| Fedora | ⚡ ~22 sec | 🧠 ~850 MB | 🔄 Every 6 months |
+
+> 📊 *Values are approximate and may vary by hardware and version.*
+
+---
+
+### 🌸 Hacktoberfest Note
+
+This issue is **🟢 Beginner Friendly** — perfect for your first contribution!  
+You’ll practice:
+- Markdown table design  
+- Visual structuring  
+- Linux knowledge  
+- Writing concise technical comparisons  
+
+---
+
+Would you like me to make a **dark/light theme–friendly version** (with color-coded badges) too — so it looks great on GitHub’s UI in both themes?
 ### Supported Desktop Environments:
 
 - LXDE
@@ -153,7 +206,7 @@ Maximum flexibility
 Install Kali NetHunter on any stock, unrooted Android device without voiding the warranty
 Android Device (Stock unmodified device, no root or custom recovery required)
 #📸 Screenshots
-## Tap on Arrow👇
+### Tap on Arrow👇
  <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
 <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/LinuxDroid/Arrow/1024arow2.png" height="120" alt="LinuxDroid">
