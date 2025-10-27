@@ -163,15 +163,15 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 </p>
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/kali.jpg" height="" alt="Kali Linux"></a></p>
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/kali.jpg" alt="Kali Linux"></a></p>
       
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">   
-   <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/chooseyoulinux.jpg" height="" alt="Choose Your Linux"></a></p>
+   <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/chooseyoulinux.jpg" alt="Choose Your Linux"></a></p>
    
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-   <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/fedora.jpg" height="" alt="Fedora"></a></p>
+   <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/fedora.jpg" alt="Fedora"></a></p>
    
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
