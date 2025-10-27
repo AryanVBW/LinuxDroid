@@ -163,18 +163,22 @@ Android Device (Stock unmodified device, no root or custom recovery required)
 </p>
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-<img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/kaliC.png" height="">
-      <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-   <p align="center">  
+<img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/kali.jpg" alt="Kali Linux"></a></p>
+      
+<p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">   
-   <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/downloadC.png" height="">
- <p align="center">  
-   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">  <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/P1/ubantucross.png" height="">
+   <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/chooseyoulinux.jpg" alt="Choose Your Linux"></a></p>
+   
 <p align="center">  
    <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
-      <img src="https://github.com/AryanVBW/LinuxDroid/releases/download/L1/debian.jpg"></a></p>
-<a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/44/020-NH-Rootless-KeX_s.png" alt="Darkside"></a>
+   <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/fedora.jpg" alt="Fedora"></a></p>
+   
+<p align="center">  
+   <a href="https://github.com/AryanVBW/LinuxDroid/blob/L2/LooksN.md">
+      <img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/debian.jpg" alt="Debian"></a></p>
+      
+<p align="center">
+<a href="https://github.com/AryanVBW/kali-Linux-Android"><img src="https://raw.githubusercontent.com/AryanVBW/LinuxDroid/main/screenshot/Nethunter.jpg" alt="NetHunter"></a></p>
 Feel free to reach out, and let's build something amazing together! 🚀
 
 
